@@ -249,6 +249,33 @@ alte Dateien lassen sich also einfach entfernen.
 
 ---
 
+## Vorschau auf GitHub Pages
+
+Zum Abstimmen liegt die Seite unter:
+
+**https://xjamie007.github.io/fuku-website/**
+
+Quelle ist der `main`-Branch dieses Repositories. Jeder `git push` erneuert die
+Vorschau nach etwa einer Minute von selbst.
+
+Was dort **nicht** funktioniert, weil GitHub Pages nur statische Dateien
+ausliefert und kein PHP ausführt:
+
+- **Das Reservierungsformular sendet nicht.** Es lässt sich vollständig
+  bedienen und prüft alle Eingaben; beim Absenden erscheint der Hinweis mit
+  der vorbereiteten E-Mail. Das ist dasselbe Verhalten wie später bei einem
+  Serverausfall – der Weg ist also mitgetestet, nur eben nicht der Versand.
+- **Der Checkout springt zu `fuku.lu`.** Die WooCommerce-Anbindung braucht
+  dieselbe Domain.
+
+Beides funktioniert erst, wenn die Dateien auf dem Hoster von fuku.lu liegen.
+
+`robots.txt` sperrt die Vorschau für Suchmaschinen aus, damit sie der echten
+Seite keine Konkurrenz macht. **Diese Datei vor dem Umzug auf fuku.lu
+ersatzlos löschen**, sonst verschwindet die Website aus Google.
+
+---
+
 ## Veröffentlichen
 
 Alle Dateien in das Web-Wurzelverzeichnis neben WordPress legen. `.htaccess`
