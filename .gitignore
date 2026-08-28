@@ -1,0 +1,9 @@
+# Zugangs- und Sitzungsdaten von Claude Code – nie veröffentlichen
+.claude/
+
+# Eingegangene Reservierungen sind personenbezogen.
+# Die Zugriffssperre selbst gehört aber ins Repository.
+_reservierungen/*
+!_reservierungen/.htaccess
+
+.DS_Store

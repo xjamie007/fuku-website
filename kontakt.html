@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Kontakt &amp; Anfahrt · Restaurant Fuku Vianden</title>
+    <meta
+      name="description"
+      content="Adresse, Öffnungszeiten und Anfahrt zum Restaurant Fuku, 9 Rue de la Gare, L-9420 Vianden."
+    />
+    <meta name="theme-color" content="#fbf8f4" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="apple-touch-icon" href="assets/img/logo.png" />
+    <link rel="canonical" href="https://fuku.lu/kontakt.html" />
+
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-normal-400-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-normal-400_700-latin.woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body data-page="contact">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Zum Inhalt springen</a>
+
+    <!-- ============================ Header ============================ -->
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="brand" href="index.html" aria-label="Restaurant Fuku – Startseite">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span>
+            <span class="brand__name">Fuku</span>
+            <span class="brand__sub">Vianden</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.home">Startseite</a>
+          <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+          <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+          <a href="kontakt.html" aria-current="page" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang" data-lang-switcher>
+            <button
+              class="lang__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              data-i18n-attr="aria-label:nav.chooseLanguage"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+              <span data-lang-current>DE</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </button>
+            <div class="lang__menu" role="menu"></div>
+          </div>
+
+          <a class="btn btn--brand header__cta" href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+
+          <button class="icon-btn burger" type="button" data-nav-open aria-expanded="false" data-i18n-attr="aria-label:nav.open">
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================= Mobile Navigation ====================== -->
+    <div class="mobile-nav" data-open="false">
+      <div class="mobile-nav__top">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span class="brand__name">Fuku</span>
+        </a>
+        <button class="icon-btn" type="button" data-nav-close data-i18n-attr="aria-label:nav.close">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Navigation">
+        <a href="index.html" data-i18n="nav.home">Startseite</a>
+        <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+        <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+        <a href="kontakt.html" aria-current="page" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="mobile-nav__foot">
+        <div class="filters" data-lang-inline></div>
+        <a class="btn btn--brand btn--lg btn--block" href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ============================ Intro =========================== -->
+      <section class="section" style="padding-bottom: 0">
+        <div class="wrap">
+          <div style="max-width: 44rem">
+            <div class="hero__status">
+              <span class="pill pill--closed" data-status-pill>
+                <span class="dot"></span>
+                <span data-status-label>Öffnungszeiten</span>
+              </span>
+              <span class="eyebrow" data-i18n="contact.eyebrow">Kontakt</span>
+            </div>
+            <h1 style="font-size: var(--step-3); margin-bottom: 1rem" data-i18n="contact.title">
+              Besuchen Sie uns in Vianden
+            </h1>
+            <p class="lede" data-i18n="contact.text">
+              Wir freuen uns auf Ihren Besuch – im Restaurant, zur Abholung oder per Lieferung.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= Info-Karten ======================== -->
+      <section class="section">
+        <div class="wrap">
+          <div class="info-grid" data-reveal>
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+              <h3 data-i18n="home.info.hours">Öffnungszeiten</h3>
+              <dl class="hours" data-hours-list></dl>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="home.info.hoursNote">Montags Ruhetag.</p>
+            </article>
+
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+              <h3 data-i18n="home.info.address">Adresse</h3>
+              <p data-contact="address">9, Rue de la Gare<br />L-9420 Vianden</p>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="home.info.addressNote">
+                Im Zentrum von Vianden, wenige Schritte von der Our.
+              </p>
+              <a class="link-arrow" data-contact="route" href="#" style="margin-top: auto">
+                <span data-i18n="home.info.route">Route planen</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+              </a>
+            </article>
+
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+              <h3 data-i18n="contact.email">E-Mail</h3>
+              <p><a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a></p>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="home.info.contactNote">
+                Für Reservierungen und Fragen erreichen Sie uns am besten per E-Mail.
+              </p>
+
+              <!--
+                Telefonnummer: Auf der bisherigen Website war keine hinterlegt.
+                Sobald sie feststeht, in assets/js/app.js unter RESTAURANT.phone
+                eintragen – dieser Block erscheint dann automatisch.
+              -->
+              <p data-contact-block style="margin-top: auto">
+                <a data-contact="phone" href="#"></a>
+              </p>
+            </article>
+
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg></span>
+              <h3 data-i18n="contact.reserve">Reservierung</h3>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="reserve.text">
+                Sagen Sie uns Datum, Uhrzeit und Personenzahl – wir bestätigen Ihre Reservierung kurzfristig per E-Mail.
+              </p>
+              <a class="btn btn--brand" href="reservieren.html" style="margin-top: auto">
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+                <span data-i18n="reserve.ctaHome">Tisch reservieren</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ Karte =========================== -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow" data-i18n="home.info.eyebrow">Gut zu wissen</span>
+              <h2 data-i18n="contact.mapTitle">Karte anzeigen</h2>
+              <p data-i18n="contact.mapNote">Die Karte wird erst nach dem Klick von OpenStreetMap geladen.</p>
+            </div>
+            <a class="btn btn--ghost" data-contact="route" href="#">
+              <span data-i18n="contact.openMaps">In Karten-App öffnen</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+            </a>
+          </div>
+
+          <div class="map-frame" data-map data-reveal>
+            <button class="map-placeholder" type="button" data-map-load>
+              <span class="map-placeholder__pin"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+              <strong>9, Rue de la Gare · L-9420 Vianden</strong>
+              <span class="btn btn--brand" data-i18n="contact.mapLoad">Karte laden</span>
+              <small data-i18n="contact.mapNote">Die Karte wird erst nach dem Klick von OpenStreetMap geladen.</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================== Impressum / Datenschutz ================ -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="legal-grid">
+            <article id="impressum" class="legal">
+              <h2 data-i18n="footer.imprint">Impressum</h2>
+              <p>
+                <strong>Restaurant Fuku</strong><br />
+                <span data-contact="address">9, Rue de la Gare<br />L-9420 Vianden</span><br />
+                Luxembourg
+              </p>
+              <p><a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a></p>
+              <!--
+                TODO: Vom Restaurant ergänzen lassen – gesetzlich vorgeschrieben:
+                Betreibergesellschaft und Rechtsform, vertretungsberechtigte Person,
+                Handelsregisternummer (RCS), Umsatzsteuer-Identifikationsnummer,
+                Betriebsgenehmigung (autorisation d'établissement).
+              -->
+              <p class="muted" style="font-size: var(--step--1)">
+                Handelsregister, Umsatzsteuer-Identifikationsnummer und vertretungsberechtigte Person werden hier
+                ergänzt.
+              </p>
+            </article>
+
+            <article id="datenschutz" class="legal">
+              <h2 data-i18n="footer.privacy">Datenschutz</h2>
+              <p data-i18n="legal.privacy1">
+                Diese Website lädt Schriften und Gestaltungsdateien ausschliesslich vom eigenen Server. Es werden keine
+                Analyse- oder Werbedienste eingebunden und keine Cookies zu Werbezwecken gesetzt.
+              </p>
+              <p data-i18n="legal.privacy2">
+                Ihre Warenkorbauswahl wird nur lokal in Ihrem Browser gespeichert. Erst beim Klick auf „Zur Kasse“
+                werden die gewählten Gerichte an unser Bestellsystem übertragen. Die Karte von OpenStreetMap wird erst
+                geladen, wenn Sie sie ausdrücklich anfordern.
+              </p>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="legal.privacy3">
+                Für Bestellung und Zahlung gelten zusätzlich die Datenschutzhinweise unseres Shop-Systems.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ Footer =========================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="index.html">
+              <img src="assets/img/logo.png" alt="" width="34" height="37" />
+              <span>
+                <span class="brand__name">Fuku</span>
+                <span class="brand__sub">Vianden</span>
+              </span>
+            </a>
+            <p data-i18n="footer.tagline">
+              Sushi, chinesische Wok-Küche und thailändische Currys im Herzen von Vianden.
+            </p>
+            <div class="socials">
+              <a href="https://www.facebook.com/Restaurant-Fuku-110551558349707/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+              </a>
+              <a href="https://www.instagram.com/restaurant_fuku/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+              </a>
+              <a data-contact="email" href="mailto:info@fuku.lu" aria-label="E-Mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.explore">Entdecken</h4>
+            <div class="footer__links">
+              <a href="bestellen.html#sushi">Sushi</a>
+              <a href="bestellen.html#chauds">Wok</a>
+              <a href="bestellen.html#thai">Thai</a>
+              <a href="bestellen.html#boissons">Getränke</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.visit">Besuchen</h4>
+            <div class="footer__links">
+              <a href="index.html" data-i18n="nav.home">Startseite</a>
+              <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+              <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+              <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="home.info.hours">Öffnungszeiten</h4>
+            <div class="footer__links">
+              <span data-i18n="days.tueSun">Dienstag – Sonntag</span>
+              <span>10:30 – 14:30</span>
+              <span>17:30 – 23:00</span>
+              <span class="muted"><span data-i18n="days.mon">Montag</span>: <span data-i18n="days.closed">Geschlossen</span></span>
+            </div>
+            <p style="margin-top: 1rem; font-size: var(--step--1)">
+              <a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> Restaurant Fuku · 9, Rue de la Gare · L-9420 Vianden</p>
+          <nav aria-label="Rechtliches">
+            <a href="#impressum" data-i18n="footer.imprint">Impressum</a>
+            <a href="#datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/contact.js"></script>
+  </body>
+</html>

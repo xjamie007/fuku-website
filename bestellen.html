@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Bestellen · Restaurant Fuku Vianden</title>
+    <meta name="description" content="Die komplette Speisekarte des Restaurant Fuku in Vianden – bequem online bestellen." />
+    <meta name="theme-color" content="#fbf8f4" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="apple-touch-icon" href="assets/img/logo.png" />
+    <link rel="canonical" href="https://fuku.lu/bestellen.html" />
+
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-normal-400_700-latin.woff2" crossorigin />
+    <link rel="preload" as="fetch" href="data/menu.json" crossorigin />
+    <link rel="preconnect" href="https://fuku.lu" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/order.css" />
+  </head>
+
+  <body class="order-page" data-page="order">
+    <a class="skip-link" href="#menu-root" data-i18n="nav.skip">Zum Inhalt springen</a>
+
+    <!-- ============================ Header ============================ -->
+    <header class="header">
+      <div class="wrap wrap-wide header__inner">
+        <a class="brand" href="index.html" aria-label="Restaurant Fuku – Startseite">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span>
+            <span class="brand__name">Fuku</span>
+            <span class="brand__sub">Vianden</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.home">Startseite</a>
+          <a href="bestellen.html" aria-current="page" data-i18n="nav.order">Karte &amp; Bestellen</a>
+          <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+          <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang" data-lang-switcher>
+            <button
+              class="lang__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              data-i18n-attr="aria-label:nav.chooseLanguage"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+              <span data-lang-current>DE</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </button>
+            <div class="lang__menu" role="menu"></div>
+          </div>
+
+          <button class="icon-btn burger" type="button" data-nav-open aria-expanded="false" data-i18n-attr="aria-label:nav.open">
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================= Mobile Navigation ====================== -->
+    <div class="mobile-nav" data-open="false">
+      <div class="mobile-nav__top">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span class="brand__name">Fuku</span>
+        </a>
+        <button class="icon-btn" type="button" data-nav-close data-i18n-attr="aria-label:nav.close">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Navigation">
+        <a href="index.html" data-i18n="nav.home">Startseite</a>
+        <a href="bestellen.html" aria-current="page" data-i18n="nav.order">Karte &amp; Bestellen</a>
+        <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="mobile-nav__foot">
+        <div class="filters" data-lang-inline></div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ============================ Intro =========================== -->
+      <section class="order-intro">
+        <div class="wrap wrap-wide">
+          <div class="order-intro__top">
+            <div>
+              <span class="eyebrow" data-i18n="order.eyebrow">Speisekarte</span>
+              <h1 data-i18n="order.title">Stellen Sie sich Ihre Bestellung zusammen</h1>
+              <p data-order-intro-text>
+                Alle Gerichte auf einer Seite. Suchen, filtern, in den Warenkorb – bezahlt wird im gewohnten
+                Kassenbereich.
+              </p>
+            </div>
+            <div class="order-intro__status">
+              <span class="pill pill--closed" data-status-pill>
+                <span class="dot"></span>
+                <span data-status-label>Öffnungszeiten</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================== Suche & Filter ======================== -->
+      <div class="order-bar">
+        <div class="wrap wrap-wide">
+          <div class="order-bar__inner">
+            <div class="search" data-search>
+              <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+              <input
+                type="search"
+                id="dish-search"
+                autocomplete="off"
+                placeholder="Gericht, Nummer oder Zutat suchen …"
+                data-i18n-attr="placeholder:order.searchPlaceholder,aria-label:order.searchPlaceholder"
+              />
+              <button class="search__clear" type="button" data-search-clear data-i18n-attr="aria-label:order.searchClear">
+                <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+              </button>
+            </div>
+
+            <div class="filters" role="group" data-i18n-attr="aria-label:order.filterAll">
+              <button class="chip" type="button" data-filter="popular" aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+                <span data-i18n="order.filterPopular">Beliebt</span>
+              </button>
+              <button class="chip" type="button" data-filter="veg" aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg>
+                <span data-i18n="order.filterVeg">Vegetarisch</span>
+              </button>
+              <button class="chip" type="button" data-filter="spicy" aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="#i-flame"></use></svg>
+                <span data-i18n="order.filterSpicy">Scharf</span>
+              </button>
+            </div>
+          </div>
+
+          <nav class="cat-pills" data-cat-pills aria-label="Kategorien"></nav>
+        </div>
+      </div>
+
+      <!-- ========================== Grundraster ======================= -->
+      <div class="wrap wrap-wide order-layout">
+        <nav class="cat-rail" aria-label="Kategorien">
+          <p class="cat-rail__title" data-i18n="order.categories">Kategorien</p>
+          <ul data-cat-rail></ul>
+        </nav>
+
+        <div>
+          <div id="menu-root" data-menu-root>
+            <!-- Speisekarte wird aus data/menu.json erzeugt -->
+          </div>
+
+          <section class="allergen-key">
+            <h2 data-i18n="allergens.legend">Allergen-Legende</h2>
+            <ol data-allergen-key></ol>
+            <p data-i18n="allergens.note">
+              Die Nummern folgen der EU-Kennzeichnung. Bei Allergien sprechen Sie uns bitte vor der Bestellung an – wir
+              beraten Sie gern.
+            </p>
+          </section>
+        </div>
+
+        <div class="cart-col">
+          <div data-cart-mount="panel"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==================== Mobile Warenkorb-Leiste ================== -->
+    <div class="cart-bar" data-cart-bar data-show="false">
+      <button class="cart-bar__btn" type="button" data-cart-open>
+        <span class="cart-bar__n" data-cart-count>0</span>
+        <span class="cart-bar__label" data-i18n="cart.view">Bestellung ansehen</span>
+        <span class="cart-bar__total">
+          <span data-cart-total>0,00 €</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- ===================== Overlays: Korb & Detail ================= -->
+    <div class="scrim" data-scrim data-open="false"></div>
+
+    <div class="sheet" data-sheet="cart" data-open="false" role="dialog" aria-modal="true" aria-labelledby="sheet-cart-title">
+      <span class="sheet__grip"></span>
+      <div data-cart-mount="sheet"></div>
+    </div>
+
+    <div class="sheet" data-sheet="detail" data-open="false" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <span class="sheet__grip"></span>
+      <div data-detail-body></div>
+    </div>
+
+    <div class="toast" data-toast data-show="false" role="status" aria-live="polite">
+      <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+      <span data-toast-text></span>
+    </div>
+
+    <!-- ============================ Footer =========================== -->
+    <footer class="footer">
+      <div class="wrap wrap-wide">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="index.html">
+              <img src="assets/img/logo.png" alt="" width="34" height="37" />
+              <span>
+                <span class="brand__name">Fuku</span>
+                <span class="brand__sub">Vianden</span>
+              </span>
+            </a>
+            <p data-i18n="footer.tagline">
+              Sushi, chinesische Wok-Küche und thailändische Currys im Herzen von Vianden.
+            </p>
+            <div class="socials">
+              <a href="https://www.facebook.com/Restaurant-Fuku-110551558349707/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+              </a>
+              <a href="https://www.instagram.com/restaurant_fuku/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+              </a>
+              <a data-contact="email" href="mailto:info@fuku.lu" aria-label="E-Mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.explore">Entdecken</h4>
+            <div class="footer__links">
+              <a href="#sushi">Sushi</a>
+              <a href="#chauds">Wok</a>
+              <a href="#thai">Thai</a>
+              <a href="#boissons">Getränke</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.visit">Besuchen</h4>
+            <div class="footer__links">
+              <a href="index.html" data-i18n="nav.home">Startseite</a>
+              <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+              <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+              <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="home.info.hours">Öffnungszeiten</h4>
+            <div class="footer__links">
+              <span data-i18n="days.tueSun">Dienstag – Sonntag</span>
+              <span>10:30 – 14:30</span>
+              <span>17:30 – 23:00</span>
+              <span class="muted"><span data-i18n="days.mon">Montag</span>: <span data-i18n="days.closed">Geschlossen</span></span>
+            </div>
+            <p style="margin-top: 1rem; font-size: var(--step--1)">
+              <a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> Restaurant Fuku · 9, Rue de la Gare · L-9420 Vianden</p>
+          <nav aria-label="Rechtliches">
+            <a href="kontakt.html#impressum" data-i18n="footer.imprint">Impressum</a>
+            <a href="kontakt.html#datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/order.js"></script>
+  </body>
+</html>

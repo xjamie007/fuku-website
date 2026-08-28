@@ -1,0 +1,6 @@
+# Diese Datei gehört zur GitHub-Pages-Vorschau und hält Suchmaschinen fern,
+# damit die Vorschau nicht mit der echten Seite fuku.lu konkurriert.
+#
+# VOR DEM UMZUG AUF fuku.lu ERSATZLOS LÖSCHEN.
+User-agent: *
+Disallow: /

@@ -1,0 +1,5054 @@
+{
+ "generatedAt": "2026-08-02T16:27:45.901Z",
+ "currency": "EUR",
+ "count": 222,
+ "sections": [
+  {
+   "id": "midi",
+   "icon": "sun",
+   "label": {
+    "fr": "Menu Midi",
+    "de": "Mittagsmenü",
+    "en": "Lunch Menu",
+    "nl": "Lunchmenu"
+   },
+   "groups": [
+    {
+     "label": null,
+     "items": [
+      {
+       "id": 687,
+       "code": "",
+       "name": "Menu Plats chaud Midi",
+       "short": "Menu Plats chaud Midi",
+       "price": 15.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "9",
+        "11"
+       ],
+       "choices": [],
+       "orderable": false,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/menu-du-midi.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/menu-du-midi-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 680,
+       "code": "",
+       "name": "Menu Sushi Midi",
+       "short": "Menu Sushi Midi",
+       "price": 15.8,
+       "description": "Soupe Miso Gratis",
+       "allergens": [],
+       "choices": [
+        {
+         "id": 682,
+         "label": "Menu 1",
+         "price": 15.8
+        },
+        {
+         "id": 683,
+         "label": "Menu 2",
+         "price": 15.8
+        },
+        {
+         "id": 684,
+         "label": "Menu 3",
+         "price": 15.8
+        },
+        {
+         "id": 685,
+         "label": "Menu 4",
+         "price": 15.8
+        }
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/menu-du-midi.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/menu-du-midi-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "entrees",
+   "icon": "bowl",
+   "label": {
+    "fr": "Entrées",
+    "de": "Vorspeisen",
+    "en": "Starters",
+    "nl": "Voorgerechten"
+   },
+   "groups": [
+    {
+     "label": {
+      "fr": "Entrées",
+      "de": "Vorspeisen",
+      "en": "Starters",
+      "nl": "Voorgerechten"
+     },
+     "items": [
+      {
+       "id": 874,
+       "code": "10",
+       "name": "Croquette printemps 2p",
+       "short": "Croquette printemps 2p",
+       "price": 5.5,
+       "description": "",
+       "allergens": [
+        "2",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/mini-spring-rolls-wooden-bowl-scaled.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/mini-spring-rolls-wooden-bowl-scaled-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 877,
+       "code": "11",
+       "name": "Minis croquette 8p",
+       "short": "Minis croquette 8p",
+       "price": 5.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3410-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3410-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 879,
+       "code": "12",
+       "name": "Nems au porc 3p",
+       "short": "Nems au porc 3p",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/04/img_4573-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/04/img_4573-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 881,
+       "code": "13",
+       "name": "Brochettes de poulet 2p",
+       "short": "Brochettes de poulet 2p",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/brochettes-poulet.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/brochettes-poulet-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 883,
+       "code": "14",
+       "name": "Curry samosas",
+       "short": "Curry samosas",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Curry-samosas.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Curry-samosas-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 885,
+       "code": "15",
+       "name": "Brochettes de scampis 2p",
+       "short": "Brochettes de scampis 2p",
+       "price": 10.9,
+       "description": "",
+       "allergens": [
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 887,
+       "code": "16",
+       "name": "Assortiment d’entrée",
+       "short": "Assortiment d’entrée",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 888,
+       "code": "17",
+       "name": "Scampis frits 5p",
+       "short": "Scampis frits 5p",
+       "price": 12.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_8173.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_8173-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 889,
+       "code": "18",
+       "name": "Cuisse de grenouilles à l’ail",
+       "short": "Cuisse de grenouilles à l’ail",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "7",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5065-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5065-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 890,
+       "code": "19",
+       "name": "Gyoza Chinois au porc 5p",
+       "short": "Gyoza Chinois au porc 5p",
+       "price": 8.3,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/04/img_4589-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/04/img_4589-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 891,
+       "code": "20",
+       "name": "Gyoza Japonais au poulet 5p",
+       "short": "Gyoza Japonais au poulet 5p",
+       "price": 7.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5066-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5066-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 892,
+       "code": "21",
+       "name": "Gyoza Japonais aux scampis 5p",
+       "short": "Gyoza Japonais aux scampis 5p",
+       "price": 8.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/gyoza_legumes.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/gyoza_legumes-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 893,
+       "code": "22",
+       "name": "Gyoza Japonais aux légumes 5p",
+       "short": "Gyoza Japonais aux légumes 5p",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/gyoza_legumes.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/gyoza_legumes-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 894,
+       "code": "23",
+       "name": "Yakitori poulet 4p",
+       "short": "Yakitori poulet 4p",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/poulrt.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/poulrt-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 895,
+       "code": "24",
+       "name": "Edamame",
+       "short": "Edamame",
+       "price": 5.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/edamame-green-soybeans-white-bowls-scaled.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/edamame-green-soybeans-white-bowls-scaled-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 896,
+       "code": "25",
+       "name": "Scampis à l’ail",
+       "short": "Scampis à l’ail",
+       "price": 11.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "7",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_8408.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_8408-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "À la vapeur",
+      "de": "Gedämpft",
+      "en": "Steamed",
+      "nl": "Gestoomd"
+     },
+     "items": [
+      {
+       "id": 897,
+       "code": "28",
+       "name": "Raviolis aux crevette 4p",
+       "short": "Raviolis aux crevette 4p",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/raviolis-de-crevettes.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/raviolis-de-crevettes-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 898,
+       "code": "29",
+       "name": "Xiao Long Bao au porc 4p",
+       "short": "Xiao Long Bao au porc 4p",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Xiao-Long-Bao.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Xiao-Long-Bao-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 899,
+       "code": "30",
+       "name": "Shao Mai au porc 4p",
+       "short": "Shao Mai au porc 4p",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "8"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/steamed-pork-dumpling-siew-mai-served-wooden-bowl-with-chopsticks-isolated-mat-side-view-grey-marble-background-scaled.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/steamed-pork-dumpling-siew-mai-served-wooden-bowl-with-chopsticks-isolated-mat-side-view-grey-marble-background-scaled-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 900,
+       "code": "31",
+       "name": "Assortiment de Vapeur 5p",
+       "short": "Assortiment de Vapeur 5p",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "soupes",
+   "icon": "soup",
+   "label": {
+    "fr": "Soupes",
+    "de": "Suppen",
+    "en": "Soups",
+    "nl": "Soepen"
+   },
+   "groups": [
+    {
+     "label": null,
+     "items": [
+      {
+       "id": 724,
+       "code": "1",
+       "name": "Soupe miso",
+       "short": "Soupe miso",
+       "price": 4.9,
+       "description": "",
+       "allergens": [
+        "2",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/soupe-miso-traditionnelle-japonaise-e1656875810587.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/soupe-miso-traditionnelle-japonaise-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 860,
+       "code": "2",
+       "name": "Soupe Thaïlandaise aux Crevettes",
+       "short": "Soupe Thaïlandaise aux Crevettes",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "2",
+        "4",
+        "12"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/tomzamkung-e1657329539666.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/tomzamkung-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 867,
+       "code": "3",
+       "name": "Soupe pékinois",
+       "short": "Soupe pékinois",
+       "price": 5.9,
+       "description": "",
+       "allergens": [
+        "3",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/soupe_peikinois.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/soupe_peikinois-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 862,
+       "code": "4",
+       "name": "Soupe poulet aux vermicelles",
+       "short": "Soupe poulet aux vermicelles",
+       "price": 5.6,
+       "description": "",
+       "allergens": [
+        "1A",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3375.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3375-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 868,
+       "code": "5",
+       "name": "Soupe raviolis chinois",
+       "short": "Soupe raviolis chinois",
+       "price": 6,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Wonton-Soup-10-e1660690274128.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Wonton-Soup-10-e1660690274128-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 871,
+       "code": "6",
+       "name": "Soupe mais et crabe",
+       "short": "Soupe mais et crabe",
+       "price": 5.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "2",
+        "3",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "salades",
+   "icon": "leaf",
+   "label": {
+    "fr": "Salades",
+    "de": "Salate",
+    "en": "Salads",
+    "nl": "Salades"
+   },
+   "groups": [
+    {
+     "label": null,
+     "items": [
+      {
+       "id": 901,
+       "code": "32",
+       "name": "Salade de crevette",
+       "short": "Salade de crevette",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_4706-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_4706-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 902,
+       "code": "33",
+       "name": "Salade de poulet",
+       "short": "Salade de poulet",
+       "price": 6.8,
+       "description": "",
+       "allergens": [
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3373.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3373-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 903,
+       "code": "34",
+       "name": "Salade de crabe",
+       "short": "Salade de crabe",
+       "price": 6.8,
+       "description": "",
+       "allergens": [
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3738-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3738-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 904,
+       "code": "35",
+       "name": "Salade de soja",
+       "short": "Salade de soja",
+       "price": 5.5,
+       "description": "",
+       "allergens": [
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 905,
+       "code": "36",
+       "name": "Salade Wakamé",
+       "short": "Salade Wakamé",
+       "price": 5.5,
+       "description": "",
+       "allergens": [
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/wakame-scaled.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/wakame-scaled-300x300.jpg",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sushi",
+   "icon": "sushi",
+   "label": {
+    "fr": "Sushi",
+    "de": "Sushi",
+    "en": "Sushi",
+    "nl": "Sushi"
+   },
+   "groups": [
+    {
+     "label": {
+      "fr": "Plateaux",
+      "de": "Sushi-Platten",
+      "en": "Platters",
+      "nl": "Schotels"
+     },
+     "items": [
+      {
+       "id": 1061,
+       "code": "P1",
+       "name": "Plateau 1 · 12 pièces",
+       "short": "Plateau 1 · 12 pièces",
+       "price": 22.8,
+       "description": "Nigiri saumon 2p\nNigiri mi-cuit saumon 2p\nNigiri thon 2p\nNigiri mi-cuit thon 2p\nNigiri Avocat 2p\nNigiri crevette 2p\nNigiri crevette 2p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/p1.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/p1-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1062,
+       "code": "P2",
+       "name": "Plateau 2 · 20 pièces",
+       "short": "Plateau 2 · 20 pièces",
+       "price": 18.9,
+       "description": "Nigiri avocat 2p\nNigiri omelette 2p\nMaki avocat cheese 8p\nCalifornia végétarien 8p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/p2.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/p2-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1063,
+       "code": "P3",
+       "name": "Plateau 3 · 32 pièces",
+       "short": "Plateau 3 · 32 pièces",
+       "price": 24.8,
+       "description": "Maki saumon 8p\nMaki saumon roll cheese 8p\nCalifornia saumon avocat 8p\nSpring saumon avocat 8p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/p3.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/p3-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1064,
+       "code": "P4",
+       "name": "Plateau 4 · 46 pièces",
+       "short": "Plateau 4 · 46 pièces",
+       "price": 43.9,
+       "description": "Nigiri saumon 2p\nNigiri thon 2p\nNigiri crevette 2p\nSashimi saumon 4p\nSashimi thon 4p\nSpecial mangue roll 8p\nMaki thon 8p\nSpring crevette ananas 8p\nSaumon roll cheese 8p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/06/6c55073ab05e53bbb7f89a545cd0ab5c-e1718157326380.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/06/6c55073ab05e53bbb7f89a545cd0ab5c-e1718157326380-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7608,
+       "code": "P5",
+       "name": "Plateau 5 · 24 pièces",
+       "short": "Plateau 5 · 24 pièces",
+       "price": 18.8,
+       "description": "California roll poulet ananas 8p\nCalifornia roll saumon frit concombre 8p\nCalifornia roll tempura concombre 8p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/06/5.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/06/5-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1069,
+       "code": "P6",
+       "name": "Plateau 6 · 62 pièces",
+       "short": "Plateau 6 · 62 pièces",
+       "price": 69.8,
+       "description": "Nigiri saumon 2p\nNigiri thon 2p\nNigiri crevette 2p\nSashimi saumon 4p\nSashimi thon 4p\nCalifornia tempura mangue 8p\nMaki saumon 8p\nUramaki scampis 8p\nSoya concombre cheese 8p\nspeciale roll Fraise roll 8p\nCalifornia poulet ananas 8p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/6.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/6-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1070,
+       "code": "P7",
+       "name": "Plateau 7 · 74 pièces",
+       "short": "Plateau 7 · 74 pièces",
+       "price": 73.8,
+       "description": "Sashimi saumon 6p\nSashimi thon 6p\nHot roll poulet et concombre 10p\nNigiri saumon 3p\nNigiri thon 3p\nNigiri crevette 3p\nNigiri anguille3p\nCalifornia roll saumon mangue 8p\nSaumon roll cheese 8p\nCalifornia bœuf concombre 8p\nsoya roll thon tuit avocat 8p\nspecial roll Tamago roll 8p",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/7.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/7-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Nigiri",
+      "de": "Nigiri",
+      "en": "Nigiri",
+      "nl": "Nigiri"
+     },
+     "items": [
+      {
+       "id": 981,
+       "code": "N1",
+       "name": "Nigiri Saumon",
+       "short": "Saumon",
+       "price": 5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_2721-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_2721-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 982,
+       "code": "N2",
+       "name": "Nigiri Thon",
+       "short": "Thon",
+       "price": 5.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_2817-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_2817-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 983,
+       "code": "N3",
+       "name": "Nigiri Crevette",
+       "short": "Crevette",
+       "price": 5.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_2808-1-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_2808-1-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 984,
+       "code": "N4",
+       "name": "Nigiri Anguille fumée",
+       "short": "Anguille fumée",
+       "price": 5.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Nigiri-Anguille-fumee.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Nigiri-Anguille-fumee-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 987,
+       "code": "N5",
+       "name": "Nigiri Thon mi-cuit",
+       "short": "Thon mi-cuit",
+       "price": 6.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_2809-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_2809-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 988,
+       "code": "N6",
+       "name": "Nigiri Saumon mi-cuit",
+       "short": "Saumon mi-cuit",
+       "price": 5.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_2813-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_2813-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 989,
+       "code": "N7",
+       "name": "Nigiri Avocat",
+       "short": "Avocat",
+       "price": 4.8,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3387-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3387-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3006,
+       "code": "N8",
+       "name": "Nigiri Omelette",
+       "short": "Omelette",
+       "price": 4.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/Nigiri-Omelette.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/Nigiri-Omelette-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Sashimi",
+      "de": "Sashimi",
+      "en": "Sashimi",
+      "nl": "Sashimi"
+     },
+     "items": [
+      {
+       "id": 1034,
+       "code": "SA1",
+       "name": "Sashimi Saumon",
+       "short": "Saumon",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Sashimi-Saumon.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Sashimi-Saumon-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1035,
+       "code": "SA2",
+       "name": "Sashimi Thon",
+       "short": "Thon",
+       "price": 9.5,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Sashimi-thon.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Sashimi-thon-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1036,
+       "code": "SA3",
+       "name": "Sashimi Mix Saumon et Thon 12p",
+       "short": "Mix Saumon et Thon 12p",
+       "price": 17.5,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Sashimi-Mixte.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Sashimi-Mixte-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Tataki",
+      "de": "Tataki",
+      "en": "Tataki",
+      "nl": "Tataki"
+     },
+     "items": [
+      {
+       "id": 1043,
+       "code": "TA1",
+       "name": "Tataki Saumon",
+       "short": "Saumon",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1044,
+       "code": "TA2",
+       "name": "Tataki Thon",
+       "short": "Thon",
+       "price": 10.9,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/tataki-thon.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/tataki-thon-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1045,
+       "code": "TA3",
+       "name": "Tataki Mix Saumon et Thon 12p",
+       "short": "Mix Saumon et Thon 12p",
+       "price": 18.9,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Tartare",
+      "de": "Tatar",
+      "en": "Tartare",
+      "nl": "Tartaar"
+     },
+     "items": [
+      {
+       "id": 1049,
+       "code": "TA5",
+       "name": "Tartare Saumon",
+       "short": "Saumon",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1050,
+       "code": "TA6",
+       "name": "Tartare Thon",
+       "short": "Thon",
+       "price": 12.5,
+       "description": "",
+       "allergens": [
+        "4"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Chirashi",
+      "de": "Chirashi",
+      "en": "Chirashi",
+      "nl": "Chirashi"
+     },
+     "items": [
+      {
+       "id": 1046,
+       "code": "CH1",
+       "name": "Chirashi Saumon",
+       "short": "Saumon",
+       "price": 18.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1047,
+       "code": "CH2",
+       "name": "Chirashi Thon",
+       "short": "Thon",
+       "price": 19.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/08/img_5542-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/08/img_5542-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1048,
+       "code": "CH3",
+       "name": "Chirashi Mix Saumon et Thon",
+       "short": "Mix Saumon et Thon",
+       "price": 22.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/08/img_5648-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/08/img_5648-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Maki rolls",
+      "de": "Maki Rolls",
+      "en": "Maki rolls",
+      "nl": "Maki rolls"
+     },
+     "items": [
+      {
+       "id": 990,
+       "code": "M1",
+       "name": "Maki Rolls Saumon",
+       "short": "Saumon",
+       "price": 5.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/MakiSaumon.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/MakiSaumon-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 991,
+       "code": "M2",
+       "name": "Maki Rolls Thon",
+       "short": "Thon",
+       "price": 6.3,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/MakiThon.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/MakiThon-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 992,
+       "code": "M3",
+       "name": "Maki Rolls Crevette",
+       "short": "Crevette",
+       "price": 6.3,
+       "description": "",
+       "allergens": [
+        "1",
+        "2"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/maki-crevette.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/maki-crevette-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 993,
+       "code": "M4",
+       "name": "Maki Rolls Thon cuit",
+       "short": "Thon cuit",
+       "price": 6.3,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/maki-thon-cuit.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/maki-thon-cuit-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 994,
+       "code": "M5",
+       "name": "Maki Rolls Avocat cheese",
+       "short": "Avocat cheese",
+       "price": 6,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Maki-Cheese-Avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Maki-Cheese-Avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 996,
+       "code": "M6",
+       "name": "Maki Rolls Concombre cheese",
+       "short": "Concombre cheese",
+       "price": 6,
+       "description": "",
+       "allergens": [
+        "1",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Maki-Cheese-Concombre.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Maki-Cheese-Concombre-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 997,
+       "code": "M7",
+       "name": "Maki Rolls Concombre mangue",
+       "short": "Concombre mangue",
+       "price": 6,
+       "description": "",
+       "allergens": [
+        "1",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Maki-Mangue-Concombre.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Maki-Mangue-Concombre-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "California rolls",
+      "de": "California Rolls",
+      "en": "California rolls",
+      "nl": "California rolls"
+     },
+     "items": [
+      {
+       "id": 1002,
+       "code": "C1",
+       "name": "California Saumon avocat",
+       "short": "Saumon avocat",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/California-Saumon-avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/California-Saumon-avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1003,
+       "code": "C2",
+       "name": "California Thon avocat",
+       "short": "Thon avocat",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/California-Thon-avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/California-Thon-avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1004,
+       "code": "C3",
+       "name": "California Bœuf piquant",
+       "short": "Bœuf piquant",
+       "price": 7.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1005,
+       "code": "C4",
+       "name": "California Tempura concombre",
+       "short": "Tempura concombre",
+       "price": 7.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/California-Tempura-concombre.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/California-Tempura-concombre-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1006,
+       "code": "C5",
+       "name": "California Thon mangue",
+       "short": "Thon mangue",
+       "price": 6.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/California-Thon-mangue.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/California-Thon-mangue-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1007,
+       "code": "C6",
+       "name": "California Saumon mangue",
+       "short": "Saumon mangue",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/California-Saumon-mangue.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/California-Saumon-mangue-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3004,
+       "code": "C7",
+       "name": "California Poulet concombre spicy",
+       "short": "Poulet concombre spicy",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/California-Poulet-concombre.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/California-Poulet-concombre-300x300.png",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1010,
+       "code": "C8",
+       "name": "Thon cuit avec pommes",
+       "short": "Thon cuit avec pommes",
+       "price": 6.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Thon-cuit-avec-pommes.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Thon-cuit-avec-pommes-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3003,
+       "code": "C9",
+       "name": "Crevette avocat",
+       "short": "Crevette avocat",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/Crevette-avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/Crevette-avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1011,
+       "code": "C10",
+       "name": "California Végétarien",
+       "short": "Végétarien",
+       "price": 6,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3334-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3334-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Spring rolls",
+      "de": "Spring Rolls",
+      "en": "Spring rolls",
+      "nl": "Spring rolls"
+     },
+     "items": [
+      {
+       "id": 1022,
+       "code": "S6",
+       "name": "Spring Rolls Saumon avocat",
+       "short": "Saumon avocat",
+       "price": 7,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Saumon-avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Saumon-avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1023,
+       "code": "S7",
+       "name": "Spring Rolls Thon avocat",
+       "short": "Thon avocat",
+       "price": 7.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Thon-avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Thon-avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1024,
+       "code": "S8",
+       "name": "Spring Rolls Crevette concombre spicy",
+       "short": "Crevette concombre spicy",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Crevette-concombre.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Crevette-concombre-300x300.jpg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1025,
+       "code": "S9",
+       "name": "Spring Rolls Tempura avocat",
+       "short": "Tempura avocat",
+       "price": 8.2,
+       "description": "",
+       "allergens": [
+        "1",
+        "2"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Tempura-avocat.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Tempura-avocat-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1026,
+       "code": "S10",
+       "name": "Spring Rolls Poulet mangue",
+       "short": "Poulet mangue",
+       "price": 7.9,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Poulet-mangue.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Poulet-mangue-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1027,
+       "code": "S11",
+       "name": "Spring Rolls Avocat cheese",
+       "short": "Avocat cheese",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Avocat-chesse.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Avocat-chesse-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1028,
+       "code": "S12",
+       "name": "Spring Rolls Concombre cheese",
+       "short": "Concombre cheese",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Concombre-chesse.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Spring-Rolls-Concombre-chesse-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Soya rolls",
+      "de": "Soya Rolls",
+      "en": "Soya rolls",
+      "nl": "Soya rolls"
+     },
+     "items": [
+      {
+       "id": 1017,
+       "code": "S1",
+       "name": "Soya Rolls Saumon cheese",
+       "short": "Saumon cheese",
+       "price": 7,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Soya-Rolls-Saumon-chesse.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Soya-Rolls-Saumon-chesse-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1018,
+       "code": "S2",
+       "name": "Soya Rolls Thon mi-cuit avocat",
+       "short": "Thon mi-cuit avocat",
+       "price": 7.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Soya-Rolls-Thon-mi-cuit-avocat.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Soya-Rolls-Thon-mi-cuit-avocat-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1019,
+       "code": "S3",
+       "name": "Soya Rolls Avocat cheese",
+       "short": "Avocat cheese",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Soya-Rolls-Avocat-chesse.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Soya-Rolls-Avocat-chesse-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1020,
+       "code": "S4",
+       "name": "Soya Rolls Poulet concombre spicy",
+       "short": "Poulet concombre spicy",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1021,
+       "code": "S5",
+       "name": "Soya Rolls Concombre cheese",
+       "short": "Concombre cheese",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/cc.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/cc.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Saumon rolls",
+      "de": "Lachs Rolls",
+      "en": "Salmon rolls",
+      "nl": "Zalm rolls"
+     },
+     "items": [
+      {
+       "id": 999,
+       "code": "L1",
+       "name": "Saumon Roll Cheese",
+       "short": "Cheese",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/sroll.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/sroll-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7587,
+       "code": "L2",
+       "name": "Saumon roll Avocat",
+       "short": "Avocat",
+       "price": 8.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/06/sra.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/06/sra-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7588,
+       "code": "L3",
+       "name": "Saumon roll Avocat cheese",
+       "short": "Avocat cheese",
+       "price": 8.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/06/srac.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/06/srac-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7589,
+       "code": "L4",
+       "name": "Saumon roll Mangue cheese",
+       "short": "Mangue cheese",
+       "price": 8.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/06/SALMON-ROLLS_MANGUE.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/06/SALMON-ROLLS_MANGUE-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Big rolls",
+      "de": "Big Rolls",
+      "en": "Big rolls",
+      "nl": "Big rolls"
+     },
+     "items": [
+      {
+       "id": 1029,
+       "code": "B1",
+       "name": "Big Rolls Saumon avocat",
+       "short": "Saumon avocat",
+       "price": 8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1030,
+       "code": "B2",
+       "name": "Big Rolls Thon mi-cuit avocat",
+       "short": "Thon mi-cuit avocat",
+       "price": 8.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1031,
+       "code": "B3",
+       "name": "Big Rolls Tempura avocat",
+       "short": "Tempura avocat",
+       "price": 8.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1032,
+       "code": "B4",
+       "name": "Big Rolls Poulet ananas",
+       "short": "Poulet ananas",
+       "price": 8.5,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1033,
+       "code": "B5",
+       "name": "Big Rolls Végétarien",
+       "short": "Végétarien",
+       "price": 6.9,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7597,
+       "code": "B6",
+       "name": "bœuf piquant avec concombre",
+       "short": "bœuf piquant avec concombre",
+       "price": 8.9,
+       "description": "",
+       "allergens": [
+        "1A"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Hot rolls",
+      "de": "Hot Rolls",
+      "en": "Hot rolls",
+      "nl": "Hot rolls"
+     },
+     "items": [
+      {
+       "id": 1037,
+       "code": "H1",
+       "name": "Hot Rolls Saumon scampis cheese",
+       "short": "Saumon scampis cheese",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "4",
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1038,
+       "code": "H2",
+       "name": "Hot Rolls Poulet concombre spicy",
+       "short": "Poulet concombre spicy",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1039,
+       "code": "H3",
+       "name": "Hot Rolls Saumon fraise et fromage",
+       "short": "Saumon fraise et fromage",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "4",
+        "7",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1040,
+       "code": "H4",
+       "name": "Hot Rolls Tempura mangue",
+       "short": "Tempura mangue",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1041,
+       "code": "H5",
+       "name": "Hot Rolls Végétarien",
+       "short": "Végétarien",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1042,
+       "code": "H6",
+       "name": "Hot Rolls Avocat cheese surimi et mangue",
+       "short": "Avocat cheese surimi et mangue",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3002,
+       "code": "H7",
+       "name": "Hot roll Canard avec concombre",
+       "short": "Canard avec concombre",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "4",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5087-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5087-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7598,
+       "code": "H8",
+       "name": "Hot roll bœuf piquant avec concombre",
+       "short": "Bœuf piquant avec concombre",
+       "price": 11.5,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 18930,
+       "code": "H9",
+       "name": "Hot roll Banane et fromage",
+       "short": "Banane et fromage",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Uramaki",
+      "de": "Uramaki",
+      "en": "Uramaki",
+      "nl": "Uramaki"
+     },
+     "items": [
+      {
+       "id": 3001,
+       "code": "U1",
+       "name": "Uramaki Thon",
+       "short": "Thon",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "4",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1052,
+       "code": "U2",
+       "name": "Uramaki Tempura",
+       "short": "Tempura",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1053,
+       "code": "U3",
+       "name": "Uramaki Saumon",
+       "short": "Saumon",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1051,
+       "code": "U4",
+       "name": "Uramaki Thon cuit",
+       "short": "Thon cuit",
+       "price": 9.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Temaki",
+      "de": "Temaki",
+      "en": "Temaki",
+      "nl": "Temaki"
+     },
+     "items": [
+      {
+       "id": 1012,
+       "code": "TE1",
+       "name": "Temaki Saumon avocat",
+       "short": "Saumon avocat",
+       "price": 6,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Temaki-Saumon-avocat.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Temaki-Saumon-avocat-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1013,
+       "code": "TE2",
+       "name": "Temaki Thon avocat",
+       "short": "Thon avocat",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Temaki-Thon-avocat.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Temaki-Thon-avocat-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1014,
+       "code": "TE3",
+       "name": "Temaki Crevette Mangue",
+       "short": "Crevette Mangue",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Temaki-Crevette-Mangue.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Temaki-Crevette-Mangue-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1015,
+       "code": "TE4",
+       "name": "Temaki Anguille concombre",
+       "short": "Anguille concombre",
+       "price": 6.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1016,
+       "code": "TE5",
+       "name": "Temaki Végétarien",
+       "short": "Végétarien",
+       "price": 5.9,
+       "description": "",
+       "allergens": [
+        "1"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Spécial rolls",
+      "de": "Special Rolls",
+      "en": "Special rolls",
+      "nl": "Special rolls"
+     },
+     "items": [
+      {
+       "id": 1054,
+       "code": "SP1",
+       "name": "Special Rolls Mi-Cuit roll",
+       "short": "Mi-Cuit roll",
+       "price": 13.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "2",
+        "3",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1055,
+       "code": "SP2",
+       "name": "Special Rolls spicy tuna roll",
+       "short": "Spicy tuna roll",
+       "price": 13.8,
+       "description": "",
+       "allergens": [
+        "4",
+        "6",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1056,
+       "code": "SP3",
+       "name": "Special Rolls Vége King roll",
+       "short": "Vége King roll",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1057,
+       "code": "SP4",
+       "name": "Special Rolls Mangue roll",
+       "short": "Mangue roll",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "4",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1058,
+       "code": "SP5",
+       "name": "Special Rolls Bœuf kadif roll",
+       "short": "Bœuf kadif roll",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1059,
+       "code": "SP6",
+       "name": "Special Rolls Fraise roll",
+       "short": "Fraise roll",
+       "price": 13.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "4",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3332.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3332-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 1060,
+       "code": "SP7",
+       "name": "Special Rolls Rainbow roll",
+       "short": "Rainbow roll",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "4"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-scaled.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-scaled-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 2984,
+       "code": "SP8",
+       "name": "Special Rolls Scampis roll",
+       "short": "Scampis roll",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "2",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/img_2796-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/img_2796-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 2983,
+       "code": "SP9",
+       "name": "Special Rolls Tamago roll",
+       "short": "Tamago roll",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "2",
+        "3",
+        "7",
+        "11"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/img_3550-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/img_3550-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 2977,
+       "code": "SP10",
+       "name": "Special Rolls Queen roll",
+       "short": "Queen roll",
+       "price": 13.8,
+       "description": "",
+       "allergens": [
+        "4",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/img_3330-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/img_3330-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 2974,
+       "code": "SP11",
+       "name": "Special Rolls King roll",
+       "short": "King roll",
+       "price": 13.8,
+       "description": "",
+       "allergens": [
+        "3",
+        "4",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/03/img_8321.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/03/img_8321-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chauds",
+   "icon": "wok",
+   "label": {
+    "fr": "Plats chinois",
+    "de": "Warme Gerichte",
+    "en": "Wok Dishes",
+    "nl": "Wokgerechten"
+   },
+   "groups": [
+    {
+     "label": {
+      "fr": "Poulet",
+      "de": "Hähnchen",
+      "en": "Chicken",
+      "nl": "Kip"
+     },
+     "items": [
+      {
+       "id": 907,
+       "code": "40",
+       "name": "Beignet de poulet à la sauce aigre-douce",
+       "short": "Beignet de poulet à la sauce aigre-douce",
+       "price": 15.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3426-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3426-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 18928,
+       "code": "40A",
+       "name": "Poulet aux oignons",
+       "short": "Poulet aux oignons",
+       "price": 15.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 908,
+       "code": "41",
+       "name": "Poulet aux légumes",
+       "short": "Poulet aux légumes",
+       "price": 15.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5064-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5064-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 909,
+       "code": "42",
+       "name": "Poulet épicé du Sichuan",
+       "short": "Poulet épicé du Sichuan",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_4982-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_4982-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 910,
+       "code": "43",
+       "name": "Poulet curry",
+       "short": "Poulet curry",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3391-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3391-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 911,
+       "code": "44",
+       "name": "Poulet à la sauce aigre-douce piquant",
+       "short": "Poulet à la sauce aigre-douce piquant",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_7980-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_7980-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 912,
+       "code": "45",
+       "name": "Poulet à l’ail et poivre",
+       "short": "Poulet à l’ail et poivre",
+       "price": 17,
+       "description": "Allerhies: 1,3,10",
+       "allergens": [],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 913,
+       "code": "46",
+       "name": "Poulet a la sauce cacahuète",
+       "short": "Poulet a la sauce cacahuète",
+       "price": 17,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 914,
+       "code": "47",
+       "name": "Poulet sur plat chauffant",
+       "short": "Poulet sur plat chauffant",
+       "price": 17.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 915,
+       "code": "48",
+       "name": "Poulet caramélisé",
+       "short": "Poulet caramélisé",
+       "price": 17,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "9",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/08/img_2583-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/08/img_2583-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": true,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 916,
+       "code": "49",
+       "name": "Poulet impérial Kung Pao",
+       "short": "Poulet impérial Kung Pao",
+       "price": 17,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5021-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5021-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3010,
+       "code": "49A",
+       "name": "Poulet caramélisé, sauce aigre-douce",
+       "short": "Poulet caramélisé, sauce aigre-douce",
+       "price": 18.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/05/img_4842-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/05/img_4842-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7568,
+       "code": "49B",
+       "name": "Poulet, sauce coréenne",
+       "short": "Poulet, sauce coréenne",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 925,
+       "code": "58",
+       "name": "Trois délices sur plat chauffant",
+       "short": "Trois délices sur plat chauffant",
+       "price": 19.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Bœuf",
+      "de": "Rind",
+      "en": "Beef",
+      "nl": "Rund"
+     },
+     "items": [
+      {
+       "id": 917,
+       "code": "50",
+       "name": "Bœuf aux oignons",
+       "short": "Bœuf aux oignons",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/04/img_4583-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/04/img_4583-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 918,
+       "code": "51",
+       "name": "Bœuf aux légumes",
+       "short": "Bœuf aux légumes",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_4981-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_4981-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 919,
+       "code": "52",
+       "name": "Bœuf épicé du Sichuan",
+       "short": "Bœuf épicé du Sichuan",
+       "price": 17,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 920,
+       "code": "53",
+       "name": "Bœuf curry",
+       "short": "Bœuf curry",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5084-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5084-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 921,
+       "code": "54",
+       "name": "Bœuf à la sauce aigre-douce",
+       "short": "Bœuf à la sauce aigre-douce",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 922,
+       "code": "55",
+       "name": "Bœuf à l’ail et poivre",
+       "short": "Bœuf à l’ail et poivre",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_8182-1.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_8182-1-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 923,
+       "code": "56",
+       "name": "Bœuf aux poivre noir",
+       "short": "Bœuf aux poivre noir",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3521-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3521-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 924,
+       "code": "57",
+       "name": "Bœuf sur plat chauffant",
+       "short": "Bœuf sur plat chauffant",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3523-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3523-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 926,
+       "code": "59",
+       "name": "Bœuf aux champignons chinois",
+       "short": "Bœuf aux champignons chinois",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 928,
+       "code": "60",
+       "name": "Entrecote grille avec sauce champignon sur plat chauffant avec oeuf",
+       "short": "Entrecote grille avec sauce champignon sur plat chauffant avec oeuf",
+       "price": 27.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "6",
+        "7",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 927,
+       "code": "60A",
+       "name": "Bœuf caramélisé avec sauce aigre-douce",
+       "short": "Bœuf caramélisé avec sauce aigre-douce",
+       "price": 19.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_4990-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_4990-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Canard",
+      "de": "Ente",
+      "en": "Duck",
+      "nl": "Eend"
+     },
+     "items": [
+      {
+       "id": 939,
+       "code": "71",
+       "name": "Canard aux légumes",
+       "short": "Canard aux légumes",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3437-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3437-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 940,
+       "code": "72",
+       "name": "Canard épicé du Sichuan",
+       "short": "Canard épicé du Sichuan",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 941,
+       "code": "73",
+       "name": "Canard à la sauce l’orange",
+       "short": "Canard à la sauce l’orange",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/09/img_5689-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/09/img_5689-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 942,
+       "code": "74",
+       "name": "Canard à la sauce aigre-douce piquant",
+       "short": "Canard à la sauce aigre-douce piquant",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_4979-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_4979-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 943,
+       "code": "75",
+       "name": "Canard à l’ail et poivre",
+       "short": "Canard à l’ail et poivre",
+       "price": 19.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "10"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 944,
+       "code": "76",
+       "name": "Canard pékinois",
+       "short": "Canard pékinois",
+       "price": 19.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3388-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3388-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 945,
+       "code": "77",
+       "name": "Canard sur plat chauffant",
+       "short": "Canard sur plat chauffant",
+       "price": 19.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "5",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 946,
+       "code": "78",
+       "name": "Canard à la cantonaise",
+       "short": "Canard à la cantonaise",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "7",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3414-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3414-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Scampis",
+      "de": "Scampi",
+      "en": "Prawns",
+      "nl": "Scampi"
+     },
+     "items": [
+      {
+       "id": 929,
+       "code": "61",
+       "name": "Scampis aux légumes",
+       "short": "Scampis aux légumes",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5083-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5083-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 930,
+       "code": "62",
+       "name": "Scampis épicé du Sichuan",
+       "short": "Scampis épicé du Sichuan",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5067-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5067-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 931,
+       "code": "63",
+       "name": "Scampis curry",
+       "short": "Scampis curry",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3390-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3390-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 932,
+       "code": "64",
+       "name": "Scampis à la sauce aigre-douce piquant",
+       "short": "Scampis à la sauce aigre-douce piquant",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3434-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3434-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 933,
+       "code": "65",
+       "name": "Scampis à l’ail et poivre",
+       "short": "Scampis à l’ail et poivre",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_7982-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_7982-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 934,
+       "code": "66",
+       "name": "Calamars l’ail et poivre",
+       "short": "Calamars l’ail et poivre",
+       "price": 18.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5081-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5081-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 935,
+       "code": "67",
+       "name": "Scampis sur plat chauffant",
+       "short": "Scampis sur plat chauffant",
+       "price": 19.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 936,
+       "code": "68",
+       "name": "Cuisses de grenouilles l’ail et poivre",
+       "short": "Cuisses de grenouilles l’ail et poivre",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "7",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3386-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3386-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 937,
+       "code": "69",
+       "name": "Gambas à l’ail aux vermicelles",
+       "short": "Gambas à l’ail aux vermicelles",
+       "price": 19.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "10"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5082-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5082-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Poisson",
+      "de": "Fisch",
+      "en": "Fish",
+      "nl": "Vis"
+     },
+     "items": [
+      {
+       "id": 938,
+       "code": "70",
+       "name": "Filet de dorade caramélisé",
+       "short": "Filet de dorade caramélisé",
+       "price": 22.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "4",
+        "6",
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7572,
+       "code": "70A",
+       "name": "Filet de dorade à l’ail et au poivre",
+       "short": "Filet de dorade à l’ail et au poivre",
+       "price": 22.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7",
+        "8C",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Légumes & tofu",
+      "de": "Gemüse & Tofu",
+      "en": "Vegetables & tofu",
+      "nl": "Groenten & tofu"
+     },
+     "items": [
+      {
+       "id": 947,
+       "code": "80",
+       "name": "Légumes sauté",
+       "short": "Légumes sauté",
+       "price": 15.8,
+       "description": "",
+       "allergens": [
+        "6",
+        "9",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 948,
+       "code": "81",
+       "name": "Marmite tofu et légumes",
+       "short": "Marmite tofu et légumes",
+       "price": 15.8,
+       "description": "Allrtgirs: 6,9,11",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/04/img_4581-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/04/img_4581-scaled-300x300.jpeg",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7575,
+       "code": "88",
+       "name": "Aubergines caramélisées, sauce aigre-douce",
+       "short": "Aubergines caramélisées, sauce aigre-douce",
+       "price": 15.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thai",
+   "icon": "chili",
+   "label": {
+    "fr": "Plats thaïlandais",
+    "de": "Thai-Gerichte",
+    "en": "Thai Dishes",
+    "nl": "Thaise gerechten"
+   },
+   "groups": [
+    {
+     "label": null,
+     "items": [
+      {
+       "id": 971,
+       "code": "T1",
+       "name": "Poulet basilic thäi",
+       "short": "Poulet basilic thäi",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 972,
+       "code": "T2",
+       "name": "Poulet curry rouge thäi",
+       "short": "Poulet curry rouge thäi",
+       "price": 17.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/08/img_2525-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/08/img_2525-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 973,
+       "code": "T3",
+       "name": "Bœuf basilic thäi",
+       "short": "Bœuf basilic thäi",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_8181.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_8181-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 974,
+       "code": "T4",
+       "name": "Bœuf curry rouge thäi",
+       "short": "Bœuf curry rouge thäi",
+       "price": 18.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 975,
+       "code": "T5",
+       "name": "Scampis basilic thäi",
+       "short": "Scampis basilic thäi",
+       "price": 20.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5079-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5079-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 976,
+       "code": "T6",
+       "name": "Scampis curry rouge thäi",
+       "short": "Scampis curry rouge thäi",
+       "price": 20.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5018-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5018-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 977,
+       "code": "T7",
+       "name": "Canard basilic thäi",
+       "short": "Canard basilic thäi",
+       "price": 19.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 978,
+       "code": "T8",
+       "name": "Canard curry rouge thäi",
+       "short": "Canard curry rouge thäi",
+       "price": 19.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/08/img_5468-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/08/img_5468-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 979,
+       "code": "T9",
+       "name": "Trois délices aux curry rouge thäi",
+       "short": "Trois délices aux curry rouge thäi",
+       "price": 20.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/08/img_2548-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/08/img_2548-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 980,
+       "code": "T10",
+       "name": "Tofu curry rouge thäi",
+       "short": "Tofu curry rouge thäi",
+       "price": 16.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/08/img_2606-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/08/img_2606-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": true,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "riz",
+   "icon": "noodles",
+   "label": {
+    "fr": "Riz & nouilles",
+    "de": "Reis & Nudeln",
+    "en": "Rice & Noodles",
+    "nl": "Rijst & noedels"
+   },
+   "groups": [
+    {
+     "label": {
+      "fr": "Riz, nouilles & udon",
+      "de": "Reis, Nudeln & Udon",
+      "en": "Rice, noodles & udon",
+      "nl": "Rijst, noedels & udon"
+     },
+     "items": [
+      {
+       "id": 949,
+       "code": "82",
+       "name": "Riz sauté aux légumes",
+       "short": "Riz sauté aux légumes",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 950,
+       "code": "83",
+       "name": "Nouilles sauté aux légumes",
+       "short": "Nouilles sauté aux légumes",
+       "price": 11.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 951,
+       "code": "84",
+       "name": "Udon sauté aux légumes",
+       "short": "Udon sauté aux légumes",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 952,
+       "code": "85",
+       "name": "Udon sauté aux légumes avec sauce korea",
+       "short": "Udon sauté aux légumes avec sauce korea",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/08/img_2545-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/08/img_2545-scaled-300x300.jpeg",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 953,
+       "code": "90",
+       "name": "Riz sauté au poulet",
+       "short": "Riz sauté au poulet",
+       "price": 13.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 954,
+       "code": "91",
+       "name": "Riz sauté au bœuf",
+       "short": "Riz sauté au bœuf",
+       "price": 14.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 955,
+       "code": "92",
+       "name": "Riz sauté aux scampis",
+       "short": "Riz sauté aux scampis",
+       "price": 15.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3007,
+       "code": "93",
+       "name": "Riz sauté aux Canard",
+       "short": "Riz sauté aux Canard",
+       "price": 15.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 956,
+       "code": "94",
+       "name": "Riz sauté spécial",
+       "short": "Riz sauté spécial",
+       "price": 15.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_4968-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_4968-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 957,
+       "code": "95",
+       "name": "Nouilles sautées au poulet",
+       "short": "Nouilles sautées au poulet",
+       "price": 13.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_7985-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_7985-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 958,
+       "code": "96",
+       "name": "Nouilles sautées au bœuf",
+       "short": "Nouilles sautées au bœuf",
+       "price": 14.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_7977-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_7977-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 959,
+       "code": "97",
+       "name": "Nouilles sautées aux scampis",
+       "short": "Nouilles sautées aux scampis",
+       "price": 15.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5086-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5086-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 960,
+       "code": "98",
+       "name": "Nouilles sautées spécial",
+       "short": "Nouilles sautées spécial",
+       "price": 15.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3417-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3417-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3008,
+       "code": "99",
+       "name": "Nouilles sautées au Canard",
+       "short": "Nouilles sautées au Canard",
+       "price": 16.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5085-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5085-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 961,
+       "code": "100",
+       "name": "Udon sautées au poulet",
+       "short": "Udon sautées au poulet",
+       "price": 14.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3408-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3408-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 962,
+       "code": "101",
+       "name": "Udon sautées au bœuf",
+       "short": "Udon sautées au bœuf",
+       "price": 15.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/12/img_3745-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/12/img_3745-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 963,
+       "code": "102",
+       "name": "Udon sautées aux scampis",
+       "short": "Udon sautées aux scampis",
+       "price": 16.9,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/06/img_5059-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/06/img_5059-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 964,
+       "code": "103",
+       "name": "Udon sautées spécial",
+       "short": "Udon sautées spécial",
+       "price": 17.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/04/img_4586-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/04/img_4586-scaled-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 3009,
+       "code": "104",
+       "name": "Udon sautées Canard",
+       "short": "Udon sautées Canard",
+       "price": 17.5,
+       "description": "",
+       "allergens": [
+        "1",
+        "2",
+        "3",
+        "6"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Vermicelles",
+      "de": "Glasnudeln",
+      "en": "Vermicelli",
+      "nl": "Vermicelli"
+     },
+     "items": [
+      {
+       "id": 7577,
+       "code": "86",
+       "name": "Vermicelle sauté aux légumes",
+       "short": "Vermicelle sauté aux légumes",
+       "price": 12.8,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7576,
+       "code": "87",
+       "name": "Vermicelle sauté aux légumes, sauce coréenne",
+       "short": "Vermicelle sauté aux légumes, sauce coréenne",
+       "price": 12.8,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7",
+        "11"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": true,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7583,
+       "code": "105",
+       "name": "Vermicelle sautées au poulet",
+       "short": "Vermicelle sautées au poulet",
+       "price": 14.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/09/img_6568-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/09/img_6568-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7582,
+       "code": "106",
+       "name": "Vermicelle sautées au bœuf",
+       "short": "Vermicelle sautées au bœuf",
+       "price": 15.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7581,
+       "code": "107",
+       "name": "Vermicelle sautées aux scampis",
+       "short": "Vermicelle sautées aux scampis",
+       "price": 16.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "",
+       "thumb": "",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7580,
+       "code": "108",
+       "name": "Vermicelle sautées spécial",
+       "short": "Vermicelle sautées spécial",
+       "price": 16.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/09/img_6564-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/09/img_6564-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 7579,
+       "code": "109",
+       "name": "Vermicelle sautées Canard",
+       "short": "Vermicelle sautées Canard",
+       "price": 16.9,
+       "description": "",
+       "allergens": [
+        "1A",
+        "3",
+        "7"
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2024/09/img_6562-scaled.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2024/09/img_6562-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fondue",
+   "icon": "pot",
+   "label": {
+    "fr": "Fondue",
+    "de": "Fondue",
+    "en": "Fondue",
+    "nl": "Fondue"
+   },
+   "groups": [
+    {
+     "label": null,
+     "items": [
+      {
+       "id": 967,
+       "code": "",
+       "name": "Fondu Fuku",
+       "short": "Fondu Fuku",
+       "price": 35,
+       "description": "",
+       "allergens": [],
+       "choices": [
+        {
+         "id": 7584,
+         "label": "1 personne",
+         "price": 35
+        }
+       ],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2022/07/Layer-40.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2022/07/Layer-40-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "boissons",
+   "icon": "glass",
+   "label": {
+    "fr": "Boissons",
+    "de": "Getränke",
+    "en": "Drinks",
+    "nl": "Dranken"
+   },
+   "groups": [
+    {
+     "label": {
+      "fr": "Softs",
+      "de": "Alkoholfrei",
+      "en": "Soft drinks",
+      "nl": "Frisdrank"
+     },
+     "items": [
+      {
+       "id": 19791,
+       "code": "",
+       "name": "Coca-Cola Classic 1.5L",
+       "short": "Coca-Cola Classic 1.5L",
+       "price": 6.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3061.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3061-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": false,
+       "purchasable": true
+      },
+      {
+       "id": 19775,
+       "code": "",
+       "name": "Coca-Cola Classic 330ml",
+       "short": "Coca-Cola Classic 330ml",
+       "price": 2.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3053-1.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3053-1-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 19793,
+       "code": "",
+       "name": "Coca-Cola Zero 1.5L",
+       "short": "Coca-Cola Zero 1.5L",
+       "price": 6.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3062.png",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3062-300x300.png",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": false,
+       "purchasable": true
+      },
+      {
+       "id": 19779,
+       "code": "",
+       "name": "Coca-Cola Zero 330ml",
+       "short": "Coca-Cola Zero 330ml",
+       "price": 3.2,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3054.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3054-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 19795,
+       "code": "",
+       "name": "Fanta 1.5L",
+       "short": "Fanta 1.5L",
+       "price": 6.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3063.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3063-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": false,
+       "purchasable": true
+      },
+      {
+       "id": 19782,
+       "code": "",
+       "name": "Fanta 330ml",
+       "short": "Fanta 330ml",
+       "price": 3.1,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3056-1.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3056-1-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 19787,
+       "code": "",
+       "name": "Spezi 330ml",
+       "short": "Spezi 330ml",
+       "price": 3.2,
+       "description": "Cola-Orange Mix",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3059.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3059-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 19789,
+       "code": "",
+       "name": "Sprite 1.5L",
+       "short": "Sprite 1.5L",
+       "price": 6.9,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3060.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3060-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 19784,
+       "code": "",
+       "name": "Sprite 330ml",
+       "short": "Sprite 330ml",
+       "price": 3.1,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2026/05/img_3057.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2026/05/img_3057-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    },
+    {
+     "label": {
+      "fr": "Bières",
+      "de": "Biere",
+      "en": "Beers",
+      "nl": "Bieren"
+     },
+     "items": [
+      {
+       "id": 5354,
+       "code": "",
+       "name": "Bière Chinoise Qingdao 330ml",
+       "short": "Bière Chinoise Qingdao 330ml",
+       "price": 3.5,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/11/Qingdao-330ml.jpeg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/11/Qingdao-330ml-300x300.jpeg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      },
+      {
+       "id": 5356,
+       "code": "",
+       "name": "Bière Japonaise Asahi 330ml",
+       "short": "Bière Japonaise Asahi 330ml",
+       "price": 3.8,
+       "description": "",
+       "allergens": [],
+       "orderable": true,
+       "image": "https://fuku.lu/wp-content/uploads/2023/11/asahi.jpg",
+       "thumb": "https://fuku.lu/wp-content/uploads/2023/11/asahi-300x300.jpg",
+       "veg": false,
+       "spicy": false,
+       "popular": false,
+       "inStock": true,
+       "purchasable": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

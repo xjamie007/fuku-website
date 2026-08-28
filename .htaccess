@@ -1,0 +1,66 @@
+# ==================================================================
+# Restaurant Fuku – Apache/LiteSpeed-Konfiguration
+# Auf dem Server neben index.html ablegen.
+# ==================================================================
+
+# ------------------------------------------------------------------
+# Komprimierung
+# ------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------------
+# Caching
+# HTML und die Speisekarte müssen immer frisch sein, damit
+# Preisänderungen aus WooCommerce sofort ankommen. Schriften und
+# Bilder dürfen dagegen lange liegen bleiben.
+# ------------------------------------------------------------------
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  <FilesMatch "^menu\.json$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  <FilesMatch "\.(woff2|png|jpg|jpeg|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Sicherheits-Header
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ------------------------------------------------------------------
+# MIME-Typen
+# ------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/json .json
+  AddType font/woff2 .woff2
+</IfModule>
+
+# ------------------------------------------------------------------
+# Saubere URLs: /bestellen statt /bestellen.html
+# ------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # WordPress-Pfade unangetastet lassen – dort laufen Checkout,
+  # Zahlungsabwicklung und die Store API.
+  RewriteRule ^(wp-admin|wp-content|wp-includes|wp-json|checkout|cart|mein-konto|my-account) - [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>

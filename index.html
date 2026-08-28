@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Restaurant Fuku · Sushi, Wok & Thai in Vianden</title>
+    <meta
+      name="description"
+      content="Sushi, chinesische Wok-Klassiker und thailändische Currys in Vianden. Über 220 Gerichte – online bestellen, abholen oder bei uns essen."
+    />
+    <meta name="theme-color" content="#fbf8f4" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="apple-touch-icon" href="assets/img/logo.png" />
+    <link rel="canonical" href="https://fuku.lu/" />
+
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:site_name" content="Restaurant Fuku" />
+    <meta property="og:title" content="Restaurant Fuku · Sushi, Wok & Thai in Vianden" />
+    <meta
+      property="og:description"
+      content="Über 220 Gerichte aus Japan, China und Thailand – mitten in Vianden. Jetzt online bestellen."
+    />
+    <meta property="og:image" content="https://fuku.lu/wp-content/uploads/2023/08/img_5648-1152x1536.jpeg" />
+
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-normal-400-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-normal-400_700-latin.woff2" crossorigin />
+    <link rel="preconnect" href="https://fuku.lu" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Restaurant Fuku",
+        "servesCuisine": ["Japanese", "Chinese", "Thai", "Sushi"],
+        "priceRange": "€€",
+        "url": "https://fuku.lu/",
+        "email": "info@fuku.lu",
+        "image": "https://fuku.lu/wp-content/uploads/2023/08/img_5648-1152x1536.jpeg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "9, Rue de la Gare",
+          "postalCode": "L-9420",
+          "addressLocality": "Vianden",
+          "addressCountry": "LU"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "10:30",
+            "closes": "14:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "17:30",
+            "closes": "23:00"
+          }
+        ],
+        "acceptsReservations": "True"
+      }
+    </script>
+  </head>
+
+  <body data-page="home">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Zum Inhalt springen</a>
+
+    <!-- ============================ Header ============================ -->
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="brand" href="index.html" aria-label="Restaurant Fuku – Startseite">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span>
+            <span class="brand__name">Fuku</span>
+            <span class="brand__sub">Vianden</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="index.html" aria-current="page" data-i18n="nav.home">Startseite</a>
+          <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+          <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+          <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang" data-lang-switcher>
+            <button
+              class="lang__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              data-i18n-attr="aria-label:nav.chooseLanguage"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+              <span data-lang-current>DE</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </button>
+            <div class="lang__menu" role="menu"></div>
+          </div>
+
+          <a class="btn btn--brand header__cta" href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+
+          <button
+            class="icon-btn burger"
+            type="button"
+            data-nav-open
+            aria-expanded="false"
+            data-i18n-attr="aria-label:nav.open"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================= Mobile Navigation ====================== -->
+    <div class="mobile-nav" data-open="false">
+      <div class="mobile-nav__top">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span class="brand__name">Fuku</span>
+        </a>
+        <button class="icon-btn" type="button" data-nav-close data-i18n-attr="aria-label:nav.close">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Navigation">
+        <a href="index.html" aria-current="page" data-i18n="nav.home">Startseite</a>
+        <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+        <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="mobile-nav__foot">
+        <div class="filters" data-lang-inline></div>
+        <a class="btn btn--brand btn--lg btn--block" href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ============================= Hero ============================ -->
+      <section class="hero">
+        <img class="hero__kanji" src="assets/img/logo.png" alt="" aria-hidden="true" />
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+            <div class="hero__status">
+              <span class="pill pill--closed" data-status-pill>
+                <span class="dot"></span>
+                <span data-status-label>Öffnungszeiten</span>
+              </span>
+              <span class="eyebrow" data-i18n="hero.badge">Vianden · Luxemburg</span>
+            </div>
+
+            <h1 data-i18n-html="hero.title">Frische Küche aus Fernost — <em>mitten in Vianden</em></h1>
+
+            <p class="hero__text" data-i18n="hero.text">
+              Über 220 Gerichte: handgerollte Sushi, chinesische Wok-Klassiker und thailändische Currys. Zum Abholen,
+              Liefern oder bei uns am Tisch.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--brand btn--lg" href="bestellen.html">
+                <svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg>
+                <span data-i18n="hero.cta">Jetzt bestellen</span>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="bestellen.html#sushi" data-i18n="hero.cta2">Karte ansehen</a>
+            </div>
+
+            <dl class="hero__facts">
+              <div>
+                <dt data-i18n="hero.fact1">Öffnungszeiten heute</dt>
+                <dd><strong data-today-hours>10:30–14:30 · 17:30–23:00</strong></dd>
+              </div>
+              <div>
+                <dt data-i18n="hero.fact2">Wo wir sind</dt>
+                <dd><strong>9, Rue de la Gare</strong></dd>
+              </div>
+              <div>
+                <dt data-i18n="hero.fact3">Auf der Karte</dt>
+                <dd><strong data-dish-count>222 Gerichte</strong></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__art">
+            <div class="hero__frame">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2023/08/img_5648-768x1024.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2023/08/img_5648-600x800.jpeg    600w,
+                  https://fuku.lu/wp-content/uploads/2023/08/img_5648-768x1024.jpeg   768w,
+                  https://fuku.lu/wp-content/uploads/2023/08/img_5648-1152x1536.jpeg 1152w
+                "
+                sizes="(min-width: 900px) 46vw, 92vw"
+                alt="Chirashi mit Lachs und Thunfisch, angerichtet mit Avocado und Gurke"
+                width="768"
+                height="1024"
+                fetchpriority="high"
+              />
+            </div>
+
+            <figure class="hero__chip">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-600x900.jpg"
+                alt=""
+                width="46"
+                height="46"
+                loading="lazy"
+              />
+              <figcaption>
+                <span data-i18n="hero.chipLabel">Empfehlung des Hauses</span>
+                <strong>SP7 · Rainbow Roll</strong>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== Laufband ========================== -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div>
+            <span>Sushi</span><b>·</b><span>Sashimi</span><b>·</b><span>Gyoza</span><b>·</b><span>Wok</span><b>·</b>
+            <span>Curry</span><b>·</b><span>Udon</span><b>·</b><span>Scampi</span><b>·</b><span>Tempura</span><b>·</b>
+            <span>Chirashi</span><b>·</b><span>Thai</span><b>·</b><span>Temaki</span><b>·</b><span>Ente</span><b>·</b>
+          </div>
+          <div>
+            <span>Sushi</span><b>·</b><span>Sashimi</span><b>·</b><span>Gyoza</span><b>·</b><span>Wok</span><b>·</b>
+            <span>Curry</span><b>·</b><span>Udon</span><b>·</b><span>Scampi</span><b>·</b><span>Tempura</span><b>·</b>
+            <span>Chirashi</span><b>·</b><span>Thai</span><b>·</b><span>Temaki</span><b>·</b><span>Ente</span><b>·</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================== Empfehlungen ======================= -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow" data-i18n="home.popular.eyebrow">Beliebt</span>
+              <h2 data-i18n="home.popular.title">Was unsere Gäste am liebsten bestellen</h2>
+              <p data-i18n="home.popular.text">
+                Eine kleine Auswahl aus über 220 Gerichten – der Rest wartet auf der Karte.
+              </p>
+            </div>
+            <a class="link-arrow" href="bestellen.html">
+              <span data-i18n="home.popular.all">Alle Gerichte ansehen</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+          </div>
+
+          <div class="rail" data-popular data-reveal>
+            <!-- wird aus data/menu.json befüllt -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================== Kategorien ========================= -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow" data-i18n="home.cats.eyebrow">Die Karte</span>
+              <h2 data-i18n="home.cats.title">Vier Küchen, ein Haus</h2>
+              <p data-i18n="home.cats.text">Von hauchdünn geschnittenem Sashimi bis zum scharfen Curry aus dem Wok.</p>
+            </div>
+          </div>
+
+          <div class="cat-grid" data-reveal>
+            <a class="cat-card" href="bestellen.html#sushi">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-600x900.jpg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-600x900.jpg  600w,
+                  https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-768x1152.jpg 768w
+                "
+                sizes="(min-width: 900px) 22vw, 45vw"
+                alt="Rainbow Roll mit Lachs, Thunfisch und Avocado"
+                loading="lazy"
+                width="600"
+                height="900"
+              />
+              <span class="cat-card__count" data-cat-count="sushi">94</span>
+              <h3>Sushi</h3>
+              <p>Nigiri · Maki · Rolls · Plateaux</p>
+            </a>
+
+            <a class="cat-card" href="bestellen.html#chauds">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2023/08/img_5468-600x450.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2023/08/img_5468-600x450.jpeg   600w,
+                  https://fuku.lu/wp-content/uploads/2023/08/img_5468-1024x768.jpeg 1024w
+                "
+                sizes="(min-width: 900px) 22vw, 45vw"
+                alt="Wok-Gericht mit Gemüse in aromatischer Sauce"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+              <span class="cat-card__count" data-cat-count="chauds">47</span>
+              <h3 data-i18n="cat.chauds">Wok &amp; Chinesisch</h3>
+              <p>Poulet · Bœuf · Canard · Scampis</p>
+            </a>
+
+            <a class="cat-card" href="bestellen.html#thai">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2022/12/img_8181-600x450.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2022/12/img_8181-600x450.jpeg   600w,
+                  https://fuku.lu/wp-content/uploads/2022/12/img_8181-1024x768.jpeg 1024w
+                "
+                sizes="(min-width: 900px) 22vw, 45vw"
+                alt="Thailändisches Rindfleisch mit Basilikum"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+              <span class="cat-card__count" data-cat-count="thai">10</span>
+              <h3 data-i18n="cat.thai">Thai</h3>
+              <p>Basilic · Curry rouge</p>
+            </a>
+
+            <a class="cat-card" href="bestellen.html#entrees">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2022/12/img_8173-600x450.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2022/12/img_8173-600x450.jpeg   600w,
+                  https://fuku.lu/wp-content/uploads/2022/12/img_8173-1024x768.jpeg 1024w
+                "
+                sizes="(min-width: 900px) 22vw, 45vw"
+                alt="Frittierte Scampi als Vorspeise angerichtet"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+              <span class="cat-card__count" data-cat-count="entrees">20</span>
+              <h3 data-i18n="cat.entrees">Vorspeisen</h3>
+              <p>Gyoza · Nems · Tempura</p>
+            </a>
+
+            <a class="cat-card" href="bestellen.html#riz">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2024/09/img_6568-600x450.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2024/09/img_6568-600x450.jpeg   600w,
+                  https://fuku.lu/wp-content/uploads/2024/09/img_6568-1024x768.jpeg 1024w
+                "
+                sizes="(min-width: 900px) 22vw, 45vw"
+                alt="Gebratene Glasnudeln mit Gemüse"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+              <span class="cat-card__count" data-cat-count="riz">26</span>
+              <h3 data-i18n="cat.riz">Reis &amp; Nudeln</h3>
+              <p>Udon · Nouilles · Vermicelles</p>
+            </a>
+
+            <a class="cat-card" href="bestellen.html#soupes">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2023/09/img_5689-600x450.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2023/09/img_5689-600x450.jpeg   600w,
+                  https://fuku.lu/wp-content/uploads/2023/09/img_5689-1024x768.jpeg 1024w
+                "
+                sizes="(min-width: 900px) 22vw, 45vw"
+                alt="Ente in Orangensauce auf weissem Teller"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+              <span class="cat-card__count" data-cat-count="soupes">6</span>
+              <h3 data-i18n="cat.soupes">Suppen &amp; Salate</h3>
+              <p>Miso · Pékinois · Wakamé</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ Story ============================ -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="split split--reverse" data-reveal>
+            <div class="split__media">
+              <img
+                src="https://fuku.lu/wp-content/uploads/2023/06/img_5087-1024x768.jpeg"
+                srcset="
+                  https://fuku.lu/wp-content/uploads/2023/06/img_5087-600x450.jpeg   600w,
+                  https://fuku.lu/wp-content/uploads/2023/06/img_5087-1024x768.jpeg 1024w
+                "
+                sizes="(min-width: 860px) 46vw, 92vw"
+                alt="Hot Roll mit Ente und Gurke, mit Sauce angerichtet"
+                loading="lazy"
+                width="1024"
+                height="768"
+              />
+            </div>
+
+            <div>
+              <span class="eyebrow" data-i18n="home.story.eyebrow">Unser Anspruch</span>
+              <h2 style="margin-block: 0.6rem 1.1rem" data-i18n="home.story.title">
+                Ehrlich gekocht, grosszügig serviert
+              </h2>
+              <p class="lede" data-i18n="home.story.text">
+                Im Restaurant Fuku haben wir nur einen Anspruch: eine ehrliche Küche, verwurzelt in den Jahreszeiten,
+                authentisch und zugleich modern, fröhlich und grosszügig, mit weitem Horizont.
+              </p>
+
+              <div class="stat-row">
+                <div>
+                  <strong data-dish-total>222</strong>
+                  <span data-i18n="home.story.stat1">Gerichte auf der Karte</span>
+                </div>
+                <div>
+                  <strong>3</strong>
+                  <span data-i18n="home.story.stat2">Küchen unter einem Dach</span>
+                </div>
+                <div>
+                  <strong>2023</strong>
+                  <span data-i18n="home.story.stat3">Empfohlen von Restaurant Guru</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================== Öffnungszeiten & Info ================== -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow" data-i18n="home.info.eyebrow">Gut zu wissen</span>
+              <h2 data-i18n="home.info.title">Öffnungszeiten &amp; Anfahrt</h2>
+            </div>
+            <span class="pill pill--closed" data-status-pill>
+              <span class="dot"></span>
+              <span data-status-label>Öffnungszeiten</span>
+            </span>
+          </div>
+
+          <div class="info-grid" data-reveal>
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+              <h3 data-i18n="home.info.hours">Öffnungszeiten</h3>
+              <dl class="hours" data-hours-list></dl>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="home.info.hoursNote">Montags Ruhetag.</p>
+            </article>
+
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+              <h3 data-i18n="home.info.address">Adresse</h3>
+              <p data-contact="address">9, Rue de la Gare<br />L-9420 Vianden</p>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="home.info.addressNote">
+                Im Zentrum von Vianden, wenige Schritte von der Our.
+              </p>
+              <a class="link-arrow" data-contact="route" href="#" style="margin-top: auto">
+                <span data-i18n="home.info.route">Route planen</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+              </a>
+            </article>
+
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+              <h3 data-i18n="home.info.contact">Kontakt</h3>
+              <p><a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a></p>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="home.info.contactNote">
+                Für Reservierungen und Fragen erreichen Sie uns am besten per E-Mail.
+              </p>
+              <a class="link-arrow" href="kontakt.html" style="margin-top: auto">
+                <span data-i18n="nav.contact">Kontakt</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+            </article>
+
+            <article class="info-card">
+              <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg></span>
+              <h3 data-i18n="contact.reserve">Reservierung</h3>
+              <p class="muted" style="font-size: var(--step--1)" data-i18n="reserve.text">
+                Sagen Sie uns Datum, Uhrzeit und Personenzahl – wir bestätigen Ihre Reservierung kurzfristig per E-Mail.
+              </p>
+              <a class="btn btn--brand" href="reservieren.html" style="margin-top: auto">
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+                <span data-i18n="reserve.ctaHome">Tisch reservieren</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== CTA-Band ========================== -->
+      <section class="wrap" style="padding-bottom: clamp(3rem, 2rem + 4vw, 6rem)">
+        <div class="cta-band" data-reveal>
+          <h2 data-i18n="home.cta.title">Hunger? Die ganze Karte wartet.</h2>
+          <p data-i18n="home.cta.text">
+            Stellen Sie Ihre Bestellung in Ruhe zusammen – Sushi, Wok, Thai und Getränke an einem Ort.
+          </p>
+          <div class="cta-band__actions">
+            <a class="btn btn--brand btn--lg" href="bestellen.html">
+              <svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg>
+              <span data-i18n="home.cta.primary">Zur Bestellung</span>
+            </a>
+            <a class="btn btn--light btn--lg" href="reservieren.html">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+              <span data-i18n="reserve.ctaHome">Tisch reservieren</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ Footer =========================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="index.html">
+              <img src="assets/img/logo.png" alt="" width="34" height="37" />
+              <span>
+                <span class="brand__name">Fuku</span>
+                <span class="brand__sub">Vianden</span>
+              </span>
+            </a>
+            <p data-i18n="footer.tagline">
+              Sushi, chinesische Wok-Küche und thailändische Currys im Herzen von Vianden.
+            </p>
+            <div class="socials">
+              <a href="https://www.facebook.com/Restaurant-Fuku-110551558349707/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+              </a>
+              <a href="https://www.instagram.com/restaurant_fuku/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+              </a>
+              <a data-contact="email" href="mailto:info@fuku.lu" aria-label="E-Mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.explore">Entdecken</h4>
+            <div class="footer__links">
+              <a href="bestellen.html#sushi">Sushi</a>
+              <a href="bestellen.html#chauds">Wok</a>
+              <a href="bestellen.html#thai">Thai</a>
+              <a href="bestellen.html#boissons">Getränke</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.visit">Besuchen</h4>
+            <div class="footer__links">
+              <a href="index.html" data-i18n="nav.home">Startseite</a>
+              <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+              <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+              <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="home.info.hours">Öffnungszeiten</h4>
+            <div class="footer__links">
+              <span data-i18n="days.tueSun">Dienstag – Sonntag</span>
+              <span>10:30 – 14:30</span>
+              <span>17:30 – 23:00</span>
+              <span class="muted"><span data-i18n="days.mon">Montag</span>: <span data-i18n="days.closed">Geschlossen</span></span>
+            </div>
+            <p style="margin-top: 1rem; font-size: var(--step--1)">
+              <a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> Restaurant Fuku · 9, Rue de la Gare · L-9420 Vianden</p>
+          <nav aria-label="Rechtliches">
+            <a href="kontakt.html#impressum" data-i18n="footer.imprint">Impressum</a>
+            <a href="kontakt.html#datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/home.js"></script>
+  </body>
+</html>

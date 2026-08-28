@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tisch reservieren · Restaurant Fuku Vianden</title>
+    <meta
+      name="description"
+      content="Reservieren Sie online einen Tisch im Restaurant Fuku in Vianden – Datum, Uhrzeit und Personenzahl in einem Schritt."
+    />
+    <meta name="theme-color" content="#fbf8f4" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="apple-touch-icon" href="assets/img/logo.png" />
+    <link rel="canonical" href="https://fuku.lu/reservieren.html" />
+
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-normal-400-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-normal-400_700-latin.woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body data-page="reserve">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Zum Inhalt springen</a>
+
+    <!-- ============================ Header ============================ -->
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="brand" href="index.html" aria-label="Restaurant Fuku – Startseite">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span>
+            <span class="brand__name">Fuku</span>
+            <span class="brand__sub">Vianden</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.home">Startseite</a>
+          <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+          <a href="reservieren.html" aria-current="page" data-i18n="nav.reserve">Reservieren</a>
+          <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang" data-lang-switcher>
+            <button
+              class="lang__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              data-i18n-attr="aria-label:nav.chooseLanguage"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+              <span data-lang-current>DE</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </button>
+            <div class="lang__menu" role="menu"></div>
+          </div>
+
+          <a class="btn btn--brand header__cta" href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+
+          <button class="icon-btn burger" type="button" data-nav-open aria-expanded="false" data-i18n-attr="aria-label:nav.open">
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================= Mobile Navigation ====================== -->
+    <div class="mobile-nav" data-open="false">
+      <div class="mobile-nav__top">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.png" alt="" width="34" height="37" />
+          <span class="brand__name">Fuku</span>
+        </a>
+        <button class="icon-btn" type="button" data-nav-close data-i18n-attr="aria-label:nav.close">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Navigation">
+        <a href="index.html" data-i18n="nav.home">Startseite</a>
+        <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+        <a href="reservieren.html" aria-current="page" data-i18n="nav.reserve">Reservieren</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="mobile-nav__foot">
+        <div class="filters" data-lang-inline></div>
+        <a class="btn btn--brand btn--lg btn--block" href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="section reserve">
+        <div class="wrap reserve__grid">
+          <!-- ------------------------- Einleitung ------------------------ -->
+          <div class="reserve__intro">
+            <div class="hero__status">
+              <span class="pill pill--closed" data-status-pill>
+                <span class="dot"></span>
+                <span data-status-label>Öffnungszeiten</span>
+              </span>
+            </div>
+
+            <span class="eyebrow" data-i18n="reserve.eyebrow">Reservierung</span>
+            <h1 data-i18n="reserve.title">Einen Tisch reservieren</h1>
+            <p class="lede" data-i18n="reserve.text">
+              Sagen Sie uns Datum, Uhrzeit und Personenzahl – wir bestätigen Ihre Reservierung kurzfristig per E-Mail.
+            </p>
+
+            <div class="reserve__facts">
+              <div>
+                <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+                <div>
+                  <h3 data-i18n="home.info.hours">Öffnungszeiten</h3>
+                  <dl class="hours" data-hours-list></dl>
+                </div>
+              </div>
+
+              <div>
+                <span class="info-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+                <div>
+                  <h3 data-i18n="home.info.address">Adresse</h3>
+                  <p data-contact="address">9, Rue de la Gare<br />L-9420 Vianden</p>
+                  <a class="link-arrow" data-contact="route" href="#">
+                    <span data-i18n="home.info.route">Route planen</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------- Formular ------------------------- -->
+          <div class="reserve__panel" data-reserve-panel>
+            <form class="reserve-form" data-reserve-form novalidate>
+              <fieldset>
+                <legend data-i18n="reserve.when">Wann möchten Sie kommen?</legend>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="res-date" data-i18n="reserve.date">Datum</label>
+                    <select id="res-date" name="date" required></select>
+                    <small class="field__error" data-error-for="date"></small>
+                  </div>
+
+                  <div class="field">
+                    <label for="res-time" data-i18n="reserve.time">Uhrzeit</label>
+                    <select id="res-time" name="time" required></select>
+                    <small class="field__error" data-error-for="time"></small>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="res-guests" data-i18n="reserve.guests">Personen</label>
+                  <select id="res-guests" name="guests" required></select>
+                  <small class="field__error" data-error-for="guests"></small>
+                </div>
+
+                <p class="field__hint field__hint--warn" data-large-group hidden>
+                  <span data-i18n="reserve.moreGuestsHint">
+                    Für grössere Gruppen schreiben Sie uns bitte direkt – wir finden eine Lösung.
+                  </span>
+                  <a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a>
+                </p>
+              </fieldset>
+
+              <fieldset>
+                <legend data-i18n="reserve.who">Wie erreichen wir Sie?</legend>
+
+                <div class="field">
+                  <label for="res-name" data-i18n="reserve.name">Name</label>
+                  <input id="res-name" name="name" type="text" autocomplete="name" required />
+                  <small class="field__error" data-error-for="name"></small>
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="res-email" data-i18n="reserve.email">E-Mail</label>
+                    <input id="res-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                    <small class="field__error" data-error-for="email"></small>
+                  </div>
+
+                  <div class="field">
+                    <label for="res-phone" data-i18n="reserve.phone">Telefon</label>
+                    <input id="res-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+                    <small class="field__error" data-error-for="phone"></small>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="res-notes" data-i18n="reserve.notes">Anmerkung</label>
+                  <textarea
+                    id="res-notes"
+                    name="notes"
+                    rows="3"
+                    maxlength="1000"
+                    placeholder="Optional"
+                    data-i18n-attr="placeholder:reserve.notesPlaceholder"
+                  ></textarea>
+                  <small class="field__hint" data-i18n="reserve.notesHint">
+                    Allergien, Kinderstuhl, besonderer Anlass – gern hier notieren.
+                  </small>
+                </div>
+              </fieldset>
+
+              <!--
+                Honigtopf gegen Bots: für Menschen unsichtbar und nicht per
+                Tastatur erreichbar. Wird das Feld ausgefüllt, verwirft der
+                Server die Anfrage stillschweigend.
+              -->
+              <div class="honeypot" aria-hidden="true">
+                <label for="res-website">Website</label>
+                <input id="res-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="reserve-form__foot">
+                <button class="btn btn--brand btn--lg btn--block" type="submit" data-reserve-submit>
+                  <span data-i18n="reserve.submit">Reservierung anfragen</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                </button>
+                <p class="field__hint" data-i18n="reserve.legal">
+                  Ihre Angaben verwenden wir ausschliesslich für diese Reservierung.
+                </p>
+              </div>
+
+              <div data-reserve-status hidden aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ Footer =========================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="index.html">
+              <img src="assets/img/logo.png" alt="" width="34" height="37" />
+              <span>
+                <span class="brand__name">Fuku</span>
+                <span class="brand__sub">Vianden</span>
+              </span>
+            </a>
+            <p data-i18n="footer.tagline">
+              Sushi, chinesische Wok-Küche und thailändische Currys im Herzen von Vianden.
+            </p>
+            <div class="socials">
+              <a href="https://www.facebook.com/Restaurant-Fuku-110551558349707/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+              </a>
+              <a href="https://www.instagram.com/restaurant_fuku/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+              </a>
+              <a data-contact="email" href="mailto:info@fuku.lu" aria-label="E-Mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.explore">Entdecken</h4>
+            <div class="footer__links">
+              <a href="bestellen.html#sushi">Sushi</a>
+              <a href="bestellen.html#chauds">Wok</a>
+              <a href="bestellen.html#thai">Thai</a>
+              <a href="bestellen.html#boissons">Getränke</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="footer.visit">Besuchen</h4>
+            <div class="footer__links">
+              <a href="index.html" data-i18n="nav.home">Startseite</a>
+              <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
+              <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+              <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 data-i18n="home.info.hours">Öffnungszeiten</h4>
+            <div class="footer__links">
+              <span data-i18n="days.tueSun">Dienstag – Sonntag</span>
+              <span>10:30 – 14:30</span>
+              <span>17:30 – 23:00</span>
+              <span class="muted"><span data-i18n="days.mon">Montag</span>: <span data-i18n="days.closed">Geschlossen</span></span>
+            </div>
+            <p style="margin-top: 1rem; font-size: var(--step--1)">
+              <a data-contact="email" href="mailto:info@fuku.lu">info@fuku.lu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> Restaurant Fuku · 9, Rue de la Gare · L-9420 Vianden</p>
+          <nav aria-label="Rechtliches">
+            <a href="kontakt.html#impressum" data-i18n="footer.imprint">Impressum</a>
+            <a href="kontakt.html#datenschutz" data-i18n="footer.privacy">Datenschutz</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/reserve.js"></script>
+  </body>
+</html>
