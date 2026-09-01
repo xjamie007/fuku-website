@@ -4,8 +4,8 @@
 
 import { boot, formatPrice, RESTAURANT } from './app.js';
 import { t, onLangChange, apply, ALLERGENS, getLang } from './i18n.js';
-import { icon } from './icons.js';
-import { loadMenu, flatten, normalize } from './menu-data.js';
+import { icon, emoji } from './icons.js';
+import { loadMenu, flatten, normalize, dishName, dishShort } from './menu-data.js';
 
 boot();
 
@@ -99,9 +99,9 @@ function dishMarkup(dish) {
   // Allergene erscheinen bewusst nur in der Detailansicht und in der
   // Legende – auf der Karte würden die Nummern nur Lärm erzeugen.
   const tags = [
-    dish.popular ? `<span class="tag tag--pop">${icon('star')}${esc(t('order.filterPopular'))}</span>` : '',
-    dish.veg ? `<span class="tag tag--veg">${icon('leaf')}${esc(t('order.filterVeg'))}</span>` : '',
-    dish.spicy ? `<span class="tag tag--spicy">${icon('flame')}${esc(t('order.filterSpicy'))}</span>` : '',
+    dish.popular ? `<span class="tag tag--pop">${emoji('star')}${esc(t('order.filterPopular'))}</span>` : '',
+    dish.veg ? `<span class="tag tag--veg">${emoji('sprout')}${esc(t('order.filterVeg'))}</span>` : '',
+    dish.spicy ? `<span class="tag tag--spicy">${emoji('flame')}${esc(t('order.filterSpicy'))}</span>` : '',
   ]
     .filter(Boolean)
     .join('');
@@ -113,12 +113,12 @@ function dishMarkup(dish) {
 
   return `
     <article class="dish" data-dish="${dish.id}" data-in-cart="${qty > 0}">
-      <button class="dish__main" type="button" data-detail="${dish.id}" aria-label="${esc(t('order.details'))}: ${esc(dish.name)}">
+      <button class="dish__main" type="button" data-detail="${dish.id}" aria-label="${esc(t('order.details'))}: ${esc(dishName(dish, getLang()))}">
         <span class="dish__thumb">${thumb}</span>
         <span class="dish__body">
           <span class="dish__title">
             ${dish.code ? `<span class="dish__code">${esc(dish.code)}</span>` : ''}
-            <span>${esc(dish.short)}</span>
+            <span>${esc(dishShort(dish, getLang()))}</span>
           </span>
           ${dish.description ? `<span class="dish__desc">${esc(dish.description.replace(/\n/g, ' · '))}</span>` : ''}
           ${tags ? `<span class="dish__tags">${tags}</span>` : ''}
@@ -146,7 +146,7 @@ function control(dish, qty, multiChoice) {
       </button>`;
   }
 
-  return stepperMarkup(orderIdsOf(dish)[0], dish.short, qty);
+  return stepperMarkup(orderIdsOf(dish)[0], dishShort(dish, getLang()), qty);
 }
 
 function stepperMarkup(orderId, label, qty) {
@@ -241,13 +241,13 @@ function renderCatNav(sections) {
 
   rail.innerHTML = links
     .map(
-      (l) => `<li><a href="#${l.id}" data-cat-link="${l.id}">${icon(l.icon)}<span>${l.name}</span>
+      (l) => `<li><a href="#${l.id}" data-cat-link="${l.id}">${emoji(l.icon)}<span>${l.name}</span>
         <span class="cat-rail__n">${l.n}</span></a></li>`,
     )
     .join('');
 
   pills.innerHTML = links
-    .map((l) => `<a href="#${l.id}" data-cat-link="${l.id}">${icon(l.icon)}<span>${l.name}</span></a>`)
+    .map((l) => `<a href="#${l.id}" data-cat-link="${l.id}">${emoji(l.icon)}<span>${l.name}</span></a>`)
     .join('');
 
   // Die Links sind neu – die gemerkte Auswahl gilt nicht mehr, sonst
@@ -331,10 +331,33 @@ function setActiveSection(id) {
   $$('[data-cat-link]').forEach((link) => {
     const active = link.dataset.catLink === id;
     link.setAttribute('aria-current', String(active));
-    if (active && link.closest('.cat-pills')) {
-      link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    }
+    if (active) revealPill(link);
   });
+}
+
+/**
+ * Schiebt die aktive Pille in den sichtbaren Bereich der Kategorienleiste.
+ *
+ * `scrollIntoView({ inline: 'center' })` ist hier unbrauchbar: Es scrollt
+ * auch dann, wenn die Pille längst sichtbar ist, und rechnet den Innenabstand
+ * der Leiste nicht mit – die erste Pille landete dadurch angeschnitten links
+ * ausserhalb des Bildschirms. Deshalb wird nur bei Bedarf und nur um die
+ * fehlende Strecke gescrollt.
+ */
+function revealPill(link) {
+  const rail = link.closest('.cat-pills');
+  if (!rail) return;
+
+  const gap = 16; // etwas Luft, damit die Pille nicht am Rand klebt
+  const railBox = rail.getBoundingClientRect();
+  const pillBox = link.getBoundingClientRect();
+
+  const missingLeft = pillBox.left - railBox.left - gap;
+  const missingRight = pillBox.right - railBox.right + gap;
+
+  // Nur eine Richtung kann fehlen; der Browser begrenzt scrollBy selbst.
+  if (missingLeft < 0) rail.scrollBy({ left: missingLeft, behavior: 'smooth' });
+  else if (missingRight > 0) rail.scrollBy({ left: missingRight, behavior: 'smooth' });
 }
 
 /* ------------------------------------------------------------------
@@ -403,7 +426,7 @@ function renderCart() {
           <div class="cart-line" data-line="${orderId}">
             <span class="cart-line__qty">${qty}×</span>
             <span class="cart-line__name">
-              ${esc(dish.short)}
+              ${esc(dishShort(dish, getLang()))}
               ${choice ? `<small>${esc(choice.label)}</small>` : dish.code ? `<small>${esc(dish.code)}</small>` : ''}
             </span>
             <span class="cart-line__end">
@@ -498,7 +521,8 @@ const addOne = (orderId) => {
   setQty(orderId, (state.cart.get(orderId) || 0) + 1);
   const entry = state.byOrderId.get(orderId);
   if (entry) {
-    const name = entry.choice ? `${entry.dish.short} · ${entry.choice.label}` : entry.dish.short;
+    const short = dishShort(entry.dish, getLang());
+    const name = entry.choice ? `${short} · ${entry.choice.label}` : short;
     showToast(t('order.added', { name }));
   }
 };
@@ -564,7 +588,7 @@ function openDetail(id) {
     <button class="sheet__x" type="button" data-sheet-close aria-label="${esc(t('cart.close'))}">${icon('close')}</button>
     ${dish.image ? `<div class="detail__media"><img src="${esc(dish.image)}" alt="${esc(dish.name)}" /></div>` : ''}
     <div class="detail__body">
-      <h2 id="detail-title">${dish.code ? `<span class="dish__code">${esc(dish.code)}</span> ` : ''}${esc(dish.name)}</h2>
+      <h2 id="detail-title">${dish.code ? `<span class="dish__code">${esc(dish.code)}</span> ` : ''}${esc(dishName(dish, getLang()))}</h2>
       ${dish.description ? `<p class="detail__desc">${esc(dish.description)}</p>` : ''}
       ${variantMarkup(dish)}
       ${allergens}
@@ -587,7 +611,7 @@ function variantMarkup(dish) {
           <div class="variant">
             <span class="variant__label">${esc(choice.label)}</span>
             <span class="variant__price">${formatPrice(choice.price ?? dish.price)}</span>
-            ${stepperMarkup(choice.id, `${dish.short} · ${choice.label}`, state.cart.get(choice.id) || 0)}
+            ${stepperMarkup(choice.id, `${dishShort(dish, getLang())} · ${choice.label}`, state.cart.get(choice.id) || 0)}
           </div>`,
         )
         .join('')}
@@ -613,7 +637,7 @@ function detailFoot(dish) {
   const orderId = orderIdsOf(dish)[0];
   return `<div class="detail__foot">
       <span class="price">${formatPrice(dish.price)}</span>
-      ${stepperMarkup(orderId, dish.short, state.cart.get(orderId) || 0)}
+      ${stepperMarkup(orderId, dishShort(dish, getLang()), state.cart.get(orderId) || 0)}
     </div>`;
 }
 
@@ -869,7 +893,15 @@ loadMenu()
       ...dish,
       // Suchindex: Name, Nummer, Beschreibung und Gruppenname
       haystack: normalize(
-        [dish.name, dish.code, dish.description, Object.values(dish.groupLabel || {}).join(' ')].join(' '),
+        [
+          dish.name,
+          dish.code,
+          dish.description,
+          // Übersetzungen mit in den Suchindex: Wer „Lachs" tippt, soll
+          // „Saumon" finden, unabhängig von der eingestellten Sprache.
+          ...Object.values(dish.t || {}),
+          Object.values(dish.groupLabel || {}).join(' '),
+        ].join(' '),
       ),
     }));
     state.byId = new Map(state.dishes.map((d) => [d.id, d]));

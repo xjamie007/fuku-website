@@ -48,9 +48,11 @@ const DICT = {
     'status.today': 'Heute',
 
     'hero.badge': 'Vianden · Luxemburg',
-    'hero.title': 'Frische Küche aus Fernost — <em>mitten in Vianden</em>',
+    'hero.title': 
+      'Frisch gerollt, scharf gewokt — <em>mitten in Vianden</em>',
     'hero.text':
-      'Über 220 Gerichte: handgerollte Sushi, chinesische Wok-Klassiker und thailändische Currys. Zum Abholen, Liefern oder bei uns am Tisch.',
+      
+      'Sushi, chinesische Wok-Gerichte und thailändische Currys. Alles wird zubereitet, wenn Sie bestellen — zum Abholen oder bei uns am Tisch.',
     'hero.cta': 'Jetzt bestellen',
     'hero.cta2': 'Karte ansehen',
     'hero.fact1': 'Öffnungszeiten heute',
@@ -60,24 +62,33 @@ const DICT = {
     'hero.chipLabel': 'Empfehlung des Hauses',
 
     'home.popular.eyebrow': 'Beliebt',
-    'home.popular.title': 'Was unsere Gäste am liebsten bestellen',
-    'home.popular.text': 'Eine kleine Auswahl aus über 220 Gerichten – der Rest wartet auf der Karte.',
+    'home.popular.title': 
+      'Womit die meisten anfangen',
+    'home.popular.text': 
+      'Vier von 222. Den Rest finden Sie auf der Karte.',
     'home.popular.all': 'Alle Gerichte ansehen',
 
     'home.cats.eyebrow': 'Die Karte',
-    'home.cats.title': 'Vier Küchen, ein Haus',
-    'home.cats.text': 'Von hauchdünn geschnittenem Sashimi bis zum scharfen Curry aus dem Wok.',
+    'home.cats.title': 
+      'Wo möchten Sie anfangen?',
+    'home.cats.text': 
+      'Vom Sashimi bis zum scharfen Curry — springen Sie direkt in die Rubrik, die Sie suchen.',
     'home.cats.count': '{n} Gerichte',
+    'cat.sushi': 'Sushi',
+    'cat.boissons': 'Getränke',
     'cat.chauds': 'Wok & Chinesisch',
     'cat.thai': 'Thai',
     'cat.entrees': 'Vorspeisen',
     'cat.riz': 'Reis & Nudeln',
     'cat.soupes': 'Suppen & Salate',
 
-    'home.story.eyebrow': 'Unser Anspruch',
-    'home.story.title': 'Ehrlich gekocht, grosszügig serviert',
+    'home.story.eyebrow': 
+      'Über uns',
+    'home.story.title': 
+      'Warum unsere Karte so lang ist',
     'home.story.text':
-      'Im Restaurant Fuku haben wir nur einen Anspruch: eine ehrliche Küche, verwurzelt in den Jahreszeiten, authentisch und zugleich modern, fröhlich und grosszügig, mit weitem Horizont.',
+      
+      'Sushi aus Japan, Wok-Gerichte aus China, Currys aus Thailand: Das sind drei Küchen unter einem Dach — und der Grund für 222 Gerichte. Jedes davon kochen wir frisch, wenn Sie bestellen. Manchmal dauert es deshalb ein paar Minuten länger. Wir finden, es lohnt sich.',
     'home.story.stat1': 'Gerichte auf der Karte',
     'home.story.stat2': 'Küchen unter einem Dach',
     'home.story.stat3': 'Empfohlen von Restaurant Guru',
@@ -90,18 +101,23 @@ const DICT = {
     'home.info.addressNote': 'Im Zentrum von Vianden, wenige Schritte von der Our.',
     'home.info.route': 'Route planen',
     'home.info.contact': 'Kontakt',
-    'home.info.contactNote': 'Für Reservierungen und Fragen erreichen Sie uns am besten per E-Mail.',
+    'home.info.contactNote': 
+      'Fragen zu einem Gericht, zu Allergien oder zu Ihrer Bestellung? Schreiben Sie uns einfach.',
     'home.info.write': 'E-Mail schreiben',
 
-    'home.cta.title': 'Hunger? Die ganze Karte wartet.',
-    'home.cta.text': 'Stellen Sie Ihre Bestellung in Ruhe zusammen – Sushi, Wok, Thai und Getränke an einem Ort.',
+    'home.cta.title': 
+      'Hunger?',
+    'home.cta.text': 
+      '222 Gerichte, ein Warenkorb. Lassen Sie sich Zeit.',
     'home.cta.primary': 'Zur Bestellung',
     'home.cta.secondary': 'Kontakt aufnehmen',
 
     'order.eyebrow': 'Speisekarte',
-    'order.title': 'Stellen Sie sich Ihre Bestellung zusammen',
+    'order.title': 
+      'Worauf haben Sie Lust?',
     'order.text':
-      'Alle {n} Gerichte auf einer Seite. Suchen, filtern, in den Warenkorb – bezahlt wird im gewohnten Kassenbereich.',
+      
+      'Alle {n} Gerichte auf einer Seite. Suchen, filtern, antippen — fertig.',
     'order.searchPlaceholder': 'Gericht, Nummer oder Zutat suchen …',
     'order.searchClear': 'Suche zurücksetzen',
     'order.categories': 'Kategorien',
@@ -237,9 +253,14 @@ const DICT = {
 
     'contact.eyebrow': 'Kontakt',
     'contact.title': 'Besuchen Sie uns in Vianden',
-    'contact.text': 'Wir freuen uns auf Ihren Besuch – im Restaurant, zur Abholung oder per Lieferung.',
-    'contact.mapTitle': 'Karte anzeigen',
-    'contact.mapNote': 'Die Karte wird erst nach dem Klick von OpenStreetMap geladen.',
+    'contact.text': 
+      'Kommen Sie vorbei oder holen Sie Ihre Bestellung ab. Wir freuen uns auf Sie.',
+    'contact.mapOpen': 'In Google Maps öffnen',
+    'contact.mapCredit': 'Kartendaten © OpenStreetMap-Mitwirkende',
+    'contact.mapTitle': 
+      'So finden Sie uns',
+    'contact.mapNote': 
+      'Mitten in Vianden, wenige Schritte von der Our. Tippen Sie auf die Karte, dann öffnet sich die Route.',
     'contact.mapLoad': 'Karte laden',
     'contact.openMaps': 'In Karten-App öffnen',
     'contact.phone': 'Telefon',
@@ -255,9 +276,12 @@ const DICT = {
     'legal.privacy3':
       'Für Bestellung und Zahlung gelten zusätzlich die Datenschutzhinweise unseres Shop-Systems.',
 
-    'footer.tagline': 'Sushi, chinesische Wok-Küche und thailändische Currys im Herzen von Vianden.',
-    'footer.explore': 'Entdecken',
-    'footer.visit': 'Besuchen',
+    'footer.tagline': 
+      'Drei Küchen unter einem Dach — mitten in Vianden.',
+    'footer.explore': 
+      'Die Karte',
+    'footer.visit': 
+      'Schnell zu',
     'footer.legal': 'Rechtliches',
     'footer.imprint': 'Impressum',
     'footer.privacy': 'Datenschutz',
@@ -305,9 +329,11 @@ const DICT = {
     'status.today': "Aujourd'hui",
 
     'hero.badge': 'Vianden · Luxembourg',
-    'hero.title': "Une cuisine d'Extrême-Orient — <em>au cœur de Vianden</em>",
+    'hero.title': 
+      'Roulés à la main, saisis au wok — <em>en plein cœur de Vianden</em>',
     'hero.text':
-      'Plus de 220 plats : sushis roulés à la main, classiques chinois au wok et currys thaïlandais. À emporter, en livraison ou à table.',
+      
+      'Sushis, plats chinois au wok et currys thaïlandais. Tout est préparé au moment de la commande — à emporter ou à table chez nous.',
     'hero.cta': 'Commander',
     'hero.cta2': 'Voir la carte',
     'hero.fact1': "Horaires d'aujourd'hui",
@@ -317,24 +343,33 @@ const DICT = {
     'hero.chipLabel': 'La suggestion du chef',
 
     'home.popular.eyebrow': 'Les favoris',
-    'home.popular.title': 'Ce que nos clients commandent le plus',
-    'home.popular.text': 'Une petite sélection parmi plus de 220 plats – le reste vous attend sur la carte.',
+    'home.popular.title': 
+      'Par où commencent la plupart',
+    'home.popular.text': 
+      'Quatre plats sur 222. Le reste vous attend sur la carte.',
     'home.popular.all': 'Voir tous les plats',
 
     'home.cats.eyebrow': 'La carte',
-    'home.cats.title': 'Quatre cuisines, une maison',
-    'home.cats.text': 'Du sashimi tranché finement au curry relevé sorti du wok.',
+    'home.cats.title': 
+      'Par où voulez-vous commencer ?',
+    'home.cats.text': 
+      'Du sashimi au curry relevé — allez directement à la rubrique qui vous intéresse.',
     'home.cats.count': '{n} plats',
+    'cat.sushi': 'Sushi',
+    'cat.boissons': 'Boissons',
     'cat.chauds': 'Wok & chinois',
     'cat.thai': 'Thaï',
     'cat.entrees': 'Entrées',
     'cat.riz': 'Riz & nouilles',
     'cat.soupes': 'Soupes & salades',
 
-    'home.story.eyebrow': 'Notre ambition',
-    'home.story.title': 'Cuisiné avec sincérité, servi avec générosité',
+    'home.story.eyebrow': 
+      'À propos',
+    'home.story.title': 
+      'Pourquoi notre carte est si longue',
     'home.story.text':
-      "Au Restaurant Fuku, il n'y a d'autre ambition que celle de proposer une cuisine sincère, ancrée dans les saisons, authentique mais moderne, joyeuse et généreuse, aux inspirations larges.",
+      
+      'Des sushis du Japon, des plats au wok de Chine, des currys de Thaïlande : trois cuisines sous un même toit, et la raison de nos 222 plats. Chacun est préparé au moment de la commande. Cela prend parfois quelques minutes de plus. Nous trouvons que cela en vaut la peine.',
     'home.story.stat1': 'plats à la carte',
     'home.story.stat2': 'cuisines sous un même toit',
     'home.story.stat3': 'Recommandé par Restaurant Guru',
@@ -347,18 +382,23 @@ const DICT = {
     'home.info.addressNote': "Au centre de Vianden, à quelques pas de l'Our.",
     'home.info.route': "Calculer l'itinéraire",
     'home.info.contact': 'Contact',
-    'home.info.contactNote': 'Pour vos réservations et vos questions, écrivez-nous de préférence par e-mail.',
+    'home.info.contactNote': 
+      'Une question sur un plat, une allergie ou votre commande ? Écrivez-nous.',
     'home.info.write': 'Nous écrire',
 
-    'home.cta.title': 'Faim ? Toute la carte vous attend.',
-    'home.cta.text': 'Composez votre commande tranquillement – sushis, wok, thaï et boissons au même endroit.',
+    'home.cta.title': 
+      'Un petit creux ?',
+    'home.cta.text': 
+      '222 plats, un seul panier. Prenez votre temps.',
     'home.cta.primary': 'Passer commande',
     'home.cta.secondary': 'Nous contacter',
 
     'order.eyebrow': 'La carte',
-    'order.title': 'Composez votre commande',
+    'order.title': 
+      'Que voulez-vous manger ?',
     'order.text':
-      'Les {n} plats sur une seule page. Cherchez, filtrez, ajoutez au panier – le paiement se fait à la caisse habituelle.',
+      
+      'Les {n} plats sur une seule page. Cherchez, filtrez, ajoutez — c’est tout.',
     'order.searchPlaceholder': 'Chercher un plat, un numéro, un ingrédient …',
     'order.searchClear': 'Effacer la recherche',
     'order.categories': 'Catégories',
@@ -494,9 +534,14 @@ const DICT = {
 
     'contact.eyebrow': 'Contact',
     'contact.title': 'Rendez-nous visite à Vianden',
-    'contact.text': 'Au plaisir de vous accueillir – sur place, à emporter ou en livraison.',
-    'contact.mapTitle': 'Afficher la carte',
-    'contact.mapNote': "La carte n'est chargée depuis OpenStreetMap qu'après votre clic.",
+    'contact.text': 
+      'Passez nous voir ou venez chercher votre commande. Au plaisir de vous accueillir.',
+    'contact.mapOpen': 'Ouvrir dans Google Maps',
+    'contact.mapCredit': 'Données cartographiques © les contributeurs OpenStreetMap',
+    'contact.mapTitle': 
+      'Nous trouver',
+    'contact.mapNote': 
+      'En plein cœur de Vianden, à deux pas de l’Our. Touchez la carte pour ouvrir l’itinéraire.',
     'contact.mapLoad': 'Charger la carte',
     'contact.openMaps': "Ouvrir dans l'app Plans",
     'contact.phone': 'Téléphone',
@@ -513,9 +558,12 @@ const DICT = {
     'legal.privacy3':
       'Pour la commande et le paiement s’appliquent en outre les informations de confidentialité de notre système de boutique.',
 
-    'footer.tagline': 'Sushis, cuisine chinoise au wok et currys thaïlandais au cœur de Vianden.',
-    'footer.explore': 'Découvrir',
-    'footer.visit': 'Nous rendre visite',
+    'footer.tagline': 
+      'Trois cuisines sous un même toit — en plein cœur de Vianden.',
+    'footer.explore': 
+      'La carte',
+    'footer.visit': 
+      'Accès rapide',
     'footer.legal': 'Mentions légales',
     'footer.imprint': 'Mentions légales',
     'footer.privacy': 'Confidentialité',
@@ -563,9 +611,11 @@ const DICT = {
     'status.today': 'Today',
 
     'hero.badge': 'Vianden · Luxembourg',
-    'hero.title': 'Far Eastern cooking — <em>in the heart of Vianden</em>',
+    'hero.title': 
+      'Rolled by hand, seared in the wok — <em>right in Vianden</em>',
     'hero.text':
-      'More than 220 dishes: hand-rolled sushi, Chinese wok classics and Thai curries. Takeaway, delivery or at our table.',
+      
+      'Sushi, Chinese wok dishes and Thai curries. Everything is cooked once you order — to take away or at our table.',
     'hero.cta': 'Order now',
     'hero.cta2': 'View the menu',
     'hero.fact1': "Today's hours",
@@ -575,24 +625,33 @@ const DICT = {
     'hero.chipLabel': "The chef's suggestion",
 
     'home.popular.eyebrow': 'Favourites',
-    'home.popular.title': 'What our guests order most',
-    'home.popular.text': 'A small selection from more than 220 dishes – the rest is waiting on the menu.',
+    'home.popular.title': 
+      'Where most people start',
+    'home.popular.text': 
+      'Four out of 222. The rest is waiting on the menu.',
     'home.popular.all': 'See all dishes',
 
     'home.cats.eyebrow': 'The menu',
-    'home.cats.title': 'Four kitchens, one house',
-    'home.cats.text': 'From finely sliced sashimi to a fiery curry straight out of the wok.',
+    'home.cats.title': 
+      'Where would you like to start?',
+    'home.cats.text': 
+      'From sashimi to a fiery curry — jump straight to the section you want.',
     'home.cats.count': '{n} dishes',
+    'cat.sushi': 'Sushi',
+    'cat.boissons': 'Drinks',
     'cat.chauds': 'Wok & Chinese',
     'cat.thai': 'Thai',
     'cat.entrees': 'Starters',
     'cat.riz': 'Rice & noodles',
     'cat.soupes': 'Soups & salads',
 
-    'home.story.eyebrow': 'Our ambition',
-    'home.story.title': 'Cooked honestly, served generously',
+    'home.story.eyebrow': 
+      'About us',
+    'home.story.title': 
+      'Why our menu is so long',
     'home.story.text':
-      'At Restaurant Fuku we have only one ambition: honest cooking, rooted in the seasons, authentic yet modern, joyful and generous, with wide-ranging inspiration.',
+      
+      'Sushi from Japan, wok dishes from China, curries from Thailand: three kitchens under one roof, and the reason for 222 dishes. Every one of them is cooked once you order. Sometimes that takes a few minutes longer. We think it is worth it.',
     'home.story.stat1': 'dishes on the menu',
     'home.story.stat2': 'kitchens under one roof',
     'home.story.stat3': 'Recommended by Restaurant Guru',
@@ -605,18 +664,23 @@ const DICT = {
     'home.info.addressNote': 'In the centre of Vianden, a few steps from the Our.',
     'home.info.route': 'Get directions',
     'home.info.contact': 'Contact',
-    'home.info.contactNote': 'For reservations and questions, email is the fastest way to reach us.',
+    'home.info.contactNote': 
+      'Questions about a dish, an allergy or your order? Just write to us.',
     'home.info.write': 'Send an email',
 
-    'home.cta.title': 'Hungry? The whole menu is waiting.',
-    'home.cta.text': 'Build your order at your own pace – sushi, wok, Thai and drinks all in one place.',
+    'home.cta.title': 
+      'Hungry?',
+    'home.cta.text': 
+      '222 dishes, one basket. Take your time.',
     'home.cta.primary': 'Start ordering',
     'home.cta.secondary': 'Get in touch',
 
     'order.eyebrow': 'Menu',
-    'order.title': 'Build your order',
+    'order.title': 
+      'What are you in the mood for?',
     'order.text':
-      'All {n} dishes on a single page. Search, filter, add to cart – payment happens at the usual checkout.',
+      
+      'All {n} dishes on one page. Search, filter, tap — done.',
     'order.searchPlaceholder': 'Search a dish, number or ingredient …',
     'order.searchClear': 'Clear search',
     'order.categories': 'Categories',
@@ -752,9 +816,14 @@ const DICT = {
 
     'contact.eyebrow': 'Contact',
     'contact.title': 'Come and see us in Vianden',
-    'contact.text': 'We look forward to your visit – in the restaurant, for collection or delivered to your door.',
-    'contact.mapTitle': 'Show map',
-    'contact.mapNote': 'The map is only loaded from OpenStreetMap after you click.',
+    'contact.text': 
+      'Come and see us, or pick up your order. We look forward to it.',
+    'contact.mapOpen': 'Open in Google Maps',
+    'contact.mapCredit': 'Map data © OpenStreetMap contributors',
+    'contact.mapTitle': 
+      'How to find us',
+    'contact.mapNote': 
+      'Right in Vianden, a few steps from the Our. Tap the map to open directions.',
     'contact.mapLoad': 'Load map',
     'contact.openMaps': 'Open in maps app',
     'contact.phone': 'Phone',
@@ -770,9 +839,12 @@ const DICT = {
     'legal.privacy3':
       'The privacy notices of our shop system additionally apply to ordering and payment.',
 
-    'footer.tagline': 'Sushi, Chinese wok cooking and Thai curries in the heart of Vianden.',
-    'footer.explore': 'Explore',
-    'footer.visit': 'Visit',
+    'footer.tagline': 
+      'Three kitchens under one roof — right in Vianden.',
+    'footer.explore': 
+      'The menu',
+    'footer.visit': 
+      'Quick links',
     'footer.legal': 'Legal',
     'footer.imprint': 'Legal notice',
     'footer.privacy': 'Privacy',
@@ -820,9 +892,11 @@ const DICT = {
     'status.today': 'Vandaag',
 
     'hero.badge': 'Vianden · Luxemburg',
-    'hero.title': 'Verse Aziatische keuken — <em>in hartje Vianden</em>',
+    'hero.title': 
+      'Met de hand gerold, in de wok gebakken — <em>midden in Vianden</em>',
     'hero.text':
-      'Meer dan 220 gerechten: handgerolde sushi, Chinese wokklassiekers en Thaise curry’s. Afhalen, bezorgen of bij ons aan tafel.',
+      
+      'Sushi, Chinese wokgerechten en Thaise curry’s. Alles wordt bereid zodra u bestelt — om af te halen of bij ons aan tafel.',
     'hero.cta': 'Nu bestellen',
     'hero.cta2': 'Bekijk de kaart',
     'hero.fact1': 'Openingstijden vandaag',
@@ -832,24 +906,33 @@ const DICT = {
     'hero.chipLabel': 'Aanrader van het huis',
 
     'home.popular.eyebrow': 'Favorieten',
-    'home.popular.title': 'Wat onze gasten het vaakst bestellen',
-    'home.popular.text': 'Een kleine selectie uit ruim 220 gerechten – de rest staat op de kaart.',
+    'home.popular.title': 
+      'Waar de meesten mee beginnen',
+    'home.popular.text': 
+      'Vier van de 222. De rest staat op de kaart.',
     'home.popular.all': 'Alle gerechten bekijken',
 
     'home.cats.eyebrow': 'De kaart',
-    'home.cats.title': 'Vier keukens, één huis',
-    'home.cats.text': 'Van dun gesneden sashimi tot een pittige curry uit de wok.',
+    'home.cats.title': 
+      'Waar wilt u beginnen?',
+    'home.cats.text': 
+      'Van sashimi tot pittige curry — ga direct naar de rubriek die u zoekt.',
     'home.cats.count': '{n} gerechten',
+    'cat.sushi': 'Sushi',
+    'cat.boissons': 'Dranken',
     'cat.chauds': 'Wok & Chinees',
     'cat.thai': 'Thais',
     'cat.entrees': 'Voorgerechten',
     'cat.riz': 'Rijst & noedels',
     'cat.soupes': 'Soepen & salades',
 
-    'home.story.eyebrow': 'Onze ambitie',
-    'home.story.title': 'Eerlijk gekookt, gul geserveerd',
+    'home.story.eyebrow': 
+      'Over ons',
+    'home.story.title': 
+      'Waarom onze kaart zo lang is',
     'home.story.text':
-      'Bij Restaurant Fuku hebben we maar één ambitie: eerlijke keuken, geworteld in de seizoenen, authentiek en toch modern, vrolijk en gul, met brede inspiratie.',
+      
+      'Sushi uit Japan, wokgerechten uit China, curry’s uit Thailand: drie keukens onder één dak, en de reden voor 222 gerechten. Elk gerecht wordt bereid zodra u bestelt. Soms duurt dat een paar minuten langer. Wij vinden dat het dat waard is.',
     'home.story.stat1': 'gerechten op de kaart',
     'home.story.stat2': 'keukens onder één dak',
     'home.story.stat3': 'Aanbevolen door Restaurant Guru',
@@ -862,18 +945,23 @@ const DICT = {
     'home.info.addressNote': 'In het centrum van Vianden, op een paar passen van de Our.',
     'home.info.route': 'Route plannen',
     'home.info.contact': 'Contact',
-    'home.info.contactNote': 'Voor reserveringen en vragen bereikt u ons het snelst per e-mail.',
+    'home.info.contactNote': 
+      'Vragen over een gerecht, een allergie of uw bestelling? Schrijf ons gerust.',
     'home.info.write': 'E-mail sturen',
 
-    'home.cta.title': 'Honger? De hele kaart wacht op u.',
-    'home.cta.text': 'Stel uw bestelling rustig samen – sushi, wok, Thais en drankjes op één plek.',
+    'home.cta.title': 
+      'Honger?',
+    'home.cta.text': 
+      '222 gerechten, één mandje. Neem rustig de tijd.',
     'home.cta.primary': 'Naar de bestelling',
     'home.cta.secondary': 'Contact opnemen',
 
     'order.eyebrow': 'Menukaart',
-    'order.title': 'Stel uw bestelling samen',
+    'order.title': 
+      'Waar heeft u zin in?',
     'order.text':
-      'Alle {n} gerechten op één pagina. Zoeken, filteren, in het mandje – betalen gebeurt bij de vertrouwde kassa.',
+      
+      'Alle {n} gerechten op één pagina. Zoeken, filteren, tikken — klaar.',
     'order.searchPlaceholder': 'Zoek een gerecht, nummer of ingrediënt …',
     'order.searchClear': 'Zoekopdracht wissen',
     'order.categories': 'Categorieën',
@@ -1009,9 +1097,14 @@ const DICT = {
 
     'contact.eyebrow': 'Contact',
     'contact.title': 'Bezoek ons in Vianden',
-    'contact.text': 'We verwelkomen u graag – in het restaurant, om af te halen of thuisbezorgd.',
-    'contact.mapTitle': 'Kaart tonen',
-    'contact.mapNote': 'De kaart wordt pas na uw klik door OpenStreetMap geladen.',
+    'contact.text': 
+      'Kom langs of haal uw bestelling op. We zien u graag.',
+    'contact.mapOpen': 'Openen in Google Maps',
+    'contact.mapCredit': 'Kaartgegevens © OpenStreetMap-bijdragers',
+    'contact.mapTitle': 
+      'Ons vinden',
+    'contact.mapNote': 
+      'Midden in Vianden, op een paar passen van de Our. Tik op de kaart voor de route.',
     'contact.mapLoad': 'Kaart laden',
     'contact.openMaps': 'Openen in kaarten-app',
     'contact.phone': 'Telefoon',
@@ -1027,9 +1120,12 @@ const DICT = {
     'legal.privacy3':
       'Voor bestelling en betaling gelden aanvullend de privacyverklaringen van ons shopsysteem.',
 
-    'footer.tagline': 'Sushi, Chinese wokkeuken en Thaise curry’s in hartje Vianden.',
-    'footer.explore': 'Ontdekken',
-    'footer.visit': 'Bezoeken',
+    'footer.tagline': 
+      'Drie keukens onder één dak — midden in Vianden.',
+    'footer.explore': 
+      'De kaart',
+    'footer.visit': 
+      'Snel naar',
     'footer.legal': 'Juridisch',
     'footer.imprint': 'Colofon',
     'footer.privacy': 'Privacy',

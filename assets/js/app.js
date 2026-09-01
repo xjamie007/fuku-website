@@ -19,7 +19,10 @@ export const RESTAURANT = {
   // TODO: Telefonnummer eintragen – auf der alten Website war keine hinterlegt.
   phone: '',
   timeZone: 'Europe/Luxembourg',
-  coords: { lat: 49.9345, lon: 6.2094 },
+  /* Aus dem OpenStreetMap-Eintrag des Restaurants übernommen.
+     Steuert den Marker auf assets/img/karte.jpg (siehe tools/make-map.py)
+     und den Ziellink nach Google Maps. */
+  coords: { lat: 49.9340376, lon: 6.2100988 },
   social: {
     facebook: 'https://www.facebook.com/Restaurant-Fuku-110551558349707/',
     instagram: 'https://www.instagram.com/restaurant_fuku/',
@@ -334,6 +337,30 @@ function initReveal() {
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) revealVisible();
   });
+
+  /*
+   * Zweites Netz am Scrollen. Der IntersectionObserver pausiert nicht nur in
+   * Hintergrund-Tabs, sondern auch in eingebetteten Ansichten, die nicht
+   * gezeichnet werden. Ohne diese Prüfung bliebe alles unterhalb des ersten
+   * Bildschirms dauerhaft unsichtbar – und Bilder mit loading="lazy" darin
+   * würden gar nicht erst geladen, weil der Browser sie für unsichtbar hält.
+   */
+  // Bewusst ein Zeitgeber statt requestAnimationFrame: Der Bildtakt steht
+  // still, solange die Seite nicht gezeichnet wird – genau dann, wenn dieses
+  // Netz gebraucht wird.
+  let warten = false;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (warten) return;
+      warten = true;
+      setTimeout(() => {
+        warten = false;
+        revealVisible();
+      }, 100);
+    },
+    { passive: true },
+  );
 }
 
 /* ------------------------------------------------------------------
@@ -360,9 +387,16 @@ function initContactData() {
     if (el.tagName === 'A') el.href = `tel:${phone.replace(/[^\d+]/g, '')}`;
   });
 
+  /*
+   * Ziel ist Google Maps: Dort liegen die Bewertungen, die Fotos und die
+   * Routenführung, die die meisten Gäste ohnehin benutzen. Die Adresse wird
+   * zusätzlich zu den Koordinaten übergeben, damit der Eintrag des
+   * Restaurants gefunden wird und nicht nur ein Punkt auf der Karte.
+   */
   const query = encodeURIComponent(`${RESTAURANT.name}, ${street}, ${zip} ${city}, ${RESTAURANT.country}`);
-  document.querySelectorAll('[data-contact="route"]').forEach((el) => {
-    el.href = `https://www.openstreetmap.org/search?query=${query}`;
+  const { lat, lon } = RESTAURANT.coords;
+  document.querySelectorAll('[data-contact="route"], [data-contact="map"]').forEach((el) => {
+    el.href = `https://www.google.com/maps/search/?api=1&query=${query}&query_place_id=&center=${lat},${lon}`;
     el.target = '_blank';
     el.rel = 'noopener';
   });

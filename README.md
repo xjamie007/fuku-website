@@ -22,10 +22,11 @@ assets/css/         style.css (global) · order.css (Bestellseite)
 assets/js/          app.js · i18n.js · icons.js · menu-data.js
                     home.js · order.js · reserve.js · contact.js
 assets/fonts/       Selbstgehostete Schriften (Inter, Instrument Serif)
-assets/img/         Logo
+assets/img/         Logo, Kartenbild
 
 data/menu.json      Erzeugte Speisekarte – nicht von Hand bearbeiten
-tools/              sync-menu.mjs · check-i18n.mjs · check-config.mjs
+tools/              sync-menu.mjs · dish-i18n.mjs · check-i18n.mjs
+                    check-config.mjs · make-map.py · dev-server.py
 
 .htaccess           Cache- und Sicherheits-Header für Apache/LiteSpeed
 _headers            Dasselbe für Netlify / Cloudflare Pages
@@ -66,10 +67,10 @@ node tools/check-i18n.mjs && node tools/check-config.mjs
 ## Lokal ansehen
 
 ```bash
-python3 -m http.server 4341
+python3 tools/dev-server.py 4371
 ```
 
-Dann `http://localhost:4341` öffnen. Die Bestellabgabe funktioniert lokal
+Dann `http://localhost:4371` öffnen. Die Bestellabgabe funktioniert lokal
 **nicht** – dazu muss die Seite auf derselben Domain wie WordPress laufen
 (siehe unten). Alles andere lässt sich lokal testen.
 
@@ -216,6 +217,56 @@ Diese Angaben liessen sich aus der alten Website nicht ermitteln:
 6. **Fotos.** 152 der 222 Gerichte haben ein Bild. Gerichte ohne Foto zeigen
    ein 福-Zeichen als Platzhalter. Neue Bilder einfach in WordPress hochladen
    und `node tools/sync-menu.mjs` erneut ausführen.
+
+---
+
+## Gerichtnamen übersetzen
+
+Die Namen kommen französisch aus WooCommerce. `tools/dish-i18n.mjs`
+übersetzt sie beim Sync nach Deutsch, Englisch und Niederländisch und legt
+das Ergebnis als `t` und `tShort` neben den Originalnamen in `data/menu.json`.
+Französisch bleibt unverändert die Originalfassung.
+
+Übersetzt wird **nicht** Wort für Wort, sondern über ein gepflegtes
+Wörterbuch aus Wendungen – die längste passende gewinnt:
+
+```
+'riz sauté'          → Gebratener Reis
+'aux légumes'        → mit Gemüse
+'sur plat chauffant' → auf heisser Platte
+```
+
+Fachbegriffe (Sushi, Nigiri, Tempura, Udon …) bleiben stehen. Für Namen,
+die sich mechanisch nur holprig übersetzen lassen, gibt es `OVERRIDES` mit
+der besseren Formulierung.
+
+Neue Gerichte aus WooCommerce werden automatisch mitübersetzt, solange sie
+dieselben Bausteine verwenden. Was das Wörterbuch nicht kennt, bleibt
+französisch stehen – `node tools/sync-menu.mjs` meldet solche Wörter am
+Ende, damit sie ergänzt werden können.
+
+Die Suche durchsucht alle Sprachen gleichzeitig: Wer „Lachs" eintippt,
+findet auch „Saumon".
+
+---
+
+## Kartenbild erneuern
+
+Die Karte auf der Kontaktseite ist ein Bild im Projekt, kein eingebetteter
+Dienst. Dadurch ist sie sofort sichtbar, es geht keine Anfrage an einen
+fremden Server, und die Seite bleibt ohne Cookie-Banner. Der Klick führt
+nach Google Maps.
+
+```bash
+python3 tools/make-map.py
+```
+
+Das Skript liest die Koordinaten aus `RESTAURANT.coords` in `app.js`, lädt
+die Kacheln von OpenStreetMap, setzt den Marker und schreibt
+`assets/img/karte.jpg`. Nötig nur, wenn sich die Adresse ändert.
+
+Die Namensnennung „Kartendaten © OpenStreetMap-Mitwirkende" steht unter der
+Karte und muss dort bleiben – sie ist Lizenzbedingung.
 
 ---
 

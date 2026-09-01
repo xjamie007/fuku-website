@@ -174,23 +174,36 @@
           <div class="section-head" data-reveal>
             <div>
               <span class="eyebrow" data-i18n="home.info.eyebrow">Gut zu wissen</span>
-              <h2 data-i18n="contact.mapTitle">Karte anzeigen</h2>
-              <p data-i18n="contact.mapNote">Die Karte wird erst nach dem Klick von OpenStreetMap geladen.</p>
+              <h2 data-i18n="contact.mapTitle">So finden Sie uns</h2>
+              <p data-i18n="contact.mapNote">
+                Mitten in Vianden, wenige Schritte von der Our. Tippen Sie auf die Karte, dann öffnet sich die Route.
+              </p>
             </div>
-            <a class="btn btn--ghost" data-contact="route" href="#">
-              <span data-i18n="contact.openMaps">In Karten-App öffnen</span>
-              <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
-            </a>
           </div>
 
-          <div class="map-frame" data-map data-reveal>
-            <button class="map-placeholder" type="button" data-map-load>
-              <span class="map-placeholder__pin"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
-              <strong>9, Rue de la Gare · L-9420 Vianden</strong>
-              <span class="btn btn--brand" data-i18n="contact.mapLoad">Karte laden</span>
-              <small data-i18n="contact.mapNote">Die Karte wird erst nach dem Klick von OpenStreetMap geladen.</small>
-            </button>
-          </div>
+          <!--
+            Die Karte liegt als Bild im Projekt (tools/make-map.py) und ist
+            deshalb sofort sichtbar, ohne dass eine Anfrage an einen fremden
+            Server geht. Der Klick führt nach Google Maps.
+          -->
+          <figure class="map-frame" data-reveal>
+            <a class="map-frame__link" data-contact="map" href="#">
+              <img
+                src="assets/img/karte.jpg"
+                alt="Lageplan: Restaurant Fuku, 9 Rue de la Gare in Vianden"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="map-frame__cta">
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+                <span data-i18n="contact.mapOpen">In Google Maps öffnen</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+              </span>
+            </a>
+            <figcaption data-i18n="contact.mapCredit">Kartendaten © OpenStreetMap-Mitwirkende</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -267,21 +280,22 @@
           </div>
 
           <div>
-            <h4 data-i18n="footer.explore">Entdecken</h4>
+            <h4 data-i18n="footer.explore">Die Karte</h4>
             <div class="footer__links">
-              <a href="bestellen.html#sushi">Sushi</a>
-              <a href="bestellen.html#chauds">Wok</a>
-              <a href="bestellen.html#thai">Thai</a>
-              <a href="bestellen.html#boissons">Getränke</a>
+              <a href="bestellen.html#sushi" data-i18n="cat.sushi">Sushi</a>
+              <a href="bestellen.html#chauds" data-i18n="cat.chauds">Wok &amp; Chinesisch</a>
+              <a href="bestellen.html#thai" data-i18n="cat.thai">Thai</a>
+              <a href="bestellen.html#entrees" data-i18n="cat.entrees">Vorspeisen</a>
+              <a href="bestellen.html#boissons" data-i18n="cat.boissons">Getränke</a>
             </div>
           </div>
 
           <div>
-            <h4 data-i18n="footer.visit">Besuchen</h4>
+            <h4 data-i18n="footer.visit">Schnell zu</h4>
             <div class="footer__links">
-              <a href="index.html" data-i18n="nav.home">Startseite</a>
-              <a href="bestellen.html" data-i18n="nav.order">Karte &amp; Bestellen</a>
-              <a href="reservieren.html" data-i18n="nav.reserve">Reservieren</a>
+              <a href="bestellen.html" data-i18n="hero.cta">Jetzt bestellen</a>
+              <a href="reservieren.html" data-i18n="reserve.ctaHome">Tisch reservieren</a>
+              <a data-contact="route" href="#" data-i18n="home.info.route">Route planen</a>
               <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
             </div>
           </div>

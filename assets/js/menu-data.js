@@ -44,6 +44,19 @@ export function flatten(menu) {
   return out;
 }
 
+/**
+ * Gerichtname in der gewünschten Sprache.
+ *
+ * Französisch ist die Originalfassung aus WooCommerce und steht in
+ * `name`/`short`; die Übersetzungen liegen in `t`/`tShort` (erzeugt von
+ * tools/dish-i18n.mjs). Fehlt eine Übersetzung – etwa weil das Gericht neu
+ * ist –, bleibt der französische Name stehen, statt eine Lücke zu zeigen.
+ */
+export const dishName = (dish, lang) => (lang === 'fr' ? dish.name : dish.t?.[lang]) || dish.name;
+
+/** Kurzform für Listen; sonst wie dishName. */
+export const dishShort = (dish, lang) => (lang === 'fr' ? dish.short : dish.tShort?.[lang]) || dish.short;
+
 /** Anzahl der Gerichte einer Sektion. */
 export function countIn(menu, sectionId) {
   const section = menu.sections.find((s) => s.id === sectionId);

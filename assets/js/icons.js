@@ -64,3 +64,37 @@ export function injectSprite() {
 
 /** Kurzschreibweise für dynamisch erzeugtes Markup. */
 export const icon = (name, cls = 'icon') => `<svg class="${cls}" aria-hidden="true"><use href="#i-${name}"></use></svg>`;
+
+/* ------------------------------------------------------------------
+   Emoji für die Speisekarte
+
+   Auf einer Restaurantkarte wirkt das Gericht selbst wärmer als eine
+   abstrakte Strichzeichnung. Die Schlüssel entsprechen den `icon`-Feldern
+   aus data/menu.json, damit beide Darstellungen austauschbar bleiben.
+   ------------------------------------------------------------------ */
+const EMOJI = {
+  sun: '🍱',
+  bowl: '🥟',
+  soup: '🍜',
+  leaf: '🥗',
+  sushi: '🍣',
+  wok: '🥘',
+  chili: '🌶️',
+  noodles: '🍚',
+  pot: '🫕',
+  glass: '🥤',
+  sprout: '🌱',
+  star: '⭐',
+  flame: '🌶️',
+};
+
+/**
+ * Emoji als dekoratives Element.
+ *
+ * `aria-hidden`, weil direkt daneben immer der Name der Kategorie steht –
+ * sonst läse ein Screenreader „Sushi Sushi“ vor.
+ */
+export const emoji = (name) => {
+  const char = EMOJI[name];
+  return char ? `<span class="emoji" aria-hidden="true">${char}</span>` : '';
+};

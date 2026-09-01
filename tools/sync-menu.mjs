@@ -11,6 +11,7 @@
  */
 
 import { writeFile, mkdir } from 'node:fs/promises';
+import { translateDish, unknown } from './dish-i18n.mjs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -388,11 +389,16 @@ async function main() {
     const fullTitle = overridden ? fixTypos(overridden) : title;
     const cats = (p.categories || []).map((c) => c.slug);
     const choices = variants.get(p.id) || null;
+    const short = shortTitle(fullTitle);
     return {
       id: p.id,
       code,
       name: fullTitle,
-      short: shortTitle(fullTitle),
+      short,
+      /* Übersetzte Namen je Sprache; Französisch bleibt in `name`/`short`.
+         Erzeugt von tools/dish-i18n.mjs. */
+      t: translateDish(fullTitle),
+      tShort: translateDish(short),
       price: Number(p.prices.price) / 10 ** Number(p.prices.currency_minor_unit),
       description,
       allergens,
@@ -459,6 +465,14 @@ async function main() {
   await mkdir(resolve(ROOT, 'data'), { recursive: true });
   await writeFile(resolve(ROOT, 'data', 'menu.json'), `${JSON.stringify(out, null, 1)}\n`, 'utf8');
   console.log(`✓ data/menu.json geschrieben – ${count} Gerichte in ${sections.length} Sektionen`);
+
+  if (unknown.size) {
+    console.warn(
+      `  ⚠︎ ${unknown.size} Wörter ohne Übersetzung (bleiben französisch stehen):\n     ` +
+        [...unknown].sort().join(', '),
+    );
+    console.warn('     Ergänzen in tools/dish-i18n.mjs');
+  }
 }
 
 /** Sortiert nach numerischer Artikelnummer, Gerichte ohne Nummer zuletzt. */

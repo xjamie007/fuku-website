@@ -3,8 +3,8 @@
    ================================================================== */
 
 import { boot, formatPrice } from './app.js';
-import { t, onLangChange } from './i18n.js';
-import { loadMenu, flatten, countIn } from './menu-data.js';
+import { t, onLangChange, getLang } from './i18n.js';
+import { loadMenu, flatten, countIn, dishName } from './menu-data.js';
 
 boot();
 
@@ -27,10 +27,10 @@ function renderHighlights(dishes) {
       (d) => `
       <a class="dish-tile" href="bestellen.html#${d.sectionId}">
         <div class="dish-tile__img">
-          <img src="${d.image}" alt="${escapeAttr(d.name)}" loading="lazy" width="400" height="300" />
+          <img src="${d.image}" alt="${escapeAttr(dishName(d, getLang()))}" loading="lazy" width="400" height="300" />
         </div>
         <div class="dish-tile__body">
-          <h4>${escapeHtml(d.name)}</h4>
+          <h4>${escapeHtml(dishName(d, getLang()))}</h4>
           <div class="dish-tile__meta">
             <span class="price">${formatPrice(d.price)}</span>
             <span class="link-arrow" style="border: 0; padding: 0">
