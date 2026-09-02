@@ -507,13 +507,50 @@
   gap: 0.22rem;
 }
 
+/*
+ * Sehr schmale Geräte (iPhone SE und kleiner).
+ *
+ * Bei 320 px blieben dem Gerichtnamen nur noch 49 px, sobald Mengenknöpfe
+ * neben dem Preis standen. Ein kleineres Vorschaubild und engere Abstände
+ * geben rund 40 px zurück, ohne die Bedienknöpfe zu verkleinern.
+ */
+@media (max-width: 380px) {
+  .dish {
+    gap: 0.6rem;
+    padding: 0.7rem;
+  }
+
+  .dish__main {
+    gap: 0.6rem;
+  }
+
+  .dish__thumb {
+    width: 58px;
+    height: 58px;
+  }
+}
+
 .dish__title {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 0.45rem;
   font-size: var(--step-0);
   font-weight: 600;
   line-height: 1.32;
+  min-width: 0;
+}
+
+/*
+ * Der Gerichtname ist ein Flex-Kind und schrumpft ohne min-width nicht
+ * unter die Breite seines längsten Wortes. Lange Komposita wie
+ * „Hähnchenspiesse“ liefen dadurch aus ihrer Spalte heraus und legten sich
+ * über den Preis. break-word trennt nur, wenn ein Wort allein nicht passt.
+ */
+.dish__title > span {
+  min-width: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .dish__code {
@@ -910,6 +947,7 @@
 
 .cart-line__name {
   min-width: 0;
+  overflow-wrap: break-word;
   font-size: var(--step--1);
   font-weight: 500;
   line-height: 1.35;

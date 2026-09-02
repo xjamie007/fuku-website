@@ -22,11 +22,12 @@ assets/css/         style.css (global) · order.css (Bestellseite)
 assets/js/          app.js · i18n.js · icons.js · menu-data.js
                     home.js · order.js · reserve.js · contact.js
 assets/fonts/       Selbstgehostete Schriften (Inter, Instrument Serif)
-assets/img/         Logo, Kartenbild
+assets/img/         Logo, Kartenbild, QR-Codes
 
 data/menu.json      Erzeugte Speisekarte – nicht von Hand bearbeiten
 tools/              sync-menu.mjs · dish-i18n.mjs · check-i18n.mjs
-                    check-config.mjs · make-map.py · dev-server.py
+                    check-config.mjs · make-map.py · make-qr.py
+                    dev-server.py
 
 .htaccess           Cache- und Sicherheits-Header für Apache/LiteSpeed
 _headers            Dasselbe für Netlify / Cloudflare Pages
@@ -267,6 +268,38 @@ die Kacheln von OpenStreetMap, setzt den Marker und schreibt
 
 Die Namensnennung „Kartendaten © OpenStreetMap-Mitwirkende" steht unter der
 Karte und muss dort bleiben – sie ist Lizenzbedingung.
+
+---
+
+## QR-Code
+
+Für Aufsteller auf dem Tisch, die Speisekarte oder ein Schaufenster:
+
+```bash
+python3 tools/make-qr.py                                      # → fuku.lu
+python3 tools/make-qr.py https://beispiel.lu --name vorschau  # anderes Ziel
+```
+
+Je Ziel entstehen drei Dateien in `assets/img/`:
+
+| Datei | Wofür |
+| --- | --- |
+| `qr-<name>.svg` | Druck – verlustfrei auf jede Grösse skalierbar |
+| `qr-<name>.png` | Bildschirm, soziale Netzwerke (1200 px) |
+| `qr-<name>-karte.png` | fertiger Aufsteller mit Logo, Adresse und Hinweis |
+
+Die Fehlerkorrektur steht auf Stufe H (30 %), damit der Code auch mit
+Kratzern oder Fettflecken noch gelesen wird.
+
+**Das Skript prüft sich selbst:** Nach dem Erzeugen liest es den Code wieder
+ein und vergleicht ihn mit der Adresse. Stimmt etwas nicht, wird nichts
+gespeichert. Erzeugt wird der Code vom QR-Generator, der in macOS eingebaut
+ist – dafür braucht es die Xcode-Kommandozeilenwerkzeuge
+(`xcode-select --install`).
+
+Für den Druck immer die **SVG-Datei** verwenden. Mindestens 2 cm Kantenlänge,
+und den weissen Rand ringsum stehen lassen – ohne ihn finden viele Kameras
+den Code nicht.
 
 ---
 

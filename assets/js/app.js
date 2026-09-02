@@ -374,7 +374,10 @@ function initContactData() {
   });
 
   document.querySelectorAll('[data-contact="email"]').forEach((el) => {
-    el.textContent = email;
+    // Nur beschriften, wenn nichts drinsteckt. Die runden Schaltflächen im
+    // Fusszeilenbereich enthalten ein Symbol – die Adresse als Text würde
+    // dort aus dem Knopf herauslaufen.
+    if (!el.children.length) el.textContent = email;
     if (el.tagName === 'A') el.href = `mailto:${email}`;
   });
 
