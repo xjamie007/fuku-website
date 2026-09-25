@@ -37,8 +37,12 @@ _headers            Dasselbe für Netlify / Cloudflare Pages
 
 ## Speisekarte aktualisieren
 
-Gerichte und Preise werden weiterhin **im WordPress-Backend** gepflegt. Nach
-jeder Änderung dort:
+Gerichte, Preise, Fotos und das Mittagsmenü werden weiterhin **im
+WordPress-Backend** gepflegt. Die Website übernimmt Änderungen von selbst:
+Die GitHub-Aktion `.github/workflows/speisekarte.yml` gleicht alle 30 Minuten
+mit WooCommerce ab und veröffentlicht die neue Karte, wenn sich etwas
+geändert hat. Sofort abgleichen: auf GitHub unter **Actions → „Speisekarte
+abgleichen“ → Run workflow**. Von Hand geht es weiterhin mit:
 
 ```bash
 node tools/sync-menu.mjs
@@ -46,7 +50,7 @@ node tools/sync-menu.mjs
 
 Das Skript lädt alle Produkte über die WooCommerce Store API, räumt Namen und
 Allergenangaben auf, ordnet sie den Kategorien zu und schreibt
-`data/menu.json`. Anschliessend nur diese eine Datei auf den Server laden.
+`data/menu.json`. Ist die Karte unverändert, bleibt die Datei unangetastet.
 
 Was das Skript dabei erledigt:
 
@@ -56,6 +60,27 @@ Was das Skript dabei erledigt:
 - liest Allergennummern aus der Beschreibung und trennt sie vom Beschreibungstext
 - markiert vegetarische, scharfe und beliebte Gerichte für die Filter
 - löst variable Produkte in bestellbare Varianten auf
+- übernimmt, was in einem Menü steckt, aus der Beschreibung der Variante
+- macht aus Varianten mit „Beliebig …“ eine Auswahl (Vorspeise und
+  Hauptgericht beim Mittagsmenü)
+
+**Gilt nur für die Vorschau auf GitHub Pages.** Liegt die Seite später beim
+Hoster von fuku.lu, muss `data/menu.json` von dort aus erneuert werden – per
+Cronjob mit `node tools/sync-menu.mjs` oder indem die GitHub-Aktion die
+Datei zusätzlich per FTP/SSH hochlädt.
+
+### Was das Restaurant in WooCommerce selbst steuert
+
+| Wo in WooCommerce | Wirkung auf der Website |
+| --- | --- |
+| Produkte → Stern ★ („Hervorgehoben“) | Gericht gilt als „Beliebt“: Filter auf der Karte und die vier Empfehlungen auf der Startseite (nur Gerichte mit Foto, möglichst aus verschiedenen Rubriken) |
+| Mittagsmenü Sushi → Varianten → Beschreibung | Inhalt von Menü 1, 2, 3 … – eine Zeile je Bestandteil |
+| Mittagsmenü warm → Eigenschaften „Entrée au choix“ / „Plat au choix“ | Die Gerichte, zwischen denen der Gast wählt |
+| Preis, Foto, Name, Beschreibung | wie bisher |
+
+Solange **kein** Produkt einen Stern hat, gilt die Liste `POPULAR_CODES` in
+`tools/sync-menu.mjs`. Sobald das erste Produkt einen Stern bekommt, zählen
+nur noch die Sterne.
 
 Übersetzungen und Konfiguration prüfen:
 
@@ -198,12 +223,15 @@ Diese Angaben liessen sich aus der alten Website nicht ermitteln:
    Person, RCS-Nummer, Umsatzsteuer-Identifikationsnummer und die
    Betriebsgenehmigung (*autorisation d'établissement*).
 
-3. **„Menu Plats chaud Midi“ ist online nicht bestellbar.** Das Produkt (ID 687)
-   ist in WooCommerce als variables Produkt angelegt, seine einzige Variante
-   hat aber für „Entrée au choix“ und „Plat au choix“ keine festgelegten Werte.
-   WooCommerce weist deshalb jeden Bestellversuch ab – auch auf der alten
-   Website. Auf der neuen Seite erscheint das Menü mit dem Hinweis „Nur im
-   Restaurant“, bis im Backend echte Varianten angelegt sind.
+3. **Mittagsmenüs im Backend aufräumen.** Beide Menüs sind online bestellbar:
+   Beim warmen Menü wählt der Gast Vorspeise und Hauptgericht, beim
+   Sushi-Menü sieht er, was in Menü 1–4 steckt. Im Katalog stehen aber
+   Tippfehler, die die Website beim Abgleich korrigiert, die Kasse und die
+   Bestellmail jedoch unverändert zeigen: „**Munu** Plats chaud Midi“,
+   „**Beignei** de Poulet“, „Soupe **péikinoise**“, „Poulet curry rouge
+   **thä**“, „Nouilles **sautée aux** Poulet“. Beim Sushi-Menü sind außerdem
+   „Menu 5“ und „Menu 6“ als Eigenschaft angelegt, aber ohne Variante – sie
+   erscheinen deshalb nicht.
 
 4. **Fondu Fuku** – die Variante heisst im Backend `1-personne`, die Anzeige
    sagt „4 personnes“. Bestellbar ist das Gericht, die Bezeichnung sollte im
@@ -323,7 +351,7 @@ danach `node tools/check-i18n.mjs` ausführen.
 - Schriften sind selbst gehostet, keine Google Fonts, kein CDN
 - keine Analyse-, Tracking- oder Werbedienste
 - der Warenkorb liegt nur lokal im Browser (`localStorage`)
-- die OpenStreetMap-Karte auf der Kontaktseite lädt erst nach ausdrücklichem Klick
+- die Karte auf der Kontaktseite ist ein Bild vom eigenen Server; erst der Klick öffnet Google Maps
 - damit ist kein Cookie-Banner nötig, solange in WordPress nichts Weiteres läuft
 
 Reservierungsdaten sind personenbezogen. Sie liegen in `_reservierungen/`

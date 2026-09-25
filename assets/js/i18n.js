@@ -25,8 +25,8 @@ const DICT = {
     'meta.title.order': 'Bestellen · Restaurant Fuku Vianden',
     'meta.title.contact': 'Kontakt & Anfahrt · Restaurant Fuku Vianden',
     'meta.desc.home':
-      'Sushi, chinesische Wok-Klassiker und thailändische Currys in Vianden. Über 220 Gerichte – online bestellen, abholen oder bei uns essen.',
-    'meta.desc.order': 'Die komplette Speisekarte des Restaurant Fuku in Vianden – bequem online bestellen.',
+      'Sushi, chinesische Wok-Klassiker und thailändische Currys in Vianden. Über 220 Gerichte: online bestellen, abholen oder bei uns essen.',
+    'meta.desc.order': 'Die komplette Speisekarte des Restaurants Fuku in Vianden. Bequem online bestellen.',
     'meta.desc.contact': 'Adresse, Öffnungszeiten und Anfahrt zum Restaurant Fuku, 9 Rue de la Gare, L-9420 Vianden.',
 
     'nav.home': 'Startseite',
@@ -34,7 +34,7 @@ const DICT = {
     'nav.contact': 'Kontakt',
     'nav.menuShort': 'Karte',
     'nav.open': 'Menü öffnen',
-    'nav.close': 'Menü schliessen',
+    'nav.close': 'Menü schließen',
     'nav.language': 'Sprache',
     'nav.chooseLanguage': 'Sprache wählen',
     'nav.cart': 'Warenkorb',
@@ -48,15 +48,12 @@ const DICT = {
     'status.today': 'Heute',
 
     'hero.badge': 'Vianden · Luxemburg',
-    'hero.title': 
-      'Frisch gerollt, scharf gewokt — <em>mitten in Vianden</em>',
-    'hero.text':
-      
-      'Sushi, chinesische Wok-Gerichte und thailändische Currys. Alles wird zubereitet, wenn Sie bestellen — zum Abholen oder bei uns am Tisch.',
+    'hero.title': 'Frisches Sushi und asiatische Spezialitäten, <em>mitten in Vianden</em>',
+    'hero.text': 'Alles wird frisch zubereitet, wenn Sie bestellen. Zum Abholen oder im Restaurant.',
     'hero.cta': 'Jetzt bestellen',
     'hero.cta2': 'Karte ansehen',
     'hero.fact1': 'Öffnungszeiten heute',
-    'hero.fact2': 'Wo wir sind',
+    'hero.fact2': 'Unsere Adresse',
     'hero.fact3': 'Auf der Karte',
     'hero.dishes': '{n} Gerichte',
     'hero.chipLabel': 'Empfehlung des Hauses',
@@ -64,15 +61,13 @@ const DICT = {
     'home.popular.eyebrow': 'Beliebt',
     'home.popular.title': 
       'Womit die meisten anfangen',
-    'home.popular.text': 
-      'Vier von 222. Den Rest finden Sie auf der Karte.',
+    'home.popular.text': 'Vier von {n}. Den Rest finden Sie auf der Karte.',
     'home.popular.all': 'Alle Gerichte ansehen',
 
     'home.cats.eyebrow': 'Die Karte',
     'home.cats.title': 
       'Wo möchten Sie anfangen?',
-    'home.cats.text': 
-      'Vom Sashimi bis zum scharfen Curry — springen Sie direkt in die Rubrik, die Sie suchen.',
+    'home.cats.text': 'Von Sushi bis zum scharfen Curry.',
     'home.cats.count': '{n} Gerichte',
     'cat.sushi': 'Sushi',
     'cat.boissons': 'Getränke',
@@ -87,8 +82,7 @@ const DICT = {
     'home.story.title': 
       'Warum unsere Karte so lang ist',
     'home.story.text':
-      
-      'Sushi aus Japan, Wok-Gerichte aus China, Currys aus Thailand: Das sind drei Küchen unter einem Dach — und der Grund für 222 Gerichte. Jedes davon kochen wir frisch, wenn Sie bestellen. Manchmal dauert es deshalb ein paar Minuten länger. Wir finden, es lohnt sich.',
+      'Sushi aus Japan, Wok-Gerichte aus China, Currys aus Thailand: Das sind drei Küchen unter einem Dach und der Grund für {n} Gerichte. Jedes davon kochen wir frisch, wenn Sie bestellen. Manchmal dauert es deshalb ein paar Minuten länger. Wir finden, es lohnt sich.',
     'home.story.stat1': 'Gerichte auf der Karte',
     'home.story.stat2': 'Küchen unter einem Dach',
     'home.story.stat3': 'Empfohlen von Restaurant Guru',
@@ -107,17 +101,14 @@ const DICT = {
 
     'home.cta.title': 
       'Hunger?',
-    'home.cta.text': 
-      '222 Gerichte, ein Warenkorb. Lassen Sie sich Zeit.',
+    'home.cta.text': '{n} Gerichte, ein Warenkorb. Lassen Sie sich Zeit.',
     'home.cta.primary': 'Zur Bestellung',
     'home.cta.secondary': 'Kontakt aufnehmen',
 
     'order.eyebrow': 'Speisekarte',
     'order.title': 
       'Worauf haben Sie Lust?',
-    'order.text':
-      
-      'Alle {n} Gerichte auf einer Seite. Suchen, filtern, antippen — fertig.',
+    'order.text': 'Alle {n} Gerichte auf einer Seite. Suchen, filtern, antippen, fertig.',
     'order.searchPlaceholder': 'Gericht, Nummer oder Zutat suchen …',
     'order.searchClear': 'Suche zurücksetzen',
     'order.categories': 'Kategorien',
@@ -139,11 +130,12 @@ const DICT = {
     'order.notOrderable': 'Nur im Restaurant',
     'order.variants': 'Auswahl',
     'order.notOrderableHint': 'Dieses Menü stellen wir gern direkt im Restaurant für Sie zusammen.',
+    'order.pickHint': 'Bitte wählen Sie in jeder Rubrik ein Gericht.',
 
     'meta.title.reserve':
       'Tisch reservieren · Restaurant Fuku Vianden',
     'meta.desc.reserve':
-      'Reservieren Sie online einen Tisch im Restaurant Fuku in Vianden – Datum, Uhrzeit und Personenzahl in einem Schritt.',
+      'Reservieren Sie online einen Tisch im Restaurant Fuku in Vianden: Datum, Uhrzeit und Personenzahl in einem Schritt.',
     'nav.reserve':
       'Reservieren',
     'reserve.eyebrow':
@@ -151,7 +143,7 @@ const DICT = {
     'reserve.title':
       'Einen Tisch reservieren',
     'reserve.text':
-      'Sagen Sie uns Datum, Uhrzeit und Personenzahl – wir bestätigen Ihre Reservierung kurzfristig per E-Mail.',
+      'Sagen Sie uns Datum, Uhrzeit und Personenzahl, wir bestätigen Ihre Reservierung kurzfristig per E-Mail.',
     'reserve.when':
       'Wann möchten Sie kommen?',
     'reserve.who':
@@ -170,8 +162,7 @@ const DICT = {
       'Telefon',
     'reserve.notes':
       'Anmerkung',
-    'reserve.notesHint':
-      'Allergien, Kinderstuhl, besonderer Anlass – gern hier notieren.',
+    'reserve.notesHint': 'Allergien, Kinderstuhl, besonderer Anlass: gern hier notieren.',
     'reserve.notesPlaceholder':
       'Optional',
     'reserve.lunch':
@@ -186,8 +177,7 @@ const DICT = {
       '{n} Personen',
     'reserve.moreGuests':
       'Mehr als {n}',
-    'reserve.moreGuestsHint':
-      'Für grössere Gruppen schreiben Sie uns bitte direkt – wir finden eine Lösung.',
+    'reserve.moreGuestsHint': 'Für größere Gruppen schreiben Sie uns bitte direkt, wir finden eine Lösung.',
     'reserve.noSlots':
       'An diesem Tag sind keine Zeiten mehr frei. Bitte wählen Sie einen anderen Tag.',
     'reserve.submit':
@@ -198,12 +188,11 @@ const DICT = {
       'Pflichtfeld',
     'reserve.summary':
       'Ihre Anfrage',
-    'reserve.legal':
-      'Ihre Angaben verwenden wir ausschliesslich für diese Reservierung.',
+    'reserve.legal': 'Ihre Angaben verwenden wir ausschließlich für diese Reservierung.',
     'reserve.successTitle':
       'Anfrage ist bei uns eingegangen',
     'reserve.successText':
-      'Wir haben Ihnen eine Eingangsbestätigung geschickt. Den Tisch bestätigen wir kurzfristig persönlich – das ist noch keine feste Zusage.',
+      'Wir haben Ihnen eine Eingangsbestätigung geschickt. Das ist noch keine feste Zusage: Den Tisch bestätigen wir Ihnen kurzfristig persönlich.',
     'reserve.successRef':
       'Referenz',
     'reserve.again':
@@ -231,7 +220,7 @@ const DICT = {
 
     'cart.title': 'Ihre Bestellung',
     'cart.empty': 'Noch nichts ausgewählt',
-    'cart.emptyText': 'Tippen Sie bei einem Gericht auf das Plus – es landet direkt hier.',
+    'cart.emptyText': 'Tippen Sie bei einem Gericht auf das Plus, dann landet es direkt hier.',
     'cart.clear': 'Leeren',
     'cart.clearConfirm': 'Warenkorb wirklich leeren?',
     'cart.subtotal': 'Zwischensumme',
@@ -240,7 +229,7 @@ const DICT = {
     'cart.checkout': 'Zur Kasse',
     'cart.checkoutBusy': 'Wird übertragen …',
     'cart.view': 'Bestellung ansehen',
-    'cart.close': 'Schliessen',
+    'cart.close': 'Schließen',
     'cart.note': 'Lieferung, Abholzeit und Zahlung wählen Sie im nächsten Schritt.',
     'cart.error': 'Die Bestellung konnte nicht übertragen werden. Bitte erneut versuchen.',
     'cart.errorOffline': 'Keine Verbindung zum Bestellsystem. Bitte Internetverbindung prüfen.',
@@ -248,7 +237,7 @@ const DICT = {
     'allergens.title': 'Allergene',
     'allergens.legend': 'Allergen-Legende',
     'allergens.note':
-      'Die Nummern folgen der EU-Kennzeichnung. Bei Allergien sprechen Sie uns bitte vor der Bestellung an – wir beraten Sie gern.',
+      'Die Nummern folgen der EU-Kennzeichnung. Bei Allergien sprechen Sie uns bitte vor der Bestellung an, wir beraten Sie gern.',
     'allergens.none': 'Keine Angabe',
 
     'contact.eyebrow': 'Kontakt',
@@ -270,14 +259,13 @@ const DICT = {
     'contact.reserveText': 'Für Tischreservierungen schreiben Sie uns bitte eine E-Mail mit Datum, Uhrzeit und Personenzahl.',
 
     'legal.privacy1':
-      'Diese Website lädt Schriften und Gestaltungsdateien ausschliesslich vom eigenen Server. Es werden keine Analyse- oder Werbedienste eingebunden und keine Cookies zu Werbezwecken gesetzt.',
+      'Diese Website lädt Schriften und Gestaltungsdateien ausschließlich vom eigenen Server. Es werden keine Analyse- oder Werbedienste eingebunden und keine Cookies zu Werbezwecken gesetzt.',
     'legal.privacy2':
-      'Ihre Warenkorbauswahl wird nur lokal in Ihrem Browser gespeichert. Erst beim Klick auf „Zur Kasse“ werden die gewählten Gerichte an unser Bestellsystem übertragen. Die Karte von OpenStreetMap wird erst geladen, wenn Sie sie ausdrücklich anfordern.',
+      'Ihre Warenkorbauswahl wird nur lokal in Ihrem Browser gespeichert. Erst beim Klick auf „Zur Kasse“ werden die gewählten Gerichte an unser Bestellsystem übertragen. Die Karte auf der Kontaktseite ist ein Bild von unserem eigenen Server. Google Maps öffnet sich erst, wenn Sie darauf tippen.',
     'legal.privacy3':
       'Für Bestellung und Zahlung gelten zusätzlich die Datenschutzhinweise unseres Shop-Systems.',
 
-    'footer.tagline': 
-      'Drei Küchen unter einem Dach — mitten in Vianden.',
+    'footer.tagline': 'Drei Küchen unter einem Dach, mitten in Vianden.',
     'footer.explore': 
       'Die Karte',
     'footer.visit': 
@@ -306,8 +294,8 @@ const DICT = {
     'meta.title.order': 'Commander · Restaurant Fuku Vianden',
     'meta.title.contact': 'Contact & accès · Restaurant Fuku Vianden',
     'meta.desc.home':
-      'Sushis, classiques chinois au wok et currys thaïlandais à Vianden. Plus de 220 plats – à commander en ligne, à emporter ou sur place.',
-    'meta.desc.order': 'Toute la carte du Restaurant Fuku à Vianden – à commander en ligne en quelques clics.',
+      'Sushis, classiques chinois au wok et currys thaïlandais à Vianden. Plus de 220 plats : à commander en ligne, à emporter ou sur place.',
+    'meta.desc.order': 'Toute la carte du Restaurant Fuku à Vianden, à commander en ligne en quelques clics.',
     'meta.desc.contact': 'Adresse, horaires et accès au Restaurant Fuku, 9 rue de la Gare, L-9420 Vianden.',
 
     'nav.home': 'Accueil',
@@ -329,15 +317,12 @@ const DICT = {
     'status.today': "Aujourd'hui",
 
     'hero.badge': 'Vianden · Luxembourg',
-    'hero.title': 
-      'Roulés à la main, saisis au wok — <em>en plein cœur de Vianden</em>',
-    'hero.text':
-      
-      'Sushis, plats chinois au wok et currys thaïlandais. Tout est préparé au moment de la commande — à emporter ou à table chez nous.',
+    'hero.title': 'Sushis frais et spécialités asiatiques, <em>en plein cœur de Vianden</em>',
+    'hero.text': 'Tout est préparé frais au moment de votre commande. À emporter ou au restaurant.',
     'hero.cta': 'Commander',
     'hero.cta2': 'Voir la carte',
     'hero.fact1': "Horaires d'aujourd'hui",
-    'hero.fact2': 'Où nous trouver',
+    'hero.fact2': 'Notre adresse',
     'hero.fact3': 'Sur la carte',
     'hero.dishes': '{n} plats',
     'hero.chipLabel': 'La suggestion du chef',
@@ -345,15 +330,13 @@ const DICT = {
     'home.popular.eyebrow': 'Les favoris',
     'home.popular.title': 
       'Par où commencent la plupart',
-    'home.popular.text': 
-      'Quatre plats sur 222. Le reste vous attend sur la carte.',
+    'home.popular.text': 'Quatre plats sur {n}. Le reste vous attend sur la carte.',
     'home.popular.all': 'Voir tous les plats',
 
     'home.cats.eyebrow': 'La carte',
     'home.cats.title': 
       'Par où voulez-vous commencer ?',
-    'home.cats.text': 
-      'Du sashimi au curry relevé — allez directement à la rubrique qui vous intéresse.',
+    'home.cats.text': 'Des sushis au curry relevé.',
     'home.cats.count': '{n} plats',
     'cat.sushi': 'Sushi',
     'cat.boissons': 'Boissons',
@@ -368,8 +351,7 @@ const DICT = {
     'home.story.title': 
       'Pourquoi notre carte est si longue',
     'home.story.text':
-      
-      'Des sushis du Japon, des plats au wok de Chine, des currys de Thaïlande : trois cuisines sous un même toit, et la raison de nos 222 plats. Chacun est préparé au moment de la commande. Cela prend parfois quelques minutes de plus. Nous trouvons que cela en vaut la peine.',
+      'Des sushis du Japon, des plats au wok de Chine, des currys de Thaïlande : trois cuisines sous un même toit, et la raison de nos {n} plats. Chacun est préparé au moment de la commande. Cela prend parfois quelques minutes de plus. Nous trouvons que cela en vaut la peine.',
     'home.story.stat1': 'plats à la carte',
     'home.story.stat2': 'cuisines sous un même toit',
     'home.story.stat3': 'Recommandé par Restaurant Guru',
@@ -388,17 +370,14 @@ const DICT = {
 
     'home.cta.title': 
       'Un petit creux ?',
-    'home.cta.text': 
-      '222 plats, un seul panier. Prenez votre temps.',
+    'home.cta.text': '{n} plats, un seul panier. Prenez votre temps.',
     'home.cta.primary': 'Passer commande',
     'home.cta.secondary': 'Nous contacter',
 
     'order.eyebrow': 'La carte',
     'order.title': 
       'Que voulez-vous manger ?',
-    'order.text':
-      
-      'Les {n} plats sur une seule page. Cherchez, filtrez, ajoutez — c’est tout.',
+    'order.text': 'Les {n} plats sur une seule page. Cherchez, filtrez, ajoutez, c’est tout.',
     'order.searchPlaceholder': 'Chercher un plat, un numéro, un ingrédient …',
     'order.searchClear': 'Effacer la recherche',
     'order.categories': 'Catégories',
@@ -420,11 +399,12 @@ const DICT = {
     'order.notOrderable': 'Au restaurant',
     'order.variants': 'Votre choix',
     'order.notOrderableHint': 'Nous composons ce menu volontiers pour vous directement au restaurant.',
+    'order.pickHint': 'Choisissez un plat dans chaque rubrique.',
 
     'meta.title.reserve':
       'Réserver une table · Restaurant Fuku Vianden',
     'meta.desc.reserve':
-      'Réservez une table en ligne au Restaurant Fuku à Vianden – date, heure et nombre de personnes en une étape.',
+      'Réservez une table en ligne au Restaurant Fuku à Vianden : date, heure et nombre de personnes en une étape.',
     'nav.reserve':
       'Réserver',
     'reserve.eyebrow':
@@ -432,7 +412,7 @@ const DICT = {
     'reserve.title':
       'Réserver une table',
     'reserve.text':
-      'Indiquez-nous la date, l’heure et le nombre de personnes – nous confirmons votre réservation par e-mail dans les meilleurs délais.',
+      'Indiquez-nous la date, l’heure et le nombre de personnes : nous confirmons votre réservation par e-mail dans les meilleurs délais.',
     'reserve.when':
       'Quand souhaitez-vous venir ?',
     'reserve.who':
@@ -451,8 +431,7 @@ const DICT = {
       'Téléphone',
     'reserve.notes':
       'Remarque',
-    'reserve.notesHint':
-      'Allergies, chaise haute, occasion particulière – précisez-le ici.',
+    'reserve.notesHint': 'Allergies, chaise haute, occasion particulière : précisez-le ici.',
     'reserve.notesPlaceholder':
       'Facultatif',
     'reserve.lunch':
@@ -468,7 +447,7 @@ const DICT = {
     'reserve.moreGuests':
       'Plus de {n}',
     'reserve.moreGuestsHint':
-      'Pour les grands groupes, écrivez-nous directement – nous trouverons une solution.',
+      'Pour les grands groupes, écrivez-nous directement, nous trouverons une solution.',
     'reserve.noSlots':
       'Plus aucun horaire disponible ce jour-là. Merci de choisir un autre jour.',
     'reserve.submit':
@@ -484,7 +463,7 @@ const DICT = {
     'reserve.successTitle':
       'Nous avons bien reçu votre demande',
     'reserve.successText':
-      'Un accusé de réception vous a été envoyé. Nous confirmons la table personnellement sous peu – ce n’est pas encore une confirmation ferme.',
+      'Un accusé de réception vous a été envoyé. Ce n’est pas encore une confirmation ferme : nous vous confirmons la table personnellement sous peu.',
     'reserve.successRef':
       'Référence',
     'reserve.again':
@@ -512,7 +491,7 @@ const DICT = {
 
     'cart.title': 'Votre commande',
     'cart.empty': 'Panier vide',
-    'cart.emptyText': 'Appuyez sur le plus à côté d’un plat – il arrive directement ici.',
+    'cart.emptyText': 'Appuyez sur le plus à côté d’un plat, il arrive directement ici.',
     'cart.clear': 'Vider',
     'cart.clearConfirm': 'Vider le panier ?',
     'cart.subtotal': 'Sous-total',
@@ -529,7 +508,7 @@ const DICT = {
     'allergens.title': 'Allergènes',
     'allergens.legend': 'Légende des allergènes',
     'allergens.note':
-      "Les numéros suivent l'étiquetage européen. En cas d'allergie, parlez-nous-en avant de commander – nous vous conseillons volontiers.",
+      'Les numéros suivent l’étiquetage européen. En cas d’allergie, parlez-nous-en avant de commander, nous vous conseillons volontiers.',
     'allergens.none': 'Non renseigné',
 
     'contact.eyebrow': 'Contact',
@@ -554,12 +533,11 @@ const DICT = {
     'legal.privacy1':
       'Ce site charge les polices et les fichiers de mise en page uniquement depuis son propre serveur. Aucun service d’analyse ou de publicité n’est intégré et aucun cookie publicitaire n’est déposé.',
     'legal.privacy2':
-      'Votre panier est enregistré uniquement en local dans votre navigateur. Les plats choisis ne sont transmis à notre système de commande qu’au moment où vous cliquez sur « Commander ». La carte OpenStreetMap n’est chargée que si vous la demandez explicitement.',
+      'Votre panier est enregistré uniquement en local dans votre navigateur. Les plats choisis ne sont transmis à notre système de commande qu’au moment où vous cliquez sur « Commander ». La carte de la page Contact est une image hébergée sur notre propre serveur. Google Maps ne s’ouvre que si vous cliquez dessus.',
     'legal.privacy3':
       'Pour la commande et le paiement s’appliquent en outre les informations de confidentialité de notre système de boutique.',
 
-    'footer.tagline': 
-      'Trois cuisines sous un même toit — en plein cœur de Vianden.',
+    'footer.tagline': 'Trois cuisines sous un même toit, en plein cœur de Vianden.',
     'footer.explore': 
       'La carte',
     'footer.visit': 
@@ -588,8 +566,8 @@ const DICT = {
     'meta.title.order': 'Order online · Restaurant Fuku Vianden',
     'meta.title.contact': 'Contact & directions · Restaurant Fuku Vianden',
     'meta.desc.home':
-      'Sushi, Chinese wok classics and Thai curries in Vianden. Over 220 dishes – order online, collect or dine in.',
-    'meta.desc.order': 'The complete menu of Restaurant Fuku in Vianden – order online in a few taps.',
+      'Sushi, Chinese wok classics and Thai curries in Vianden. Over 220 dishes: order online, collect or dine in.',
+    'meta.desc.order': 'The complete menu of Restaurant Fuku in Vianden. Order online in a few taps.',
     'meta.desc.contact': 'Address, opening hours and directions to Restaurant Fuku, 9 Rue de la Gare, L-9420 Vianden.',
 
     'nav.home': 'Home',
@@ -611,15 +589,12 @@ const DICT = {
     'status.today': 'Today',
 
     'hero.badge': 'Vianden · Luxembourg',
-    'hero.title': 
-      'Rolled by hand, seared in the wok — <em>right in Vianden</em>',
-    'hero.text':
-      
-      'Sushi, Chinese wok dishes and Thai curries. Everything is cooked once you order — to take away or at our table.',
+    'hero.title': 'Fresh sushi and Asian specialities, <em>right in Vianden</em>',
+    'hero.text': 'Everything is freshly prepared when you order. For takeaway or in the restaurant.',
     'hero.cta': 'Order now',
     'hero.cta2': 'View the menu',
     'hero.fact1': "Today's hours",
-    'hero.fact2': 'Where to find us',
+    'hero.fact2': 'Our address',
     'hero.fact3': 'On the menu',
     'hero.dishes': '{n} dishes',
     'hero.chipLabel': "The chef's suggestion",
@@ -627,15 +602,13 @@ const DICT = {
     'home.popular.eyebrow': 'Favourites',
     'home.popular.title': 
       'Where most people start',
-    'home.popular.text': 
-      'Four out of 222. The rest is waiting on the menu.',
+    'home.popular.text': 'Four out of {n}. The rest is waiting on the menu.',
     'home.popular.all': 'See all dishes',
 
     'home.cats.eyebrow': 'The menu',
     'home.cats.title': 
       'Where would you like to start?',
-    'home.cats.text': 
-      'From sashimi to a fiery curry — jump straight to the section you want.',
+    'home.cats.text': 'From sushi to a fiery curry.',
     'home.cats.count': '{n} dishes',
     'cat.sushi': 'Sushi',
     'cat.boissons': 'Drinks',
@@ -650,8 +623,7 @@ const DICT = {
     'home.story.title': 
       'Why our menu is so long',
     'home.story.text':
-      
-      'Sushi from Japan, wok dishes from China, curries from Thailand: three kitchens under one roof, and the reason for 222 dishes. Every one of them is cooked once you order. Sometimes that takes a few minutes longer. We think it is worth it.',
+      'Sushi from Japan, wok dishes from China, curries from Thailand: three kitchens under one roof, and the reason for {n} dishes. Every one of them is cooked once you order. Sometimes that takes a few minutes longer. We think it is worth it.',
     'home.story.stat1': 'dishes on the menu',
     'home.story.stat2': 'kitchens under one roof',
     'home.story.stat3': 'Recommended by Restaurant Guru',
@@ -670,17 +642,14 @@ const DICT = {
 
     'home.cta.title': 
       'Hungry?',
-    'home.cta.text': 
-      '222 dishes, one basket. Take your time.',
+    'home.cta.text': '{n} dishes, one basket. Take your time.',
     'home.cta.primary': 'Start ordering',
     'home.cta.secondary': 'Get in touch',
 
     'order.eyebrow': 'Menu',
     'order.title': 
       'What are you in the mood for?',
-    'order.text':
-      
-      'All {n} dishes on one page. Search, filter, tap — done.',
+    'order.text': 'All {n} dishes on one page. Search, filter, tap, done.',
     'order.searchPlaceholder': 'Search a dish, number or ingredient …',
     'order.searchClear': 'Clear search',
     'order.categories': 'Categories',
@@ -702,11 +671,12 @@ const DICT = {
     'order.notOrderable': 'In restaurant only',
     'order.variants': 'Your choice',
     'order.notOrderableHint': 'We are happy to put this menu together for you at the restaurant.',
+    'order.pickHint': 'Please choose one dish from each group.',
 
     'meta.title.reserve':
       'Book a table · Restaurant Fuku Vianden',
     'meta.desc.reserve':
-      'Book a table online at Restaurant Fuku in Vianden – date, time and party size in one step.',
+      'Book a table online at Restaurant Fuku in Vianden: date, time and party size in one step.',
     'nav.reserve':
       'Book a table',
     'reserve.eyebrow':
@@ -714,7 +684,7 @@ const DICT = {
     'reserve.title':
       'Book a table',
     'reserve.text':
-      'Tell us the date, time and how many of you there are – we confirm your booking by email shortly.',
+      'Tell us the date, time and number of guests, and we will confirm your booking by email shortly.',
     'reserve.when':
       'When would you like to come?',
     'reserve.who':
@@ -733,8 +703,7 @@ const DICT = {
       'Phone',
     'reserve.notes':
       'Note',
-    'reserve.notesHint':
-      'Allergies, high chair, special occasion – just let us know here.',
+    'reserve.notesHint': 'Allergies, high chair, special occasion: just let us know here.',
     'reserve.notesPlaceholder':
       'Optional',
     'reserve.lunch':
@@ -749,8 +718,7 @@ const DICT = {
       '{n} guests',
     'reserve.moreGuests':
       'More than {n}',
-    'reserve.moreGuestsHint':
-      'For larger groups please write to us directly – we will find a way.',
+    'reserve.moreGuestsHint': 'For larger groups please write to us directly and we will find a way.',
     'reserve.noSlots':
       'No times left on that day. Please pick another day.',
     'reserve.submit':
@@ -766,7 +734,7 @@ const DICT = {
     'reserve.successTitle':
       'We have received your request',
     'reserve.successText':
-      'We sent you a confirmation of receipt. We will confirm the table personally very soon – this is not a firm booking yet.',
+      'We have sent you a confirmation of receipt. This is not a firm booking yet: we will confirm your table personally very soon.',
     'reserve.successRef':
       'Reference',
     'reserve.again':
@@ -794,7 +762,7 @@ const DICT = {
 
     'cart.title': 'Your order',
     'cart.empty': 'Nothing selected yet',
-    'cart.emptyText': 'Tap the plus next to a dish – it lands right here.',
+    'cart.emptyText': 'Tap the plus next to a dish and it lands right here.',
     'cart.clear': 'Clear',
     'cart.clearConfirm': 'Empty the cart?',
     'cart.subtotal': 'Subtotal',
@@ -811,7 +779,7 @@ const DICT = {
     'allergens.title': 'Allergens',
     'allergens.legend': 'Allergen key',
     'allergens.note':
-      'Numbers follow the EU allergen labelling. If you have an allergy, please tell us before ordering – we are happy to advise.',
+      'Numbers follow the EU allergen labelling. If you have an allergy, please tell us before ordering. We are happy to advise.',
     'allergens.none': 'Not specified',
 
     'contact.eyebrow': 'Contact',
@@ -835,12 +803,11 @@ const DICT = {
     'legal.privacy1':
       'This website loads fonts and layout files exclusively from its own server. No analytics or advertising services are embedded and no advertising cookies are set.',
     'legal.privacy2':
-      'Your cart is stored locally in your browser only. The dishes you chose are transmitted to our ordering system only when you click “Checkout”. The OpenStreetMap map is loaded only if you explicitly request it.',
+      'Your cart is stored locally in your browser only. The dishes you chose are transmitted to our ordering system only when you click “Checkout”. The map on the contact page is an image served from our own server. Google Maps only opens if you tap it.',
     'legal.privacy3':
       'The privacy notices of our shop system additionally apply to ordering and payment.',
 
-    'footer.tagline': 
-      'Three kitchens under one roof — right in Vianden.',
+    'footer.tagline': 'Three kitchens under one roof, right in Vianden.',
     'footer.explore': 
       'The menu',
     'footer.visit': 
@@ -869,8 +836,8 @@ const DICT = {
     'meta.title.order': 'Bestellen · Restaurant Fuku Vianden',
     'meta.title.contact': 'Contact & route · Restaurant Fuku Vianden',
     'meta.desc.home':
-      'Sushi, Chinese wokklassiekers en Thaise curry’s in Vianden. Meer dan 220 gerechten – online bestellen, afhalen of bij ons eten.',
-    'meta.desc.order': 'De volledige kaart van Restaurant Fuku in Vianden – eenvoudig online bestellen.',
+      'Sushi, Chinese wokklassiekers en Thaise curry’s in Vianden. Meer dan 220 gerechten: online bestellen, afhalen of bij ons eten.',
+    'meta.desc.order': 'De volledige kaart van Restaurant Fuku in Vianden. Eenvoudig online bestellen.',
     'meta.desc.contact': 'Adres, openingstijden en route naar Restaurant Fuku, 9 Rue de la Gare, L-9420 Vianden.',
 
     'nav.home': 'Home',
@@ -892,15 +859,12 @@ const DICT = {
     'status.today': 'Vandaag',
 
     'hero.badge': 'Vianden · Luxemburg',
-    'hero.title': 
-      'Met de hand gerold, in de wok gebakken — <em>midden in Vianden</em>',
-    'hero.text':
-      
-      'Sushi, Chinese wokgerechten en Thaise curry’s. Alles wordt bereid zodra u bestelt — om af te halen of bij ons aan tafel.',
+    'hero.title': 'Verse sushi en Aziatische specialiteiten, <em>midden in Vianden</em>',
+    'hero.text': 'Alles wordt vers bereid zodra u bestelt. Om af te halen of in het restaurant.',
     'hero.cta': 'Nu bestellen',
     'hero.cta2': 'Bekijk de kaart',
     'hero.fact1': 'Openingstijden vandaag',
-    'hero.fact2': 'Waar u ons vindt',
+    'hero.fact2': 'Ons adres',
     'hero.fact3': 'Op de kaart',
     'hero.dishes': '{n} gerechten',
     'hero.chipLabel': 'Aanrader van het huis',
@@ -908,15 +872,13 @@ const DICT = {
     'home.popular.eyebrow': 'Favorieten',
     'home.popular.title': 
       'Waar de meesten mee beginnen',
-    'home.popular.text': 
-      'Vier van de 222. De rest staat op de kaart.',
+    'home.popular.text': 'Vier van de {n}. De rest staat op de kaart.',
     'home.popular.all': 'Alle gerechten bekijken',
 
     'home.cats.eyebrow': 'De kaart',
     'home.cats.title': 
       'Waar wilt u beginnen?',
-    'home.cats.text': 
-      'Van sashimi tot pittige curry — ga direct naar de rubriek die u zoekt.',
+    'home.cats.text': 'Van sushi tot pittige curry.',
     'home.cats.count': '{n} gerechten',
     'cat.sushi': 'Sushi',
     'cat.boissons': 'Dranken',
@@ -931,8 +893,7 @@ const DICT = {
     'home.story.title': 
       'Waarom onze kaart zo lang is',
     'home.story.text':
-      
-      'Sushi uit Japan, wokgerechten uit China, curry’s uit Thailand: drie keukens onder één dak, en de reden voor 222 gerechten. Elk gerecht wordt bereid zodra u bestelt. Soms duurt dat een paar minuten langer. Wij vinden dat het dat waard is.',
+      'Sushi uit Japan, wokgerechten uit China, curry’s uit Thailand: drie keukens onder één dak, en de reden voor {n} gerechten. Elk gerecht wordt bereid zodra u bestelt. Soms duurt dat een paar minuten langer. Wij vinden dat het dat waard is.',
     'home.story.stat1': 'gerechten op de kaart',
     'home.story.stat2': 'keukens onder één dak',
     'home.story.stat3': 'Aanbevolen door Restaurant Guru',
@@ -951,17 +912,14 @@ const DICT = {
 
     'home.cta.title': 
       'Honger?',
-    'home.cta.text': 
-      '222 gerechten, één mandje. Neem rustig de tijd.',
+    'home.cta.text': '{n} gerechten, één mandje. Neem rustig de tijd.',
     'home.cta.primary': 'Naar de bestelling',
     'home.cta.secondary': 'Contact opnemen',
 
     'order.eyebrow': 'Menukaart',
     'order.title': 
       'Waar heeft u zin in?',
-    'order.text':
-      
-      'Alle {n} gerechten op één pagina. Zoeken, filteren, tikken — klaar.',
+    'order.text': 'Alle {n} gerechten op één pagina. Zoeken, filteren, tikken, klaar.',
     'order.searchPlaceholder': 'Zoek een gerecht, nummer of ingrediënt …',
     'order.searchClear': 'Zoekopdracht wissen',
     'order.categories': 'Categorieën',
@@ -983,11 +941,12 @@ const DICT = {
     'order.notOrderable': 'Alleen in het restaurant',
     'order.variants': 'Uw keuze',
     'order.notOrderableHint': 'Dit menu stellen we graag in het restaurant voor u samen.',
+    'order.pickHint': 'Kies in elke rubriek één gerecht.',
 
     'meta.title.reserve':
       'Tafel reserveren · Restaurant Fuku Vianden',
     'meta.desc.reserve':
-      'Reserveer online een tafel bij Restaurant Fuku in Vianden – datum, tijd en aantal personen in één stap.',
+      'Reserveer online een tafel bij Restaurant Fuku in Vianden: datum, tijd en aantal personen in één stap.',
     'nav.reserve':
       'Reserveren',
     'reserve.eyebrow':
@@ -995,7 +954,7 @@ const DICT = {
     'reserve.title':
       'Een tafel reserveren',
     'reserve.text':
-      'Geef datum, tijd en het aantal personen door – we bevestigen uw reservering zo snel mogelijk per e-mail.',
+      'Geef datum, tijd en het aantal personen door, dan bevestigen we uw reservering zo snel mogelijk per e-mail.',
     'reserve.when':
       'Wanneer wilt u komen?',
     'reserve.who':
@@ -1014,8 +973,7 @@ const DICT = {
       'Telefoon',
     'reserve.notes':
       'Opmerking',
-    'reserve.notesHint':
-      'Allergieën, kinderstoel, bijzondere gelegenheid – laat het hier weten.',
+    'reserve.notesHint': 'Allergieën, kinderstoel, bijzondere gelegenheid: laat het hier weten.',
     'reserve.notesPlaceholder':
       'Optioneel',
     'reserve.lunch':
@@ -1031,7 +989,7 @@ const DICT = {
     'reserve.moreGuests':
       'Meer dan {n}',
     'reserve.moreGuestsHint':
-      'Voor grotere groepen kunt u ons rechtstreeks schrijven – we vinden een oplossing.',
+      'Voor grotere groepen kunt u ons rechtstreeks schrijven, dan vinden we een oplossing.',
     'reserve.noSlots':
       'Op die dag zijn er geen tijden meer vrij. Kies een andere dag.',
     'reserve.submit':
@@ -1047,7 +1005,7 @@ const DICT = {
     'reserve.successTitle':
       'Uw aanvraag is bij ons binnen',
     'reserve.successText':
-      'We hebben u een ontvangstbevestiging gestuurd. De tafel bevestigen we binnenkort persoonlijk – dit is nog geen vaste toezegging.',
+      'We hebben u een ontvangstbevestiging gestuurd. Dit is nog geen vaste toezegging: de tafel bevestigen we binnenkort persoonlijk.',
     'reserve.successRef':
       'Referentie',
     'reserve.again':
@@ -1075,7 +1033,7 @@ const DICT = {
 
     'cart.title': 'Uw bestelling',
     'cart.empty': 'Nog niets gekozen',
-    'cart.emptyText': 'Tik op de plus bij een gerecht – het komt hier direct terecht.',
+    'cart.emptyText': 'Tik op de plus bij een gerecht, dan komt het hier direct terecht.',
     'cart.clear': 'Legen',
     'cart.clearConfirm': 'Winkelmandje legen?',
     'cart.subtotal': 'Subtotaal',
@@ -1092,7 +1050,7 @@ const DICT = {
     'allergens.title': 'Allergenen',
     'allergens.legend': 'Allergenenlijst',
     'allergens.note':
-      'De nummers volgen de EU-etikettering. Heeft u een allergie, laat het ons weten vóór het bestellen – we adviseren u graag.',
+      'De nummers volgen de EU-etikettering. Heeft u een allergie, laat het ons dan weten vóór het bestellen. We adviseren u graag.',
     'allergens.none': 'Niet vermeld',
 
     'contact.eyebrow': 'Contact',
@@ -1116,12 +1074,11 @@ const DICT = {
     'legal.privacy1':
       'Deze website laadt lettertypen en opmaakbestanden uitsluitend van de eigen server. Er zijn geen analyse- of advertentiediensten ingebouwd en er worden geen advertentiecookies geplaatst.',
     'legal.privacy2':
-      'Uw winkelmandje wordt alleen lokaal in uw browser bewaard. Pas wanneer u op „Afrekenen“ klikt, worden de gekozen gerechten naar ons bestelsysteem verstuurd. De kaart van OpenStreetMap wordt pas geladen als u daar uitdrukkelijk om vraagt.',
+      'Uw winkelmandje wordt alleen lokaal in uw browser bewaard. Pas wanneer u op „Afrekenen“ klikt, worden de gekozen gerechten naar ons bestelsysteem verstuurd. De kaart op de contactpagina is een afbeelding van onze eigen server. Google Maps opent pas als u erop tikt.',
     'legal.privacy3':
       'Voor bestelling en betaling gelden aanvullend de privacyverklaringen van ons shopsysteem.',
 
-    'footer.tagline': 
-      'Drie keukens onder één dak — midden in Vianden.',
+    'footer.tagline': 'Drie keukens onder één dak, midden in Vianden.',
     'footer.explore': 
       'De kaart',
     'footer.visit': 

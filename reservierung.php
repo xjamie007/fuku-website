@@ -306,7 +306,7 @@ vielen Dank für Ihre Anfrage. Wir haben sie erhalten:
 Bitte beachten Sie: Dies ist eine Eingangsbestätigung, noch keine
 Zusage. Wir melden uns kurzfristig bei Ihnen und bestätigen den Tisch.
 
-Herzliche Grüsse
+Herzliche Grüße
 Restaurant Fuku
 9, Rue de la Gare · L-9420 Vianden
 TEXT,

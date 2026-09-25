@@ -10,7 +10,7 @@
  * WordPress-Backend dieses Skript erneut laufen lassen.
  */
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { translateDish, unknown } from './dish-i18n.mjs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -175,6 +175,12 @@ const TYPOS = [
   [/\brolle\b/gi, 'roll'],
   [/\bmunu\b/gi, 'Menu'],
   [/\bvege\b/gi, 'Végé'],
+  [/\bbeignei\b/gi, 'Beignet'],
+  [/\bpéikinoise\b/gi, 'pékinoise'],
+  [/\bthä(?![a-zà-ÿ])/gi, 'thäi'],
+  [/\bsautée aux poulet\b/gi, 'sautées au poulet'],
+  // „cheese8p“ → „cheese 8p“
+  [/([a-zà-ÿ])(\d+p)\b/g, '$1 $2'],
   [/´/g, '’'],
   [/`/g, '’'],
   [/'/g, '’'],
@@ -198,8 +204,11 @@ const ALLERGEN_OVERRIDES = {
   1054: ['1A', '2', '3', '11'], // stand als "1A,2,311" im Katalog
 };
 
-// Gerichte, die auf der bisherigen Startseite als Empfehlung liefen.
-const POPULAR_CODES = new Set(['H2', '23', '45', '48', 'P3', 'SP7', 'CH3', '2']);
+/* „Beliebt“ steuert das Restaurant selbst: In WooCommerce unter Produkte
+   den Stern (★ „Hervorgehoben“) anklicken. Solange kein einziges Produkt
+   einen Stern hat, gilt diese Liste – die Empfehlungen der alten Startseite,
+   ohne die thailändische Suppe (ihr Foto hat nur 300 × 200 Pixel). */
+const POPULAR_CODES = new Set(['H2', '23', '45', '48', 'P3', 'SP7', 'CH3']);
 
 // Heuristik für die Schärfe-Kennzeichnung anhand des Gerichtnamens.
 const SPICY_RE = /piquant|spicy|sichuan|épicé|epice|curry rouge|kung pao|basilic thä?i/i;
@@ -332,6 +341,19 @@ async function fetchAll() {
   return items;
 }
 
+/** IDs der in WooCommerce mit Stern hervorgehobenen Produkte. */
+async function fetchFeatured() {
+  const res = await fetch(`${API}/products?featured=true&per_page=100`);
+  if (!res.ok) throw new Error(`Store API ${res.status} bei hervorgehobenen Produkten`);
+  return new Set((await res.json()).map((p) => p.id));
+}
+
+/** Name mit Übersetzungen – dieselbe Form wie bei den Gerichten. */
+const named = (raw) => {
+  const name = tidy(raw);
+  return { name, t: translateDish(name) };
+};
+
 /**
  * Variable Produkte (Mittagsmenüs, Fondue) brauchen beim Bestellen eine
  * konkrete Variante. Wir lösen jede Variante zu einer bestellbaren Option
@@ -348,25 +370,63 @@ async function resolveVariants(product) {
     for (const term of attr.terms || []) termNames.set(`${attr.name}|${term.slug}`, term.name);
   }
 
-  const choices = [];
-  for (const variation of detail.variations || []) {
-    const parts = (variation.attributes || []).map((a) =>
-      a.value ? termNames.get(`${a.name}|${a.value}`) || a.value.replace(/-/g, ' ') : null,
-    );
+  const priceOf = (info) =>
+    info?.prices ? Number(info.prices.price) / 10 ** Number(info.prices.currency_minor_unit) : null;
 
-    // Varianten ohne festgelegte Attributwerte weist WooCommerce beim
-    // Bestellen ab – sie werden deshalb übersprungen.
-    if (!parts.length || parts.some((p) => p === null)) continue;
+  // Was im Menü steckt, steht in WooCommerce in der Beschreibung der
+  // Variante – eine Zeile je Bestandteil.
+  const itemsOf = (info) =>
+    tidy(info?.description || '')
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .map(named);
+
+  const fixed = [];
+  const open = [];
+
+  for (const variation of detail.variations || []) {
+    const attrs = variation.attributes || [];
+    if (!attrs.length) continue;
 
     const info = await (await fetch(`${API}/products/${variation.id}`)).json();
-    choices.push({
+
+    // Variante mit „Beliebig …“: Der Gast wählt selbst, etwa Vorspeise und
+    // Hauptgericht beim Mittagsmenü. WooCommerce nimmt sie nur an, wenn die
+    // Auswahl beim Bestellen mitgeschickt wird (siehe order.js).
+    if (attrs.some((a) => !a.value)) {
+      const pick = attrs
+        .filter((a) => !a.value)
+        .map((a) => ({
+          attribute: a.name,
+          ...named(a.name),
+          options: (detail.attributes.find((d) => d.name === a.name)?.terms || []).map((term) => ({
+            value: term.slug,
+            ...named(term.name),
+          })),
+        }));
+      if (pick.every((group) => group.options.length)) {
+        const label = attrs.filter((a) => a.value).map((a) => termNames.get(`${a.name}|${a.value}`) || a.value);
+        open.push({ id: variation.id, label: label.join(' · '), t: translateDish(label.join(' · ')), price: priceOf(info), pick });
+      }
+      continue;
+    }
+
+    const label = attrs.map((a) => termNames.get(`${a.name}|${a.value}`) || a.value.replace(/-/g, ' ')).join(' · ');
+    const items = itemsOf(info);
+    fixed.push({
       id: variation.id,
-      label: parts.join(' · '),
-      price: info?.prices ? Number(info.prices.price) / 10 ** Number(info.prices.currency_minor_unit) : null,
+      label,
+      t: translateDish(label),
+      price: priceOf(info),
+      ...(items.length ? { items } : {}),
     });
   }
 
-  return choices;
+  // Feste Varianten haben Vorrang; eine freie Auswahl gibt es nur, wenn das
+  // Produkt ausschliesslich daraus besteht – sonst würde die Karte zwei
+  // verschiedene Bedienkonzepte für ein Gericht zeigen.
+  return fixed.length ? fixed : open.slice(0, 1);
 }
 
 async function main() {
@@ -374,11 +434,23 @@ async function main() {
   const raw = await fetchAll();
   console.log(`  ${raw.length} Produkte empfangen`);
 
+  const featured = await fetchFeatured();
+  console.log(
+    featured.size
+      ? `  ${featured.size} Produkte mit Stern → „Beliebt“`
+      : '  kein Produkt mit Stern → „Beliebt“ aus POPULAR_CODES',
+  );
+  const isPopular = (p, code) => (featured.size ? featured.has(p.id) : POPULAR_CODES.has(code));
+
   const variants = new Map();
   for (const product of raw.filter((p) => p.type === 'variable')) {
     const choices = await resolveVariants(product);
     variants.set(product.id, choices);
-    const note = choices.length ? `${choices.length} Variante(n)` : '⚠︎ keine bestellbare Variante';
+    const note = choices[0]?.pick
+      ? `Auswahl: ${choices[0].pick.map((g) => `${g.name} (${g.options.length})`).join(', ')}`
+      : choices.length
+        ? `${choices.length} Variante(n)`
+        : '⚠︎ keine bestellbare Variante';
     console.log(`  variabel: ${product.name} → ${note}`);
   }
 
@@ -414,7 +486,7 @@ async function main() {
       cats,
       veg: cats.includes('vegetarien'),
       spicy: SPICY_RE.test(fullTitle),
-      popular: POPULAR_CODES.has(code),
+      popular: isPopular(p, code),
       inStock: p.is_in_stock !== false,
       purchasable: p.is_purchasable !== false,
     };
@@ -460,11 +532,19 @@ async function main() {
   }
 
   const count = sections.reduce((n, s) => n + s.groups.reduce((m, g) => m + g.items.length, 0), 0);
-  const out = { generatedAt: new Date().toISOString(), currency: 'EUR', count, sections };
+  const file = resolve(ROOT, 'data', 'menu.json');
 
-  await mkdir(resolve(ROOT, 'data'), { recursive: true });
-  await writeFile(resolve(ROOT, 'data', 'menu.json'), `${JSON.stringify(out, null, 1)}\n`, 'utf8');
-  console.log(`✓ data/menu.json geschrieben – ${count} Gerichte in ${sections.length} Sektionen`);
+  // Unverändert? Dann bleibt die Datei, wie sie ist – sonst entstünde bei
+  // jedem automatischen Lauf ein Commit, nur weil sich die Uhrzeit ändert.
+  const previous = await readFile(file, 'utf8').then(JSON.parse, () => null);
+  if (previous && JSON.stringify({ count: previous.count, sections: previous.sections }) === JSON.stringify({ count, sections })) {
+    console.log(`✓ data/menu.json unverändert – ${count} Gerichte in ${sections.length} Sektionen`);
+  } else {
+    const out = { generatedAt: new Date().toISOString(), currency: 'EUR', count, sections };
+    await mkdir(resolve(ROOT, 'data'), { recursive: true });
+    await writeFile(file, `${JSON.stringify(out, null, 1)}\n`, 'utf8');
+    console.log(`✓ data/menu.json geschrieben – ${count} Gerichte in ${sections.length} Sektionen`);
+  }
 
   if (unknown.size) {
     console.warn(

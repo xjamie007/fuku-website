@@ -43,11 +43,11 @@ const PHRASES = {
   'poulet curry': { de: 'Hähnchen-Curry', en: 'Chicken curry', nl: 'Kipcurry' },
   'bœuf curry': { de: 'Rind-Curry', en: 'Beef curry', nl: 'Rundcurry' },
   'scampis curry': { de: 'Scampi-Curry', en: 'Prawn curry', nl: 'Scampicurry' },
-  'sur plat chauffant': { de: 'auf heisser Platte', en: 'on a sizzling plate', nl: 'op een hete plaat' },
-  'à la sauce aigre-douce piquant': { de: 'in scharfer süss-saurer Sauce', en: 'in spicy sweet & sour sauce', nl: 'in pittige zoetzure saus' },
-  'à la sauce aigre-douce': { de: 'in süss-saurer Sauce', en: 'in sweet & sour sauce', nl: 'in zoetzure saus' },
-  'avec sauce aigre-douce': { de: 'in süss-saurer Sauce', en: 'in sweet & sour sauce', nl: 'in zoetzure saus' },
-  'sauce aigre-douce': { de: 'süss-saure Sauce', en: 'sweet & sour sauce', nl: 'zoetzure saus' },
+  'sur plat chauffant': { de: 'auf heißer Platte', en: 'on a sizzling plate', nl: 'op een hete plaat' },
+  'à la sauce aigre-douce piquant': { de: 'in scharfer süß-saurer Sauce', en: 'in spicy sweet & sour sauce', nl: 'in pittige zoetzure saus' },
+  'à la sauce aigre-douce': { de: 'in süß-saurer Sauce', en: 'in sweet & sour sauce', nl: 'in zoetzure saus' },
+  'avec sauce aigre-douce': { de: 'in süß-saurer Sauce', en: 'in sweet & sour sauce', nl: 'in zoetzure saus' },
+  'sauce aigre-douce': { de: 'süß-saure Sauce', en: 'sweet & sour sauce', nl: 'zoetzure saus' },
   'à la sauce cacahuète': { de: 'in Erdnusssauce', en: 'in peanut sauce', nl: 'in pindasaus' },
   'a la sauce cacahuète': { de: 'in Erdnusssauce', en: 'in peanut sauce', nl: 'in pindasaus' },
   'à la sauce l’orange': { de: 'in Orangensauce', en: 'in orange sauce', nl: 'in sinaasappelsaus' },
@@ -69,6 +69,10 @@ const PHRASES = {
   'anguille fumée': { de: 'Räucheraal', en: 'Smoked eel', nl: 'Gerookte paling' },
   'mi-cuit': { de: 'angebraten', en: 'seared', nl: 'aangebraden' },
 
+  /* --- Auswahl beim Mittagsmenü ------------------------------------ */
+  'entrée au choix': { de: 'Vorspeise nach Wahl', en: 'Starter of your choice', nl: 'Voorgerecht naar keuze' },
+  'plat au choix': { de: 'Hauptgericht nach Wahl', en: 'Main course of your choice', nl: 'Hoofdgerecht naar keuze' },
+
   /* --- Vorspeisen und Beilagen ------------------------------------- */
   'croquette printemps': { de: 'Frühlingsrollen', en: 'Spring rolls', nl: 'Loempia’s' },
   'minis croquette': { de: 'Mini-Kroketten', en: 'Mini croquettes', nl: 'Mini-kroketten' },
@@ -76,8 +80,8 @@ const PHRASES = {
   'assortiment de vapeur': { de: 'Dim-Sum-Auswahl', en: 'Steamed selection', nl: 'Gestoomde selectie' },
   'cuisses de grenouilles': { de: 'Froschschenkel', en: 'Frog legs', nl: 'Kikkerbilletjes' },
   'cuisse de grenouilles': { de: 'Froschschenkel', en: 'Frog legs', nl: 'Kikkerbilletjes' },
-  'brochettes de poulet': { de: 'Hähnchenspiesse', en: 'Chicken skewers', nl: 'Kipspiesjes' },
-  'brochettes de scampis': { de: 'Scampi-Spiesse', en: 'Prawn skewers', nl: 'Scampispiesjes' },
+  'brochettes de poulet': { de: 'Hähnchenspieße', en: 'Chicken skewers', nl: 'Kipspiesjes' },
+  'brochettes de scampis': { de: 'Scampi-Spieße', en: 'Prawn skewers', nl: 'Scampispiesjes' },
   'beignet de poulet': { de: 'Hähnchen im Teigmantel', en: 'Battered chicken', nl: 'Kip in beslag' },
   'filet de dorade': { de: 'Doradenfilet', en: 'Sea bream fillet', nl: 'Doradefilet' },
   'nems au porc': { de: 'Frühlingsrollen mit Schweinefleisch', en: 'Pork spring rolls', nl: 'Loempia’s met varkensvlees' },
@@ -85,6 +89,7 @@ const PHRASES = {
   'soupe raviolis chinois': { de: 'Suppe mit chinesischen Teigtaschen', en: 'Chinese dumpling soup', nl: 'Chinese dumplingsoep' },
   'soupe thaïlandaise': { de: 'Thailändische Suppe', en: 'Thai soup', nl: 'Thaise soep' },
   'soupe pékinois': { de: 'Peking-Suppe', en: 'Peking soup', nl: 'Pekingsoep' },
+  'soupe pékinoise': { de: 'Peking-Suppe', en: 'Peking soup', nl: 'Pekingsoep' },
   'soupe poulet': { de: 'Hähnchensuppe', en: 'Chicken soup', nl: 'Kippensoep' },
   'soupe mais et crabe': { de: 'Mais-Krabben-Suppe', en: 'Sweetcorn and crab soup', nl: 'Maïs-krabsoep' },
   'soupe miso': { de: 'Misosuppe', en: 'Miso soup', nl: 'Misosoep' },
@@ -157,7 +162,7 @@ const PHRASES = {
   raviolis: { de: 'Teigtaschen', en: 'dumplings', nl: 'dumplings' },
   croquette: { de: 'Krokette', en: 'croquette', nl: 'kroket' },
   samosas: { de: 'Samosas', en: 'Samosas', nl: 'Samosa’s' },
-  brochettes: { de: 'Spiesse', en: 'skewers', nl: 'spiesjes' },
+  brochettes: { de: 'Spieße', en: 'skewers', nl: 'spiesjes' },
   filet: { de: 'Filet', en: 'fillet', nl: 'filet' },
   marmite: { de: 'Topf', en: 'hot pot', nl: 'pot' },
   assortiment: { de: 'Auswahl', en: 'selection', nl: 'selectie' },
@@ -175,6 +180,8 @@ const PHRASES = {
 
   /* --- Eigenschaften -------------------------------------------------- */
   végétarien: { de: 'Vegetarisch', en: 'Vegetarian', nl: 'Vegetarisch' },
+  vegetarian: { de: 'vegetarisch', en: 'vegetarian', nl: 'vegetarisch' },
+  personne: { de: 'Person', en: 'person', nl: 'persoon' },
   vége: { de: 'Vegetarisch', en: 'Vegetarian', nl: 'Vegetarisch' },
   caramélisées: { de: 'karamellisiert', en: 'caramelised', nl: 'gekarameliseerd' },
   caramélisé: { de: 'karamellisiert', en: 'caramelised', nl: 'gekarameliseerd' },
@@ -231,12 +238,12 @@ const OVERRIDES = {
     nl: 'Doradefilet met knoflook en peper',
   },
   'Beignet de poulet à la sauce aigre-douce': {
-    de: 'Hähnchen im Teigmantel, süss-sauer',
+    de: 'Hähnchen im Teigmantel, süß-sauer',
     en: 'Battered chicken in sweet & sour sauce',
     nl: 'Kip in beslag, zoetzuur',
   },
   'Entrecote grille avec sauce champignon sur plat chauffant avec oeuf': {
-    de: 'Gegrilltes Entrecôte mit Pilzsauce und Ei, auf heisser Platte',
+    de: 'Gegrilltes Entrecôte mit Pilzsauce und Ei, auf heißer Platte',
     en: 'Grilled entrecôte with mushroom sauce and egg, on a sizzling plate',
     nl: 'Gegrilde entrecote met paddenstoelensaus en ei, op een hete plaat',
   },
@@ -246,7 +253,7 @@ const OVERRIDES = {
     nl: 'Gamba’s met knoflook op vermicelli',
   },
   'Aubergines caramélisées, sauce aigre-douce': {
-    de: 'Karamellisierte Auberginen in süss-saurer Sauce',
+    de: 'Karamellisierte Auberginen in süß-saurer Sauce',
     en: 'Caramelised aubergines in sweet & sour sauce',
     nl: 'Gekarameliseerde aubergines in zoetzure saus',
   },
@@ -285,12 +292,12 @@ const OVERRIDES = {
   'Curry samosas': { de: 'Curry-Samosas', en: 'Curry samosas', nl: 'Currysamosa’s' },
   'Poulet caramélisé': { de: 'Karamellisiertes Hähnchen', en: 'Caramelised chicken', nl: 'Gekarameliseerde kip' },
   'Poulet caramélisé, sauce aigre-douce': {
-    de: 'Karamellisiertes Hähnchen, süss-sauer',
+    de: 'Karamellisiertes Hähnchen, süß-sauer',
     en: 'Caramelised chicken, sweet & sour',
     nl: 'Gekarameliseerde kip, zoetzuur',
   },
   'Bœuf caramélisé avec sauce aigre-douce': {
-    de: 'Karamellisiertes Rind in süss-saurer Sauce',
+    de: 'Karamellisiertes Rind in süß-saurer Sauce',
     en: 'Caramelised beef in sweet & sour sauce',
     nl: 'Gekarameliseerd rund in zoetzure saus',
   },

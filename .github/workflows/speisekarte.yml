@@ -1,0 +1,52 @@
+# Holt die Speisekarte regelmässig aus WooCommerce.
+#
+# Was das Restaurant in WordPress ändert – Preise, neue Gerichte, Fotos,
+# das Mittagsmenü, der Stern für „Beliebt“ –, landet so ohne Zutun auf der
+# Website. Hat sich nichts geändert, entsteht auch kein Commit.
+#
+# Sofort abgleichen: GitHub → Actions → „Speisekarte abgleichen“ → Run workflow.
+
+name: Speisekarte abgleichen
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: speisekarte
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Speisekarte aus WooCommerce laden
+        run: node tools/sync-menu.mjs
+
+      - name: Änderungen veröffentlichen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/menu.json; then
+            echo "Keine Änderung an der Speisekarte."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/menu.json
+          git commit -m "Speisekarte aus WooCommerce aktualisiert"
+          git push
+          # Vorschau auf GitHub Pages neu bauen lassen
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || true

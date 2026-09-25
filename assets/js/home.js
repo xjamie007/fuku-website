@@ -3,7 +3,7 @@
    ================================================================== */
 
 import { boot, formatPrice } from './app.js';
-import { t, onLangChange, getLang } from './i18n.js';
+import { t, onLangChange, getLang, apply } from './i18n.js';
 import { loadMenu, flatten, countIn, dishName } from './menu-data.js';
 
 boot();
@@ -11,11 +11,17 @@ boot();
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
 
-/** Vier Empfehlungen – bevorzugt solche mit Foto. */
+/**
+ * Vier Empfehlungen – nur mit Foto, und zuerst je eine aus jeder
+ * Rubrik, damit die Leiste nicht aus vier Sushi-Rollen besteht.
+ */
 function pickHighlights(dishes) {
   const popular = dishes.filter((d) => d.popular && d.image);
-  const fallback = dishes.filter((d) => d.image && !popular.includes(d));
-  return [...popular, ...fallback].slice(0, 4);
+  const fallback = dishes.filter((d) => d.image && !d.popular);
+  const sections = new Set();
+  const varied = popular.filter((d) => !sections.has(d.sectionId) && sections.add(d.sectionId));
+  const rest = popular.filter((d) => !varied.includes(d));
+  return [...varied, ...rest, ...fallback].slice(0, 4);
 }
 
 function renderHighlights(dishes) {
@@ -63,6 +69,12 @@ loadMenu()
     document.querySelectorAll('[data-dish-total]').forEach((el) => {
       el.textContent = String(total);
     });
+
+    // Texte mit {n} („Vier von 222“) auf die tatsächliche Zahl setzen.
+    document.querySelectorAll('[data-i18n-vars]').forEach((el) => {
+      el.dataset.i18nVars = JSON.stringify({ n: total });
+    });
+    apply();
 
     const setDishCount = () => {
       document.querySelectorAll('[data-dish-count]').forEach((el) => {

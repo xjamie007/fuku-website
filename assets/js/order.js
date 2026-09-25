@@ -33,12 +33,17 @@ const CART_KEY = 'fuku:cart';
  * variablen (Mittagsmenü, Fondue) die ID der gewählten Variante. Die
  * Store API nimmt beides über denselben Weg entgegen, deshalb ist der
  * Warenkorb durchgehend eine Map<bestellId, menge>.
+ *
+ * Menüs mit freier Auswahl (Vorspeise und Hauptgericht nach Wahl) tragen
+ * die Auswahl im Schlüssel: „723|croquette-printemps-2p|boeuf-aux-legumes“.
+ * Die Schlüssel sind deshalb durchgehend Zeichenketten.
  */
 const state = {
   menu: null,
   dishes: [],
   byId: new Map(), // Gericht-ID  → Gericht
-  byOrderId: new Map(), // Bestell-ID  → { dish, choice }
+  byOrderId: new Map(), // Bestell-ID  → { dish, choice, options? }
+  picks: new Map(), // Varianten-ID mit freier Auswahl → { dish, choice }
   cart: loadCart(),
   query: '',
   filters: new Set(),
@@ -48,7 +53,7 @@ const state = {
 function loadCart() {
   try {
     const raw = JSON.parse(localStorage.getItem(CART_KEY) || '{}');
-    return new Map(Object.entries(raw).map(([id, qty]) => [Number(id), Number(qty)]).filter(([, q]) => q > 0));
+    return new Map(Object.entries(raw).map(([id, qty]) => [String(id), Number(qty)]).filter(([, q]) => q > 0));
   } catch {
     return new Map();
   }
@@ -64,8 +69,41 @@ function saveCart() {
 
 const cartCount = () => [...state.cart.values()].reduce((a, b) => a + b, 0);
 
+/** Gericht mit freier Auswahl (z. B. Mittagsmenü „Plats chauds“)? */
+const isConfigurable = (dish) => dish.choices?.length === 1 && Boolean(dish.choices[0].pick);
+
+/**
+ * Eintrag zu einer Bestell-ID. Menüs mit freier Auswahl stehen nicht
+ * vorab in byOrderId, sondern werden beim ersten Zugriff aus dem Schlüssel
+ * aufgelöst – und nur, wenn es jede gewählte Option noch gibt.
+ */
+function entryFor(orderId) {
+  const known = state.byOrderId.get(orderId);
+  if (known) return known;
+
+  const [id, ...values] = String(orderId).split('|');
+  const base = state.picks.get(id);
+  if (!base || values.length !== base.choice.pick.length) return null;
+
+  const options = base.choice.pick.map((group, i) => group.options.find((o) => o.value === values[i]));
+  if (options.some((o) => !o)) return null;
+
+  const entry = { ...base, options };
+  state.byOrderId.set(orderId, entry);
+  return entry;
+}
+
+/** Name einer festen Variante („Menü 1“) in der aktuellen Sprache. */
+const choiceLabel = (choice) => (getLang() === 'fr' ? choice.label : choice.t?.[getLang()]) || choice.label;
+
+/** Zusatzzeile im Warenkorb: gewählte Variante bzw. gewählte Gerichte. */
+const entryLabel = (entry) => {
+  if (entry.options) return entry.options.map((o) => dishName(o, getLang())).join(' · ');
+  return entry.choice ? choiceLabel(entry.choice) : '';
+};
+
 const unitPrice = (orderId) => {
-  const entry = state.byOrderId.get(orderId);
+  const entry = entryFor(orderId);
   if (!entry) return 0;
   return entry.choice?.price ?? entry.dish.price;
 };
@@ -74,10 +112,11 @@ const cartTotal = () =>
   [...state.cart.entries()].reduce((sum, [orderId, qty]) => sum + unitPrice(orderId) * qty, 0);
 
 /** Alle Bestell-IDs eines Gerichts (mehrere bei Varianten). */
-const orderIdsOf = (dish) => (dish.choices?.length ? dish.choices.map((c) => c.id) : [dish.id]);
+const orderIdsOf = (dish) => (dish.choices?.length ? dish.choices.map((c) => String(c.id)) : [String(dish.id)]);
 
-/** Gesamtmenge eines Gerichts über alle seine Varianten. */
-const dishQty = (dish) => orderIdsOf(dish).reduce((n, id) => n + (state.cart.get(id) || 0), 0);
+/** Gesamtmenge eines Gerichts über alle seine Varianten und Zusammenstellungen. */
+const dishQty = (dish) =>
+  [...state.cart.entries()].reduce((n, [orderId, qty]) => n + (entryFor(orderId)?.dish === dish ? qty : 0), 0);
 
 /* ------------------------------------------------------------------
    Hilfen
@@ -94,7 +133,7 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
    ------------------------------------------------------------------ */
 function dishMarkup(dish) {
   const qty = dishQty(dish);
-  const multiChoice = (dish.choices?.length ?? 0) > 1;
+  const multiChoice = (dish.choices?.length ?? 0) > 1 || isConfigurable(dish);
 
   // Allergene erscheinen bewusst nur in der Detailansicht und in der
   // Legende – auf der Karte würden die Nummern nur Lärm erzeugen.
@@ -422,12 +461,12 @@ function renderCart() {
   const body = lines.length
     ? lines
         .map(
-          ({ orderId, dish, choice, qty }) => `
-          <div class="cart-line" data-line="${orderId}">
+          ({ orderId, dish, qty, label }) => `
+          <div class="cart-line" data-line="${esc(orderId)}">
             <span class="cart-line__qty">${qty}×</span>
             <span class="cart-line__name">
               ${esc(dishShort(dish, getLang()))}
-              ${choice ? `<small>${esc(choice.label)}</small>` : dish.code ? `<small>${esc(dish.code)}</small>` : ''}
+              ${label ? `<small>${esc(label)}</small>` : dish.code ? `<small>${esc(dish.code)}</small>` : ''}
             </span>
             <span class="cart-line__end">
               <span class="cart-line__ctrl">
@@ -469,7 +508,10 @@ function renderCart() {
 /** Warenkorbzeilen mit aufgelöstem Gericht und ggf. gewählter Variante. */
 function cartLines() {
   return [...state.cart.entries()]
-    .map(([orderId, qty]) => ({ orderId, qty, ...(state.byOrderId.get(orderId) || {}) }))
+    .map(([orderId, qty]) => {
+      const entry = entryFor(orderId);
+      return { orderId, qty, ...(entry || {}), label: entry ? entryLabel(entry) : '' };
+    })
     .filter((l) => l.dish);
 }
 
@@ -488,7 +530,7 @@ function syncOrderId(orderId) {
   });
 
   // Karte des zugehörigen Gerichts nachziehen (bei Varianten die Summe).
-  const dish = state.byOrderId.get(orderId)?.dish;
+  const dish = entryFor(orderId)?.dish;
   if (!dish) return;
   const total = dishQty(dish);
 
@@ -519,11 +561,11 @@ function setQty(orderId, qty) {
 
 const addOne = (orderId) => {
   setQty(orderId, (state.cart.get(orderId) || 0) + 1);
-  const entry = state.byOrderId.get(orderId);
+  const entry = entryFor(orderId);
   if (entry) {
     const short = dishShort(entry.dish, getLang());
-    const name = entry.choice ? `${short} · ${entry.choice.label}` : short;
-    showToast(t('order.added', { name }));
+    const label = entryLabel(entry);
+    showToast(t('order.added', { name: label ? `${short} · ${label}` : short }));
   }
 };
 
@@ -590,7 +632,7 @@ function openDetail(id) {
     <div class="detail__body">
       <h2 id="detail-title">${dish.code ? `<span class="dish__code">${esc(dish.code)}</span> ` : ''}${esc(dishName(dish, getLang()))}</h2>
       ${dish.description ? `<p class="detail__desc">${esc(dish.description)}</p>` : ''}
-      ${variantMarkup(dish)}
+      ${isConfigurable(dish) ? pickMarkup(dish) : variantMarkup(dish)}
       ${allergens}
     </div>
     ${detailFoot(dish)}`;
@@ -609,16 +651,94 @@ function variantMarkup(dish) {
         .map(
           (choice) => `
           <div class="variant">
-            <span class="variant__label">${esc(choice.label)}</span>
+            <span class="variant__label">
+              ${esc(choiceLabel(choice))}
+              ${
+                choice.items?.length
+                  ? `<small class="variant__items">${choice.items.map((i) => esc(dishName(i, getLang()))).join('<br />')}</small>`
+                  : ''
+              }
+            </span>
             <span class="variant__price">${formatPrice(choice.price ?? dish.price)}</span>
-            ${stepperMarkup(choice.id, `${dishShort(dish, getLang())} · ${choice.label}`, state.cart.get(choice.id) || 0)}
+            ${stepperMarkup(
+              String(choice.id),
+              `${dishShort(dish, getLang())} · ${choiceLabel(choice)}`,
+              state.cart.get(String(choice.id)) || 0,
+            )}
           </div>`,
         )
         .join('')}
     </div>`;
 }
 
+/**
+ * Freie Auswahl, etwa Vorspeise und Hauptgericht beim Mittagsmenü.
+ * Rubriken und Gerichte kommen aus den Attributen des Produkts in
+ * WooCommerce – ändert das Restaurant dort die Auswahl, ändert sie sich
+ * hier mit dem nächsten Abgleich.
+ */
+function pickMarkup(dish) {
+  return dish.choices[0].pick
+    .map(
+      (group, i) => `
+      <div class="variants" role="group" aria-label="${esc(dishName(group, getLang()))}">
+        <h3>${esc(dishName(group, getLang()))}</h3>
+        <div class="variant-picks">
+          ${group.options
+            .map(
+              (option) => `<button class="chip" type="button" data-pick="${i}" data-value="${esc(option.value)}" aria-pressed="false">
+                ${esc(dishName(option, getLang()))}
+              </button>`,
+            )
+            .join('')}
+        </div>
+      </div>`,
+    )
+    .join('');
+}
+
+/** Aktuelle Auswahl im Detailfenster; null, solange eine Rubrik fehlt. */
+function pickedValues(dish) {
+  const body = $('[data-detail-body]');
+  const values = dish.choices[0].pick.map(
+    (group, i) => $(`[data-pick="${i}"][aria-pressed="true"]`, body)?.dataset.value,
+  );
+  return values.every(Boolean) ? values : null;
+}
+
+function selectPick(button) {
+  const body = $('[data-detail-body]');
+  $$(`[data-pick="${button.dataset.pick}"]`, body).forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+
+  const add = $('[data-pick-add]', body);
+  const dish = add && state.byId.get(Number(add.dataset.pickAdd));
+  if (!dish) return;
+  const complete = Boolean(pickedValues(dish));
+  add.disabled = !complete;
+  add.style.opacity = complete ? '' : '0.45';
+  $('[data-pick-hint]', body).hidden = complete;
+}
+
+function addPicked(dishId) {
+  const dish = state.byId.get(dishId);
+  const values = dish && pickedValues(dish);
+  if (!values) return;
+  closeSheets();
+  addOne([dish.choices[0].id, ...values].join('|'));
+}
+
 function detailFoot(dish) {
+  if (isConfigurable(dish)) {
+    return `<div class="detail__foot">
+        <span class="price">${formatPrice(dish.choices[0].price ?? dish.price)}</span>
+        <span class="detail__hint" data-pick-hint>${esc(t('order.pickHint'))}</span>
+        <button class="btn btn--brand" type="button" data-pick-add="${dish.id}" disabled style="opacity: 0.45">
+          ${icon('plus')}
+          <span>${esc(t('order.add'))}</span>
+        </button>
+      </div>`;
+  }
+
   if (dish.orderable === false) {
     return `<div class="detail__foot">
         <span class="price">${formatPrice(dish.price)}</span>
@@ -661,12 +781,16 @@ async function pushToWooCommerce(lines) {
   // Nacheinander übertragen: der /batch-Endpunkt reicht die Nonce nicht an
   // seine Teilanfragen weiter und quittiert jedes add-item mit 401.
   const failed = [];
-  for (const { orderId, qty } of lines) {
+  for (const { orderId, qty, dish, choice, options } of lines) {
+    const item = { id: choice ? choice.id : dish.id, quantity: qty };
+    // Bei freier Auswahl verlangt WooCommerce die gewählten Werte je Attribut.
+    if (options) item.variation = choice.pick.map((group, i) => ({ attribute: group.attribute, value: options[i].value }));
+
     const res = await fetch(`${WOO.store}/cart/add-item`, {
       method: 'POST',
       headers,
       credentials: 'include',
-      body: JSON.stringify({ id: orderId, quantity: qty }),
+      body: JSON.stringify(item),
     });
     if (!res.ok) failed.push({ orderId, status: res.status });
   }
@@ -683,8 +807,10 @@ function orderMailto() {
     `${t('cart.title')}:`,
     '',
     ...lines.map(
-      ({ orderId, dish, choice, qty }) =>
-        `${qty}× ${dish.code ? `${dish.code} ` : ''}${dish.name}${choice ? ` (${choice.label})` : ''} — ${formatPrice(
+      ({ orderId, dish, choice, options, qty }) =>
+        `${qty}× ${dish.code ? `${dish.code} ` : ''}${dish.name}${
+          options ? ` (${options.map((o) => o.name).join(', ')})` : choice ? ` (${choice.label})` : ''
+        } — ${formatPrice(
           unitPrice(orderId) * qty,
         )}`,
     ),
@@ -753,13 +879,25 @@ function wireEvents() {
   document.addEventListener('click', (event) => {
     const inc = event.target.closest('[data-inc]');
     if (inc) {
-      addOne(Number(inc.dataset.inc));
+      addOne(inc.dataset.inc);
       return;
     }
 
     const dec = event.target.closest('[data-dec]');
     if (dec) {
-      removeOne(Number(dec.dataset.dec));
+      removeOne(dec.dataset.dec);
+      return;
+    }
+
+    const pick = event.target.closest('[data-pick]');
+    if (pick) {
+      selectPick(pick);
+      return;
+    }
+
+    const pickAdd = event.target.closest('[data-pick-add]');
+    if (pickAdd) {
+      addPicked(Number(pickAdd.dataset.pickAdd));
       return;
     }
 
@@ -908,11 +1046,14 @@ loadMenu()
 
     // Bestell-IDs auflösen: Varianten bekommen je eine eigene.
     state.byOrderId = new Map();
+    state.picks = new Map();
     for (const dish of state.dishes) {
-      if (dish.choices?.length) {
-        dish.choices.forEach((choice) => state.byOrderId.set(choice.id, { dish, choice }));
+      if (isConfigurable(dish)) {
+        state.picks.set(String(dish.choices[0].id), { dish, choice: dish.choices[0] });
+      } else if (dish.choices?.length) {
+        dish.choices.forEach((choice) => state.byOrderId.set(String(choice.id), { dish, choice }));
       } else if (dish.orderable !== false) {
-        state.byOrderId.set(dish.id, { dish, choice: null });
+        state.byOrderId.set(String(dish.id), { dish, choice: null });
       }
     }
 
@@ -920,7 +1061,7 @@ loadMenu()
     // nicht mehr gibt, würden sonst als Geisterposten mitgezählt.
     let pruned = false;
     for (const orderId of [...state.cart.keys()]) {
-      if (!state.byOrderId.has(orderId)) {
+      if (!entryFor(orderId)) {
         state.cart.delete(orderId);
         pruned = true;
       }

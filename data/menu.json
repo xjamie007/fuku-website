@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-01T19:16:22.090Z",
+ "generatedAt": "2026-09-25T20:52:09.801Z",
  "currency": "EUR",
  "count": 222,
  "sections": [
@@ -42,8 +42,133 @@
         "9",
         "11"
        ],
-       "choices": [],
-       "orderable": false,
+       "choices": [
+        {
+         "id": 723,
+         "label": "",
+         "t": {
+          "de": "",
+          "en": "",
+          "nl": ""
+         },
+         "price": 15.8,
+         "pick": [
+          {
+           "attribute": "Entrée au choix",
+           "name": "Entrée au choix",
+           "t": {
+            "de": "Vorspeise nach Wahl",
+            "en": "Starter of your choice",
+            "nl": "Voorgerecht naar keuze"
+           },
+           "options": [
+            {
+             "value": "croquette-printemps-2p",
+             "name": "Croquette printemps 2p",
+             "t": {
+              "de": "Frühlingsrollen 2p",
+              "en": "Spring rolls 2p",
+              "nl": "Loempia’s 2p"
+             }
+            },
+            {
+             "value": "minis-croquette-8p",
+             "name": "Minis croquette 8p",
+             "t": {
+              "de": "Mini-Kroketten 8p",
+              "en": "Mini croquettes 8p",
+              "nl": "Mini-kroketten 8p"
+             }
+            },
+            {
+             "value": "nems-au-porc-2p",
+             "name": "Nems au Porc 2p",
+             "t": {
+              "de": "Frühlingsrollen mit Schweinefleisch 2p",
+              "en": "Pork spring rolls 2p",
+              "nl": "Loempia’s met varkensvlees 2p"
+             }
+            },
+            {
+             "value": "soupe-peikinoise",
+             "name": "Soupe pékinoise",
+             "t": {
+              "de": "Peking-Suppe",
+              "en": "Peking soup",
+              "nl": "Pekingsoep"
+             }
+            },
+            {
+             "value": "soupe-poulet-aux-vermicelles",
+             "name": "Soupe poulet aux vermicelles",
+             "t": {
+              "de": "Hähnchensuppe mit Glasnudeln",
+              "en": "Chicken soup with vermicelli",
+              "nl": "Kippensoep met vermicelli"
+             }
+            }
+           ]
+          },
+          {
+           "attribute": "Plat au choix",
+           "name": "Plat au choix",
+           "t": {
+            "de": "Hauptgericht nach Wahl",
+            "en": "Main course of your choice",
+            "nl": "Hoofdgerecht naar keuze"
+           },
+           "options": [
+            {
+             "value": "beignei-de-poulet-avec-sauce-aigre-douce",
+             "name": "Beignet de Poulet avec Sauce aigre-douce",
+             "t": {
+              "de": "Hähnchen im Teigmantel in süß-saurer Sauce",
+              "en": "Battered chicken in sweet & sour sauce",
+              "nl": "Kip in beslag in zoetzure saus"
+             }
+            },
+            {
+             "value": "boeuf-aux-legumes",
+             "name": "Bœuf aux légumes",
+             "t": {
+              "de": "Rind mit Gemüse",
+              "en": "Beef with vegetables",
+              "nl": "Rund met groenten"
+             }
+            },
+            {
+             "value": "marmite-tofu-et-legumes",
+             "name": "Marmite tofu et légumes",
+             "t": {
+              "de": "Tofu-Gemüse-Topf",
+              "en": "Tofu and vegetable pot",
+              "nl": "Tofu-groentepot"
+             }
+            },
+            {
+             "value": "nouilles-sautee-aux-poulet",
+             "name": "Nouilles sautées au poulet",
+             "t": {
+              "de": "Gebratene Nudeln mit Hähnchen",
+              "en": "Fried noodles with chicken",
+              "nl": "Gebakken noedels met kip"
+             }
+            },
+            {
+             "value": "poulet-curry-rouge-tha",
+             "name": "Poulet curry rouge thäi",
+             "t": {
+              "de": "Hähnchen in rotem Thai-Curry",
+              "en": "Chicken in red Thai curry",
+              "nl": "Kip in rode Thaise curry"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "orderable": true,
        "image": "https://fuku.lu/wp-content/uploads/2022/07/menu-du-midi.jpg",
        "thumb": "https://fuku.lu/wp-content/uploads/2022/07/menu-du-midi-300x300.jpg",
        "veg": false,
@@ -74,22 +199,138 @@
         {
          "id": 682,
          "label": "Menu 1",
-         "price": 15.8
+         "t": {
+          "de": "Menü 1",
+          "en": "Menu 1",
+          "nl": "Menu 1"
+         },
+         "price": 15.8,
+         "items": [
+          {
+           "name": "California roll poulet concombre spicy 8p",
+           "t": {
+            "de": "California Roll Hähnchen Gurke scharf 8p",
+            "en": "California roll chicken cucumber spicy 8p",
+            "nl": "California Roll kip komkommer pittig 8p"
+           }
+          },
+          {
+           "name": "California roll saumon avocat 8p",
+           "t": {
+            "de": "California Roll Lachs Avocado 8p",
+            "en": "California roll salmon avocado 8p",
+            "nl": "California Roll zalm avocado 8p"
+           }
+          },
+          {
+           "name": "California roll tempura scampis mangue 8p",
+           "t": {
+            "de": "California Roll tempura Scampi Mango 8p",
+            "en": "California roll tempura prawns mango 8p",
+            "nl": "California Roll tempura scampi mango 8p"
+           }
+          }
+         ]
         },
         {
          "id": 683,
          "label": "Menu 2",
-         "price": 15.8
+         "t": {
+          "de": "Menü 2",
+          "en": "Menu 2",
+          "nl": "Menu 2"
+         },
+         "price": 15.8,
+         "items": [
+          {
+           "name": "California roll vegetarian 8p",
+           "t": {
+            "de": "California Roll vegetarisch 8p",
+            "en": "California roll vegetarian 8p",
+            "nl": "California Roll vegetarisch 8p"
+           }
+          },
+          {
+           "name": "Maki roll avocat cheese 8p",
+           "t": {
+            "de": "Maki Roll Avocado Frischkäse 8p",
+            "en": "Maki roll avocado cream cheese 8p",
+            "nl": "Maki Roll avocado roomkaas 8p"
+           }
+          },
+          {
+           "name": "Soya roll concombre cheese 8p",
+           "t": {
+            "de": "Soya Roll Gurke Frischkäse 8p",
+            "en": "Soya roll cucumber cream cheese 8p",
+            "nl": "Soya Roll komkommer roomkaas 8p"
+           }
+          }
+         ]
         },
         {
          "id": 684,
          "label": "Menu 3",
-         "price": 15.8
+         "t": {
+          "de": "Menü 3",
+          "en": "Menu 3",
+          "nl": "Menu 3"
+         },
+         "price": 15.8,
+         "items": [
+          {
+           "name": "Hot roll tempura scampis mangue 10p",
+           "t": {
+            "de": "Hot Roll tempura Scampi Mango 10p",
+            "en": "Hot roll tempura prawns mango 10p",
+            "nl": "Hot Roll tempura scampi mango 10p"
+           }
+          },
+          {
+           "name": "Hot roll poulet concombre spicy 10p",
+           "t": {
+            "de": "Hot Roll Hähnchen Gurke scharf 10p",
+            "en": "Hot roll chicken cucumber spicy 10p",
+            "nl": "Hot Roll kip komkommer pittig 10p"
+           }
+          }
+         ]
         },
         {
          "id": 685,
          "label": "Menu 4",
-         "price": 15.8
+         "t": {
+          "de": "Menü 4",
+          "en": "Menu 4",
+          "nl": "Menu 4"
+         },
+         "price": 15.8,
+         "items": [
+          {
+           "name": "Saumon roll cheese 8p",
+           "t": {
+            "de": "Lachs Roll Frischkäse 8p",
+            "en": "Salmon roll cream cheese 8p",
+            "nl": "Zalm Roll roomkaas 8p"
+           }
+          },
+          {
+           "name": "Nigiri saumon 4p",
+           "t": {
+            "de": "Nigiri Lachs 4p",
+            "en": "Nigiri salmon 4p",
+            "nl": "Nigiri zalm 4p"
+           }
+          },
+          {
+           "name": "Sashimi saumon 3p",
+           "t": {
+            "de": "Sashimi Lachs 3p",
+            "en": "Sashimi salmon 3p",
+            "nl": "Sashimi zalm 3p"
+           }
+          }
+         ]
         }
        ],
        "orderable": true,
@@ -220,12 +461,12 @@
        "name": "Brochettes de poulet 2p",
        "short": "Brochettes de poulet 2p",
        "t": {
-        "de": "Hähnchenspiesse 2p",
+        "de": "Hähnchenspieße 2p",
         "en": "Chicken skewers 2p",
         "nl": "Kipspiesjes 2p"
        },
        "tShort": {
-        "de": "Hähnchenspiesse 2p",
+        "de": "Hähnchenspieße 2p",
         "en": "Chicken skewers 2p",
         "nl": "Kipspiesjes 2p"
        },
@@ -283,12 +524,12 @@
        "name": "Brochettes de scampis 2p",
        "short": "Brochettes de scampis 2p",
        "t": {
-        "de": "Scampi-Spiesse 2p",
+        "de": "Scampi-Spieße 2p",
         "en": "Prawn skewers 2p",
         "nl": "Scampispiesjes 2p"
        },
        "tShort": {
-        "de": "Scampi-Spiesse 2p",
+        "de": "Scampi-Spieße 2p",
         "en": "Prawn skewers 2p",
         "nl": "Scampispiesjes 2p"
        },
@@ -822,7 +1063,7 @@
        "thumb": "https://fuku.lu/wp-content/uploads/2022/07/tomzamkung-300x300.jpeg",
        "veg": false,
        "spicy": false,
-       "popular": true,
+       "popular": false,
        "inStock": true,
        "purchasable": true
       },
@@ -1319,7 +1560,7 @@
         "nl": "Schotel 7 · 74 stuks"
        },
        "price": 73.8,
-       "description": "Sashimi saumon 6p\nSashimi thon 6p\nHot roll poulet et concombre 10p\nNigiri saumon 3p\nNigiri thon 3p\nNigiri crevette 3p\nNigiri anguille3p\nCalifornia roll saumon mangue 8p\nSaumon roll cheese 8p\nCalifornia bœuf concombre 8p\nsoya roll thon tuit avocat 8p\nspecial roll Tamago roll 8p",
+       "description": "Sashimi saumon 6p\nSashimi thon 6p\nHot roll poulet et concombre 10p\nNigiri saumon 3p\nNigiri thon 3p\nNigiri crevette 3p\nNigiri anguille 3p\nCalifornia roll saumon mangue 8p\nSaumon roll cheese 8p\nCalifornia bœuf concombre 8p\nsoya roll thon tuit avocat 8p\nspecial roll Tamago roll 8p",
        "allergens": [],
        "orderable": true,
        "image": "https://fuku.lu/wp-content/uploads/2022/07/7.jpg",
@@ -4143,12 +4384,12 @@
        "name": "Beignet de poulet à la sauce aigre-douce",
        "short": "Beignet de poulet à la sauce aigre-douce",
        "t": {
-        "de": "Hähnchen im Teigmantel, süss-sauer",
+        "de": "Hähnchen im Teigmantel, süß-sauer",
         "en": "Battered chicken in sweet & sour sauce",
         "nl": "Kip in beslag, zoetzuur"
        },
        "tShort": {
-        "de": "Hähnchen im Teigmantel, süss-sauer",
+        "de": "Hähnchen im Teigmantel, süß-sauer",
         "en": "Battered chicken in sweet & sour sauce",
         "nl": "Kip in beslag, zoetzuur"
        },
@@ -4302,12 +4543,12 @@
        "name": "Poulet à la sauce aigre-douce piquant",
        "short": "Poulet à la sauce aigre-douce piquant",
        "t": {
-        "de": "Hähnchen in scharfer süss-saurer Sauce",
+        "de": "Hähnchen in scharfer süß-saurer Sauce",
         "en": "Chicken in spicy sweet & sour sauce",
         "nl": "Kip in pittige zoetzure saus"
        },
        "tShort": {
-        "de": "Hähnchen in scharfer süss-saurer Sauce",
+        "de": "Hähnchen in scharfer süß-saurer Sauce",
         "en": "Chicken in spicy sweet & sour sauce",
         "nl": "Kip in pittige zoetzure saus"
        },
@@ -4393,12 +4634,12 @@
        "name": "Poulet sur plat chauffant",
        "short": "Poulet sur plat chauffant",
        "t": {
-        "de": "Hähnchen auf heisser Platte",
+        "de": "Hähnchen auf heißer Platte",
         "en": "Chicken on a sizzling plate",
         "nl": "Kip op een hete plaat"
        },
        "tShort": {
-        "de": "Hähnchen auf heisser Platte",
+        "de": "Hähnchen auf heißer Platte",
         "en": "Chicken on a sizzling plate",
         "nl": "Kip op een hete plaat"
        },
@@ -4490,12 +4731,12 @@
        "name": "Poulet caramélisé, sauce aigre-douce",
        "short": "Poulet caramélisé, sauce aigre-douce",
        "t": {
-        "de": "Karamellisiertes Hähnchen, süss-sauer",
+        "de": "Karamellisiertes Hähnchen, süß-sauer",
         "en": "Caramelised chicken, sweet & sour",
         "nl": "Gekarameliseerde kip, zoetzuur"
        },
        "tShort": {
-        "de": "Karamellisiertes Hähnchen, süss-sauer",
+        "de": "Karamellisiertes Hähnchen, süß-sauer",
         "en": "Caramelised chicken, sweet & sour",
         "nl": "Gekarameliseerde kip, zoetzuur"
        },
@@ -4552,12 +4793,12 @@
        "name": "Trois délices sur plat chauffant",
        "short": "Trois délices sur plat chauffant",
        "t": {
-        "de": "Drei Köstlichkeiten auf heisser Platte",
+        "de": "Drei Köstlichkeiten auf heißer Platte",
         "en": "Three delights on a sizzling plate",
         "nl": "Drie lekkernijen op een hete plaat"
        },
        "tShort": {
-        "de": "Drei Köstlichkeiten auf heisser Platte",
+        "de": "Drei Köstlichkeiten auf heißer Platte",
         "en": "Three delights on a sizzling plate",
         "nl": "Drie lekkernijen op een hete plaat"
        },
@@ -4723,12 +4964,12 @@
        "name": "Bœuf à la sauce aigre-douce",
        "short": "Bœuf à la sauce aigre-douce",
        "t": {
-        "de": "Rind in süss-saurer Sauce",
+        "de": "Rind in süß-saurer Sauce",
         "en": "Beef in sweet & sour sauce",
         "nl": "Rund in zoetzure saus"
        },
        "tShort": {
-        "de": "Rind in süss-saurer Sauce",
+        "de": "Rind in süß-saurer Sauce",
         "en": "Beef in sweet & sour sauce",
         "nl": "Rund in zoetzure saus"
        },
@@ -4816,12 +5057,12 @@
        "name": "Bœuf sur plat chauffant",
        "short": "Bœuf sur plat chauffant",
        "t": {
-        "de": "Rind auf heisser Platte",
+        "de": "Rind auf heißer Platte",
         "en": "Beef on a sizzling plate",
         "nl": "Rund op een hete plaat"
        },
        "tShort": {
-        "de": "Rind auf heisser Platte",
+        "de": "Rind auf heißer Platte",
         "en": "Beef on a sizzling plate",
         "nl": "Rund op een hete plaat"
        },
@@ -4881,12 +5122,12 @@
        "name": "Entrecote grille avec sauce champignon sur plat chauffant avec oeuf",
        "short": "Entrecote grille avec sauce champignon sur plat chauffant avec oeuf",
        "t": {
-        "de": "Gegrilltes Entrecôte mit Pilzsauce und Ei, auf heisser Platte",
+        "de": "Gegrilltes Entrecôte mit Pilzsauce und Ei, auf heißer Platte",
         "en": "Grilled entrecôte with mushroom sauce and egg, on a sizzling plate",
         "nl": "Gegrilde entrecote met paddenstoelensaus en ei, op een hete plaat"
        },
        "tShort": {
-        "de": "Gegrilltes Entrecôte mit Pilzsauce und Ei, auf heisser Platte",
+        "de": "Gegrilltes Entrecôte mit Pilzsauce und Ei, auf heißer Platte",
         "en": "Grilled entrecôte with mushroom sauce and egg, on a sizzling plate",
         "nl": "Gegrilde entrecote met paddenstoelensaus en ei, op een hete plaat"
        },
@@ -4914,12 +5155,12 @@
        "name": "Bœuf caramélisé avec sauce aigre-douce",
        "short": "Bœuf caramélisé avec sauce aigre-douce",
        "t": {
-        "de": "Karamellisiertes Rind in süss-saurer Sauce",
+        "de": "Karamellisiertes Rind in süß-saurer Sauce",
         "en": "Caramelised beef in sweet & sour sauce",
         "nl": "Gekarameliseerd rund in zoetzure saus"
        },
        "tShort": {
-        "de": "Karamellisiertes Rind in süss-saurer Sauce",
+        "de": "Karamellisiertes Rind in süß-saurer Sauce",
         "en": "Caramelised beef in sweet & sour sauce",
         "nl": "Gekarameliseerd rund in zoetzure saus"
        },
@@ -5051,12 +5292,12 @@
        "name": "Canard à la sauce aigre-douce piquant",
        "short": "Canard à la sauce aigre-douce piquant",
        "t": {
-        "de": "Ente in scharfer süss-saurer Sauce",
+        "de": "Ente in scharfer süß-saurer Sauce",
         "en": "Duck in spicy sweet & sour sauce",
         "nl": "Eend in pittige zoetzure saus"
        },
        "tShort": {
-        "de": "Ente in scharfer süss-saurer Sauce",
+        "de": "Ente in scharfer süß-saurer Sauce",
         "en": "Duck in spicy sweet & sour sauce",
         "nl": "Eend in pittige zoetzure saus"
        },
@@ -5144,12 +5385,12 @@
        "name": "Canard sur plat chauffant",
        "short": "Canard sur plat chauffant",
        "t": {
-        "de": "Ente auf heisser Platte",
+        "de": "Ente auf heißer Platte",
         "en": "Duck on a sizzling plate",
         "nl": "Eend op een hete plaat"
        },
        "tShort": {
-        "de": "Ente auf heisser Platte",
+        "de": "Ente auf heißer Platte",
         "en": "Duck on a sizzling plate",
         "nl": "Eend op een hete plaat"
        },
@@ -5320,12 +5561,12 @@
        "name": "Scampis à la sauce aigre-douce piquant",
        "short": "Scampis à la sauce aigre-douce piquant",
        "t": {
-        "de": "Scampi in scharfer süss-saurer Sauce",
+        "de": "Scampi in scharfer süß-saurer Sauce",
         "en": "Prawns in spicy sweet & sour sauce",
         "nl": "Scampi in pittige zoetzure saus"
        },
        "tShort": {
-        "de": "Scampi in scharfer süss-saurer Sauce",
+        "de": "Scampi in scharfer süß-saurer Sauce",
         "en": "Prawns in spicy sweet & sour sauce",
         "nl": "Scampi in pittige zoetzure saus"
        },
@@ -5416,12 +5657,12 @@
        "name": "Scampis sur plat chauffant",
        "short": "Scampis sur plat chauffant",
        "t": {
-        "de": "Scampi auf heisser Platte",
+        "de": "Scampi auf heißer Platte",
         "en": "Prawns on a sizzling plate",
         "nl": "Scampi op een hete plaat"
        },
        "tShort": {
-        "de": "Scampi auf heisser Platte",
+        "de": "Scampi auf heißer Platte",
         "en": "Prawns on a sizzling plate",
         "nl": "Scampi op een hete plaat"
        },
@@ -5491,7 +5732,7 @@
         "en": "King prawns with garlic on vermicelli",
         "nl": "Gamba’s met knoflook op vermicelli"
        },
-       "price": 19.5,
+       "price": 19.9,
        "description": "",
        "allergens": [
         "1",
@@ -5658,12 +5899,12 @@
        "name": "Aubergines caramélisées, sauce aigre-douce",
        "short": "Aubergines caramélisées, sauce aigre-douce",
        "t": {
-        "de": "Karamellisierte Auberginen in süss-saurer Sauce",
+        "de": "Karamellisierte Auberginen in süß-saurer Sauce",
         "en": "Caramelised aubergines in sweet & sour sauce",
         "nl": "Gekarameliseerde aubergines in zoetzure saus"
        },
        "tShort": {
-        "de": "Karamellisierte Auberginen in süss-saurer Sauce",
+        "de": "Karamellisierte Auberginen in süß-saurer Sauce",
         "en": "Caramelised aubergines in sweet & sour sauce",
         "nl": "Gekarameliseerde aubergines in zoetzure saus"
        },
@@ -6925,6 +7166,11 @@
         {
          "id": 7584,
          "label": "1 personne",
+         "t": {
+          "de": "1 Person",
+          "en": "1 person",
+          "nl": "1 persoon"
+         },
          "price": 35
         }
        ],

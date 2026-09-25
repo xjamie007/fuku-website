@@ -7,3 +7,6 @@ _reservierungen/*
 !_reservierungen/.htaccess
 
 .DS_Store
+
+# Übersetzungsvorlagen und andere Arbeitsdateien – nicht auf die Website
+*.docx
