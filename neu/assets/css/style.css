@@ -2059,3 +2059,21 @@ body::after {
     display: none;
   }
 }
+
+/* Impressum und Datenschutz erscheinen nur, wenn sie über den Link in der
+   Fusszeile angesprungen werden (kontakt.html#impressum / #datenschutz). */
+.legal-section:not(:has(:target)) {
+  display: none;
+}
+
+.legal:not(:target) {
+  display: none;
+}
+
+.legal {
+  max-width: 70ch;
+}
+
+.legal h2 {
+  margin-bottom: 1rem;
+}
