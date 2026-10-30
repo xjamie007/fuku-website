@@ -94,6 +94,7 @@ const DICT = {
     'home.info.address': 'Adresse',
     'home.info.addressNote': 'Im Zentrum von Vianden, wenige Schritte von der Our.',
     'home.info.route': 'Route planen',
+    'contact.write': 'E-Mail schreiben',
     'home.info.contact': 'Kontakt',
     'home.info.contactNote': 
       'Fragen zu einem Gericht, zu Allergien oder zu Ihrer Bestellung? Schreiben Sie uns einfach.',
@@ -363,6 +364,7 @@ const DICT = {
     'home.info.address': 'Adresse',
     'home.info.addressNote': "Au centre de Vianden, à quelques pas de l'Our.",
     'home.info.route': "Calculer l'itinéraire",
+    'contact.write': 'Écrire un e-mail',
     'home.info.contact': 'Contact',
     'home.info.contactNote': 
       'Une question sur un plat, une allergie ou votre commande ? Écrivez-nous.',
@@ -635,6 +637,7 @@ const DICT = {
     'home.info.address': 'Address',
     'home.info.addressNote': 'In the centre of Vianden, a few steps from the Our.',
     'home.info.route': 'Get directions',
+    'contact.write': 'Send an email',
     'home.info.contact': 'Contact',
     'home.info.contactNote': 
       'Questions about a dish, an allergy or your order? Just write to us.',
@@ -905,6 +908,7 @@ const DICT = {
     'home.info.address': 'Adres',
     'home.info.addressNote': 'In het centrum van Vianden, op een paar passen van de Our.',
     'home.info.route': 'Route plannen',
+    'contact.write': 'E-mail sturen',
     'home.info.contact': 'Contact',
     'home.info.contactNote': 
       'Vragen over een gerecht, een allergie of uw bestelling? Schrijf ons gerust.',

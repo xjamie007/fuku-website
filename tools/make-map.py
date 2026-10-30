@@ -7,7 +7,7 @@ Bild im Projekt abgelegt. Dadurch ist sie beim Besuch sofort sichtbar, ohne
 dass eine Anfrage an einen fremden Server geht – die Seite bleibt ohne
 Cookie-Banner. Der Klick auf das Bild führt nach Google Maps.
 
-    python3 tools/make-map.py
+    python3 tools/make-map.py [Zieldatei]
 
 Kartendaten © OpenStreetMap-Mitwirkende (ODbL). Die Namensnennung steht
 sichtbar unter der Karte auf kontakt.html.
@@ -20,7 +20,7 @@ import sys
 import urllib.request
 from io import BytesIO
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageEnhance, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -84,8 +84,19 @@ def build(lat, lon):
         int(left - x0 * TILE) + WIDTH, int(top - y0 * TILE) + HEIGHT,
     ))
 
+    img = tone(img)
     draw_marker(img)
     return img
+
+
+def tone(img):
+    """Ruhiger Kartenstil passend zur Seite: Farben fast ganz heraus, warm
+    getönt zwischen Tusche und Papier. Ein Rest der Originalfarben bleibt,
+    damit Fluss und Grünflächen erkennbar sind; der rote Marker sticht heraus."""
+    gray = ImageOps.autocontrast(img.convert("L"), cutoff=1)
+    warm = ImageOps.colorize(gray, black=(70, 60, 52), white=(251, 248, 244), mid=(236, 230, 221))
+    soft = ImageEnhance.Color(img).enhance(0.5)
+    return Image.blend(warm, soft, 0.38)
 
 
 def draw_marker(img):
@@ -108,7 +119,7 @@ def main():
     print(f"→ Karte für {lat}, {lon} (Zoom {ZOOM}) …")
     img = build(lat, lon)
 
-    out = os.path.join(ROOT, "assets/img/karte.jpg")
+    out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "assets/img/karte.jpg")
     img.save(out, quality=86, optimize=True, progressive=True)
     print(f"✓ {out} – {img.size[0]}×{img.size[1]}, {os.path.getsize(out)//1024} KB")
 
