@@ -767,6 +767,7 @@ p {
   inset: 0 0 auto;
   height: var(--hero-h);
   z-index: 0;
+  overflow: hidden;
   background: #0b0a0a;
 }
 
@@ -774,17 +775,22 @@ p {
   position: absolute;
   bottom: 0;
   left: 50%;
-  translate: -50% 0;
+  /* etwas nach unten versetzt, damit die Platte tiefer im Bild steht */
+  translate: -50% 9%;
   height: 100%;
   min-width: 100%;
   width: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: 50% 100%;
-  /* Seiten weich ins Schwarz auslaufen lassen, falls der Bildschirm
-     breiter ist als das Video. */
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  /* Oberkante und Seiten weich ins Schwarz auslaufen lassen – so bleibt
+     keine Kante sichtbar, wo das versetzte Video beginnt. */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%),
+    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent, #000 14%),
+    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-composite: intersect;
 }
 
 .hero__stage {
