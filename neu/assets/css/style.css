@@ -476,6 +476,28 @@ p {
   background: rgba(251, 248, 244, 0.94);
 }
 
+/* Über dem Dampf-Video der Startseite: dunkle Leiste. Die Farbtokens werden
+   nur für die Leiste umgestellt, alle Kinder ziehen von selbst mit. */
+.header.is-on-dark {
+  --ink: #f3ebe1;
+  --ink-soft: #d8ccbf;
+  --muted: #a89a8d;
+  --muted-2: #8a7c70;
+  --paper: #120e0c;
+  --paper-warm: #1a1411;
+  --paper-deep: #251c17;
+  --surface: #1e1713;
+  --line: rgba(243, 235, 225, 0.1);
+  --line-strong: rgba(243, 235, 225, 0.18);
+  color: var(--ink);
+  background: rgba(11, 10, 10, 0.86);
+  border-bottom-color: transparent;
+}
+
+.header.is-on-dark .brand img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 .header__inner {
   display: flex;
   align-items: center;
@@ -753,14 +775,16 @@ p {
   bottom: 0;
   left: 50%;
   translate: -50% 0;
-  height: 62%;
+  height: 100%;
+  min-width: 100%;
   width: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  /* Ränder weich ins Schwarz auslaufen lassen – so wirkt die Platte
-     freigestellt, egal wie breit der Bildschirm ist. */
-  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 55%, transparent 100%);
-  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 55%, transparent 100%);
+  object-position: 50% 100%;
+  /* Seiten weich ins Schwarz auslaufen lassen, falls der Bildschirm
+     breiter ist als das Video. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
 .hero__stage {

@@ -172,8 +172,12 @@ function initHeader() {
   const bar = document.querySelector('.order-bar');
   if (!header) return;
 
+  // Startseite: solange das Dampf-Video unter der Leiste liegt, ist sie dunkel.
+  const darkZone = document.querySelector('.hero__media');
+
   const onScroll = () => {
     header.classList.toggle('is-stuck', window.scrollY > 4);
+    if (darkZone) header.classList.toggle('is-on-dark', darkZone.getBoundingClientRect().bottom > header.offsetHeight);
     if (bar) bar.classList.toggle('is-stuck', bar.getBoundingClientRect().top <= header.offsetHeight + 1);
   };
 
