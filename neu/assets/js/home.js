@@ -8,6 +8,13 @@ import { loadMenu, flatten, countIn, dishName } from './menu-data.js';
 
 boot();
 
+// Wer weniger Bewegung eingestellt hat, sieht nur das Standbild.
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  heroVideo.removeAttribute('autoplay');
+  heroVideo.pause();
+}
+
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
 

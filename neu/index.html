@@ -22,8 +22,8 @@
     />
     <meta property="og:image" content="https://fuku.lu/wp-content/uploads/2023/08/img_5648-1152x1536.jpeg" />
 
-    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-normal-400-latin.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-normal-400_700-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/shippori-mincho-b1-500-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/zen-kaku-gothic-new-400-latin.woff2" crossorigin />
     <link rel="preconnect" href="https://fuku.lu" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -143,8 +143,13 @@
     <main id="main">
       <!-- ============================= Hero ============================ -->
       <section class="hero">
-        <img class="hero__kanji" src="assets/img/logo.png" alt="" aria-hidden="true" />
-        <div class="wrap hero__grid">
+        <div class="hero__media" aria-hidden="true">
+          <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-sushi.jpg">
+            <source src="assets/video/hero-dampf.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="wrap hero__stage">
           <div class="hero__copy">
             <div class="hero__status">
               <span class="pill pill--closed" data-status-pill>
@@ -167,54 +172,24 @@
               </a>
               <a class="btn btn--ghost btn--lg" href="bestellen.html#sushi" data-i18n="hero.cta2">Karte ansehen</a>
             </div>
-
-            <dl class="hero__facts">
-              <div>
-                <dt data-i18n="hero.fact1">Öffnungszeiten heute</dt>
-                <dd><strong data-today-hours>10:30–14:30 · 17:30–23:00</strong></dd>
-              </div>
-              <div>
-                <dt data-i18n="hero.fact2">Unsere Adresse</dt>
-                <dd><strong>9, Rue de la Gare, L-9420 Vianden</strong></dd>
-              </div>
-              <div>
-                <dt data-i18n="hero.fact3">Auf der Karte</dt>
-                <dd><strong data-dish-count>222 Gerichte</strong></dd>
-              </div>
-            </dl>
           </div>
+        </div>
 
-          <div class="hero__art">
-            <div class="hero__frame">
-              <img
-                src="https://fuku.lu/wp-content/uploads/2023/08/img_5648-768x1024.jpeg"
-                srcset="
-                  https://fuku.lu/wp-content/uploads/2023/08/img_5648-600x800.jpeg    600w,
-                  https://fuku.lu/wp-content/uploads/2023/08/img_5648-768x1024.jpeg   768w,
-                  https://fuku.lu/wp-content/uploads/2023/08/img_5648-1152x1536.jpeg 1152w
-                "
-                sizes="(min-width: 900px) 46vw, 92vw"
-                alt="Chirashi mit Lachs und Thunfisch, angerichtet mit Avocado und Gurke"
-                width="768"
-                height="1024"
-                fetchpriority="high"
-              />
+        <div class="wrap">
+          <dl class="hero__facts">
+            <div>
+              <dt data-i18n="hero.fact1">Öffnungszeiten heute</dt>
+              <dd><strong data-today-hours>10:30–14:30 · 17:30–23:00</strong></dd>
             </div>
-
-            <figure class="hero__chip">
-              <img
-                src="https://fuku.lu/wp-content/uploads/2022/07/rainbow_roll-600x900.jpg"
-                alt=""
-                width="46"
-                height="46"
-                loading="lazy"
-              />
-              <figcaption>
-                <span data-i18n="hero.chipLabel">Empfehlung des Hauses</span>
-                <strong>SP7 · Rainbow Roll</strong>
-              </figcaption>
-            </figure>
-          </div>
+            <div>
+              <dt data-i18n="hero.fact2">Unsere Adresse</dt>
+              <dd><strong>9, Rue de la Gare, L-9420 Vianden</strong></dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.fact3">Auf der Karte</dt>
+              <dd><strong data-dish-count>222 Gerichte</strong></dd>
+            </div>
+          </dl>
         </div>
       </section>
 
