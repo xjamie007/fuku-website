@@ -773,10 +773,13 @@ p {
 
 .hero__video {
   position: absolute;
-  bottom: 0;
+  /* Die Unterkante der Platte liegt im Video bei 89 % der Bildhöhe. Um die
+     restlichen 11 % nach unten versetzen, damit die Platte genau am unteren
+     Bildschirmrand aufsitzt. Bei sehr breiten Bildschirmen wird das Video
+     über die Breite skaliert, dann zählt 56.25vw (16:9) als Bildhöhe. */
+  bottom: calc(-0.11 * max(100%, 56.25vw));
   left: 50%;
-  /* etwas nach unten versetzt, damit die Platte tiefer im Bild steht */
-  translate: -50% 9%;
+  translate: -50% 0;
   height: 100%;
   min-width: 100%;
   width: auto;
