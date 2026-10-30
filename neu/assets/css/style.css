@@ -773,27 +773,22 @@ p {
 
 .hero__video {
   position: absolute;
-  /* Die Unterkante der Platte liegt im Video bei 89 % der Bildhöhe. Um 8 %
-     nach unten versetzen, dann steht die Platte knapp über dem unteren
-     Bildschirmrand. Bei sehr breiten Bildschirmen wird das Video über die
-     Breite skaliert, dann zählt 56.25vw (16:9) als Bildhöhe. */
-  bottom: calc(-0.08 * max(100%, 56.25vw));
+  /* Das Video ist 5 % höher als die Bühne und um diese 5 % nach unten
+     versetzt: Die Platte steht etwas über dem unteren Rand, und oben
+     reicht der Dampf ohne Lücke bis an die Leiste. */
+  bottom: -5%;
   left: 50%;
   translate: -50% 0;
-  height: 100%;
+  height: 105%;
   min-width: 100%;
   width: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: 50% 100%;
-  /* Oberkante und Seiten weich ins Schwarz auslaufen lassen – so bleibt
-     keine Kante sichtbar, wo das versetzte Video beginnt. */
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%),
-    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to bottom, transparent, #000 14%),
-    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-composite: intersect;
+  /* Seiten weich ins Schwarz auslaufen lassen, falls der Bildschirm
+     breiter ist als das Video. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
 .hero__stage {
@@ -2060,20 +2055,11 @@ body::after {
   }
 }
 
-/* Impressum und Datenschutz erscheinen nur, wenn sie über den Link in der
-   Fusszeile angesprungen werden (kontakt.html#impressum / #datenschutz). */
-.legal-section:not(:has(:target)) {
-  display: none;
-}
-
-.legal:not(:target) {
-  display: none;
-}
-
+/* Impressum und Datenschutz (eigene Seiten) */
 .legal {
   max-width: 70ch;
 }
 
-.legal h2 {
-  margin-bottom: 1rem;
+.legal h1 {
+  margin-bottom: 1.25rem;
 }
