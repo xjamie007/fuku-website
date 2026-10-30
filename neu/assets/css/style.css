@@ -6,30 +6,28 @@
    ================================================================== */
 
 :root {
-  /* Farben – Izakaya am Abend: Tusche-Nacht, Laternenlicht, Zinnober */
-  color-scheme: dark;
+  /* Farben ------------------------------------------------------- */
+  --ink: #17110e;
+  --ink-soft: #453a34;
+  --muted: #7d6e65;
+  --muted-2: #9c8d84;
 
-  --ink: #f3ebe1;
-  --ink-soft: #d8ccbf;
-  --muted: #a89a8d;
-  --muted-2: #8a7c70;
+  --paper: #fbf8f4;
+  --paper-warm: #f5eee5;
+  --paper-deep: #ece2d5;
+  --surface: #ffffff;
 
-  --paper: #120e0c;
-  --paper-warm: #1a1411;
-  --paper-deep: #251c17;
-  --surface: #1e1713;
+  --brand: #d8412a;
+  --brand-deep: #ae2f1c;
+  --brand-tint: #fdeeea;
+  --brand-ring: rgba(216, 65, 42, 0.28);
 
-  --brand: #e0573f;
-  --brand-deep: #c4432c;
-  --brand-tint: rgba(224, 87, 63, 0.16);
-  --brand-ring: rgba(224, 87, 63, 0.35);
+  --gold: #b8873c;
+  --green: #2f7a53;
+  --green-tint: #e8f3ec;
 
-  --gold: #d9aa5f;
-  --green: #66b98c;
-  --green-tint: rgba(102, 185, 140, 0.14);
-
-  --line: rgba(243, 235, 225, 0.1);
-  --line-strong: rgba(243, 235, 225, 0.18);
+  --line: rgba(23, 17, 14, 0.1);
+  --line-strong: rgba(23, 17, 14, 0.16);
 
   /* Typografie --------------------------------------------------- */
   --font-display: 'Shippori Mincho B1', 'Hiragino Mincho ProN', Georgia, serif;
@@ -50,10 +48,10 @@
   --r-xl: 32px;
   --r-full: 999px;
 
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.26);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.26), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --shadow-md: 0 10px 30px -12px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 28px 60px -24px rgba(0, 0, 0, 0.6), 0 4px 14px rgba(0, 0, 0, 0.26);
+  --shadow-xs: 0 1px 2px rgba(23, 17, 14, 0.06);
+  --shadow-sm: 0 2px 8px rgba(23, 17, 14, 0.06), 0 1px 2px rgba(23, 17, 14, 0.04);
+  --shadow-md: 0 10px 30px -12px rgba(23, 17, 14, 0.22), 0 2px 8px rgba(23, 17, 14, 0.05);
+  --shadow-lg: 0 28px 60px -24px rgba(23, 17, 14, 0.32), 0 4px 14px rgba(23, 17, 14, 0.06);
 
   --wrap: 1220px;
   --gutter: clamp(1.1rem, 0.6rem + 2.2vw, 2.5rem);
@@ -357,7 +355,7 @@ p {
 
 .btn--light:hover {
   --btn-bg: #fff;
-  --btn-fg: var(--paper);
+  --btn-fg: var(--ink);
 }
 
 .btn--lg {
@@ -466,7 +464,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 90;
-  background: rgba(18, 14, 12, 0.78);
+  background: rgba(251, 248, 244, 0.82);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid transparent;
@@ -475,7 +473,7 @@ p {
 
 .header.is-stuck {
   border-bottom-color: var(--line);
-  background: rgba(18, 14, 12, 0.94);
+  background: rgba(251, 248, 244, 0.94);
 }
 
 .header__inner {
@@ -740,89 +738,8 @@ p {
   background: var(--paper);
 }
 
-/* Bühne über dem Video: so hoch wie der Bildschirm, Text oben im Dampf,
+/* Dunkle Bühne mit dem Dampf-Video; Logo und Buttons stehen oben im Dampf,
    die Platte bleibt unten frei sichtbar. */
-.hero__stage {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  min-height: var(--hero-h);
-  padding-block: clamp(2.5rem, 1.5rem + 5vw, 5.5rem) 0;
-  text-align: center;
-}
-
-.hero__copy {
-  position: relative;
-  z-index: 2;
-  max-width: 46rem;
-}
-
-.hero__status {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Auf schmalen Bildschirmen bricht „Vianden · Luxemburg“ sonst mitten im
-   Ortsnamen um; als eigene Zeile bleibt es lesbar. */
-.hero__status .eyebrow {
-  white-space: nowrap;
-}
-
-.hero h1 {
-  margin-bottom: 1.25rem;
-  font-size: clamp(2.2rem, 1.4rem + 2.6vw, 3.6rem);
-  text-wrap: balance;
-}
-
-.hero h1 em {
-  font-style: normal; /* Mincho hat keine Kursive */
-  color: var(--brand);
-}
-
-.hero__text {
-  max-width: 42ch;
-  margin-inline: auto;
-  color: var(--ink-soft);
-  font-size: var(--step-1);
-  line-height: 1.55;
-}
-
-.hero__cta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.hero__facts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 3rem;
-  position: relative;
-  z-index: 2;
-  padding-block: 1.75rem 2.5rem;
-  border-top: 1px solid var(--line);
-  text-align: center;
-  font-size: var(--step--1);
-  color: var(--muted);
-}
-
-.hero__facts strong {
-  display: block;
-  color: var(--ink);
-  font-weight: 600;
-  font-size: var(--step-0);
-}
-
-/* Hintergrundvideo: Dampf über der Sushi-Platte. Die Verläufe legen
-   ringsum mehr Schwarz an und halten den Titel lesbar. */
 .hero__media {
   position: absolute;
   inset: 0 0 auto;
@@ -836,7 +753,7 @@ p {
   bottom: 0;
   left: 50%;
   translate: -50% 0;
-  height: 58%;
+  height: 62%;
   width: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -846,11 +763,63 @@ p {
   mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 55%, transparent 100%);
 }
 
-.hero__media::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 85%, var(--paper));
+.hero__stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  min-height: var(--hero-h);
+  padding-block: clamp(2rem, 1rem + 4vw, 4.5rem) 0;
+  text-align: center;
+}
+
+.hero__brand {
+  margin: 0;
+  line-height: 0;
+}
+
+/* Das Logo ist schwarze Tusche auf Transparent. Auf dem dunklen Grund wird
+   die Tusche hell; hue-rotate holt das Zinnober der Sushi-Rolle zurück. */
+.hero__brand img {
+  width: clamp(150px, 90px + 12vw, 250px);
+  height: auto;
+  margin-inline: auto;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+}
+
+/* Öffnungsstatus und Eckdaten unter der Bühne, im hellen Design */
+.hero__info {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+  padding-block: 2rem 2.75rem;
+  text-align: center;
+}
+
+.hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 3rem;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.hero__facts strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--step-0);
 }
 
 .hero__kanji {
@@ -871,10 +840,10 @@ p {
 .marquee {
   --speed: 42s;
   overflow: hidden;
-  background: var(--brand);
-  color: #fff;
+  background: var(--ink);
+  color: var(--paper);
   padding-block: 0.9rem;
-  border-block: 1px solid var(--brand);
+  border-block: 1px solid var(--ink);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
@@ -1220,8 +1189,8 @@ p {
 .cta-band {
   position: relative;
   overflow: hidden;
-  background: var(--brand-deep);
-  color: #fff;
+  background: var(--ink);
+  color: var(--paper);
   border-radius: var(--r-xl);
   padding: clamp(2.5rem, 1.5rem + 5vw, 5rem) clamp(1.5rem, 1rem + 4vw, 4.5rem);
   text-align: center;
@@ -1245,7 +1214,7 @@ p {
 .cta-band p {
   max-width: 48ch;
   margin: 1.1rem auto 2rem;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(251, 248, 244, 0.72);
 }
 
 .cta-band__actions {
@@ -1257,7 +1226,7 @@ p {
 
 .cta-band .btn--brand:hover {
   --btn-bg: #fff;
-  --btn-fg: var(--paper);
+  --btn-fg: var(--ink);
 }
 
 /* ------------------------------------------------------------------
@@ -1412,8 +1381,8 @@ p {
   display: block;
   padding: 0.7rem 0.9rem;
   border-radius: var(--r-sm);
-  background: rgba(217, 170, 95, 0.14);
-  color: var(--gold);
+  background: #fdf3e2;
+  color: #7a5a1e;
 }
 
 .field__hint--warn a {
@@ -1746,7 +1715,7 @@ p {
   font-size: var(--step--1);
   font-weight: 600;
   white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 20px rgba(23, 17, 14, 0.22);
   transition: translate 0.28s var(--ease-out), background-color 0.2s var(--ease), color 0.2s var(--ease);
 }
 
@@ -2056,10 +2025,4 @@ body::after {
   .marquee {
     display: none;
   }
-}
-
-/* Das Logo ist schwarze Tusche auf Transparent. Auf dem dunklen Grund wird
-   die Tusche hell; hue-rotate holt das Zinnober der Sushi-Rolle zurück. */
-img[src$='logo.png'] {
-  filter: invert(1) hue-rotate(180deg);
 }
