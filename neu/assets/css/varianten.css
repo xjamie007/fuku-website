@@ -2,13 +2,10 @@
    Kopfbereich-Varianten (nur varianten.html)
    ================================================================== */
 
-/* Ohne Logo: Buttons stehen mittig auf der Bühne */
-.hero--v .hero__stage {
-  justify-content: center;
-  padding-block: 0;
-}
-
-.hero--v .hero__cta {
+/* Diashow, Fotowand, Mosaik, Story: Logo, Buttons und Bewertung stehen
+   genau wie beim Dampf-Video. Nur das Karussell hat kein Logo – dort
+   stehen die Buttons unter den Fotos (siehe unten). */
+.hero[data-variant='4'] .hero__cta {
   margin-top: 0;
 }
 
@@ -291,11 +288,17 @@
   color: #fff;
 }
 
-/* Auf dem Handy steht die Bewertung unten – der Umschalter deshalb oben */
+/* Auf dem Handy steht die Bewertung unten – der Umschalter deshalb oben.
+   Solange er da ist, rückt der Inhalt der Bühne etwas nach unten, damit
+   er das Logo nicht verdeckt (fällt mit dem Umschalter wieder weg). */
 @media (max-width: 767px) {
   .hv-switch {
     top: calc(var(--header-h) + 0.5rem);
     bottom: auto;
+  }
+
+  .hero .hero__stage {
+    padding-top: 4rem;
   }
 }
 
@@ -517,7 +520,7 @@
 .hero[data-variant='original'] > .hero__info,
 .hero:not(.hero--dampf) .hero__video,
 .hero--dampf .hv,
-.hero--v .hero__brand {
+.hero[data-variant='4'] .hero__brand {
   display: none;
 }
 
