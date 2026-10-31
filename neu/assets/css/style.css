@@ -891,6 +891,13 @@ p {
   }
 }
 
+/* iPad (Touch-Bildschirm ab Tablet-Breite): etwas mehr Abstand wie zuvor */
+@media (min-width: 768px) and (max-width: 1366px) and (pointer: coarse) {
+  .hero .hero__rating {
+    margin-top: 1.25rem;
+  }
+}
+
 /* Öffnungsstatus und Eckdaten unter der Bühne, im hellen Design */
 .hero__info {
   position: relative;
