@@ -3,8 +3,8 @@
    ================================================================== */
 
 /* Diashow, Fotowand, Mosaik, Story: Logo, Buttons und Bewertung stehen
-   genau wie beim Dampf-Video. Im Karussell steht das Logo kleiner oben,
-   die Fotos drehen sich darunter, die Buttons stehen ganz unten. */
+   genau wie beim Dampf-Video. Im Karussell liegt das Logo über den
+   Fotos, die Buttons stehen ganz unten. */
 .hero[data-variant='4'] .hero__copy {
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
 }
 
 .hero[data-variant='4'] .hero__brand img {
-  width: clamp(110px, 60px + 8vw, 170px);
+  filter: invert(1) hue-rotate(180deg) drop-shadow(0 6px 24px rgba(0, 0, 0, 0.65));
 }
 
 .hero[data-variant='4'] .hero__cta {
@@ -167,10 +167,10 @@
 }
 
 .hv4__card {
-  --w: clamp(150px, 17vw, 260px);
+  --w: clamp(200px, 28vw, 420px);
   position: absolute;
   left: 50%;
-  top: 52%;
+  top: 42%;
   width: var(--w);
   aspect-ratio: 4 / 5;
   margin: 0;
