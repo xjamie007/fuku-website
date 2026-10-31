@@ -25,7 +25,7 @@
     <link rel="preload" as="font" type="font/woff2" href="assets/fonts/shippori-mincho-b1-500-latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="assets/fonts/zen-kaku-gothic-new-400-latin.woff2" crossorigin />
     <link rel="preconnect" href="https://fuku.lu" />
-    <link rel="stylesheet" href="assets/css/style.css?v=20261031e" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20261031f" />
 
     <script type="application/ld+json">
       {
@@ -48,14 +48,14 @@
           {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "10:30",
+            "opens": "11:30",
             "closes": "14:30"
           },
           {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "17:30",
-            "closes": "23:00"
+            "closes": "22:30"
           }
         ],
         "acceptsReservations": "True"
@@ -143,7 +143,7 @@
       <!-- ============================= Hero ============================ -->
       <section class="hero">
         <div class="hero__media" aria-hidden="true">
-          <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-dampf-3.jpg">
+          <video class="hero__video" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="auto" poster="assets/img/hero-dampf-3.jpg">
             <source src="assets/video/hero-dampf-3.mp4" type="video/mp4" />
           </video>
         </div>
@@ -184,7 +184,7 @@
           <dl class="hero__facts">
             <div>
               <dt data-i18n="hero.fact1">Öffnungszeiten heute</dt>
-              <dd><strong data-today-hours>10:30–14:30 · 17:30–23:00</strong></dd>
+              <dd><strong data-today-hours>11:30–14:30 · 17:30–22:30</strong></dd>
             </div>
             <div>
               <dt data-i18n="hero.fact2">Unsere Adresse</dt>
@@ -551,8 +551,8 @@
             <h4 data-i18n="home.info.hours">Öffnungszeiten</h4>
             <div class="footer__links">
               <span data-i18n="days.tueSun">Dienstag – Sonntag</span>
-              <span>10:30 – 14:30</span>
-              <span>17:30 – 23:00</span>
+              <span>11:30 – 14:30</span>
+              <span>17:30 – 22:30</span>
               <span class="muted"><span data-i18n="days.mon">Montag</span>: <span data-i18n="days.closed">Geschlossen</span></span>
             </div>
             <p style="margin-top: 1rem; font-size: var(--step--1)">
@@ -576,6 +576,6 @@
       </div>
     </footer>
 
-    <script type="module" src="assets/js/home.js?v=20261031e"></script>
+    <script type="module" src="assets/js/home.js?v=20261031f"></script>
   </body>
 </html>

@@ -298,7 +298,7 @@ const DICT = {
     'footer.privacy': 'Datenschutz',
     'footer.terms': 'AGB',
     'footer.rights': 'Alle Rechte vorbehalten.',
-    'footer.hours': 'Di – So · 10:30–14:30 & 17:30–23:00',
+    'footer.hours': 'Di – So · 11:30–14:30 & 17:30–22:30',
 
     'days.1': 'Montag',
     'days.2': 'Dienstag',
@@ -593,7 +593,7 @@ const DICT = {
     'footer.privacy': 'Confidentialité',
     'footer.terms': 'CGV',
     'footer.rights': 'Tous droits réservés.',
-    'footer.hours': 'Mar – Dim · 10:30–14:30 & 17:30–23:00',
+    'footer.hours': 'Mar – Dim · 11:30–14:30 & 17:30–22:30',
 
     'days.1': 'Lundi',
     'days.2': 'Mardi',
@@ -886,7 +886,7 @@ const DICT = {
     'footer.privacy': 'Privacy',
     'footer.terms': 'Terms',
     'footer.rights': 'All rights reserved.',
-    'footer.hours': 'Tue – Sun · 10:30–14:30 & 17:30–23:00',
+    'footer.hours': 'Tue – Sun · 11:30–14:30 & 17:30–22:30',
 
     'days.1': 'Monday',
     'days.2': 'Tuesday',
@@ -1180,7 +1180,7 @@ const DICT = {
     'footer.privacy': 'Privacy',
     'footer.terms': 'Voorwaarden',
     'footer.rights': 'Alle rechten voorbehouden.',
-    'footer.hours': 'Di – Zo · 10:30–14:30 & 17:30–23:00',
+    'footer.hours': 'Di – Zo · 11:30–14:30 & 17:30–22:30',
 
     'days.1': 'Maandag',
     'days.2': 'Dinsdag',

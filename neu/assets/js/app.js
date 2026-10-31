@@ -3,8 +3,8 @@
    Header, mobile Navigation, Sprachumschalter, Öffnungszeiten.
    ================================================================== */
 
-import { initLang, setLang, t, apply, onLangChange, getLang, getLocale, LANGUAGES } from './i18n.js?v=20261031e';
-import { injectSprite } from './icons.js?v=20261031e';
+import { initLang, setLang, t, apply, onLangChange, getLang, getLocale, LANGUAGES } from './i18n.js?v=20261031f';
+import { injectSprite } from './icons.js?v=20261031f';
 
 /* ------------------------------------------------------------------
    Stammdaten des Restaurants
@@ -30,13 +30,13 @@ export const RESTAURANT = {
   /* Öffnungszeiten in Minuten ab Mitternacht, Index = Wochentag (0 = Sonntag).
      Montag ist Ruhetag. */
   hours: {
-    0: [[630, 870], [1050, 1380]],
+    0: [[690, 870], [1050, 1350]],
     1: [],
-    2: [[630, 870], [1050, 1380]],
-    3: [[630, 870], [1050, 1380]],
-    4: [[630, 870], [1050, 1380]],
-    5: [[630, 870], [1050, 1380]],
-    6: [[630, 870], [1050, 1380]],
+    2: [[690, 870], [1050, 1350]],
+    3: [[690, 870], [1050, 1350]],
+    4: [[690, 870], [1050, 1350]],
+    5: [[690, 870], [1050, 1350]],
+    6: [[690, 870], [1050, 1350]],
   },
 };
 
