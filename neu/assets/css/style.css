@@ -887,7 +887,7 @@ p {
   .hero .hero__rating {
     position: static;
     translate: none;
-    margin-top: 1.25rem;
+    margin-top: 0.85rem;
   }
 }
 
