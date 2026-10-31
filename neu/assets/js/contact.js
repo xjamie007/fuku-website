@@ -6,8 +6,8 @@
    werden von boot() aus RESTAURANT gefüllt.
    ================================================================== */
 
-import { boot } from './app.js?v=20261031i';
-import './feedback.js?v=20261031i';
+import { boot } from './app.js?v=20261031j';
+import './feedback.js?v=20261031j';
 
 boot();
 

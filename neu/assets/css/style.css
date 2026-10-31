@@ -248,10 +248,17 @@ p {
   font-size: var(--step--1);
   font-weight: 600;
   transition: translate 0.2s var(--ease);
+  /* unsichtbar, bis man mit der Tastatur hinspringt – sonst blitzt der
+     Link beim Hochziehen der Seite (Mac/Trackpad) oben auf. Bewusst
+     opacity statt visibility: so bleibt er per Tab erreichbar. */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .skip-link:focus-visible {
   translate: -50% 0;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ------------------------------------------------------------------
