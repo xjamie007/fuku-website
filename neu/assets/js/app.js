@@ -3,8 +3,8 @@
    Header, mobile Navigation, Sprachumschalter, Öffnungszeiten.
    ================================================================== */
 
-import { initLang, setLang, t, apply, onLangChange, getLang, getLocale, LANGUAGES } from './i18n.js';
-import { injectSprite } from './icons.js';
+import { initLang, setLang, t, apply, onLangChange, getLang, getLocale, LANGUAGES } from './i18n.js?v=20261031d';
+import { injectSprite } from './icons.js?v=20261031d';
 
 /* ------------------------------------------------------------------
    Stammdaten des Restaurants

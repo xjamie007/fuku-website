@@ -815,6 +815,45 @@ p {
   filter: invert(1) hue-rotate(180deg);
 }
 
+/* Google-Bewertung unter dem Logo, führt zu Restaurant Guru */
+.hero__rating {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  margin-top: 1.25rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--r-full);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: var(--step--1);
+  color: rgba(255, 255, 255, 0.82);
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.hero__rating:hover,
+.hero__rating:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero__rating strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Sterne anteilig füllen: --rating 4.8 → 96 % gold */
+.hero__stars {
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #f4b400 calc(var(--rating) / 5 * 100%), rgba(255, 255, 255, 0.3) 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero__cta {
   display: flex;
   flex-wrap: wrap;
@@ -1137,6 +1176,18 @@ p {
 .stat-row span {
   font-size: var(--step--1);
   color: var(--muted);
+}
+
+.stat-row__link span {
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+  transition: color 0.18s var(--ease), text-decoration-color 0.18s var(--ease);
+}
+
+.stat-row__link:hover span {
+  color: var(--brand);
+  text-decoration-color: var(--brand);
 }
 
 /* ------------------------------------------------------------------

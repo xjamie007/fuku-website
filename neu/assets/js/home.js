@@ -2,9 +2,9 @@
    Startseite – Zahlen und Empfehlungen aus der Speisekarte
    ================================================================== */
 
-import { boot, formatPrice } from './app.js';
-import { t, onLangChange, getLang, apply } from './i18n.js';
-import { loadMenu, flatten, countIn, dishName } from './menu-data.js';
+import { boot, formatPrice } from './app.js?v=20261031d';
+import { t, onLangChange, getLang, apply } from './i18n.js?v=20261031d';
+import { loadMenu, flatten, countIn, dishName } from './menu-data.js?v=20261031d';
 
 boot();
 
@@ -77,9 +77,10 @@ loadMenu()
       el.textContent = String(total);
     });
 
-    // Texte mit {n} („Vier von 222“) auf die tatsächliche Zahl setzen.
+    // Texte mit {n} („Vier von 222“) auf die tatsächliche Zahl setzen;
+    // andere Platzhalter (z. B. {count} der Bewertung) bleiben erhalten.
     document.querySelectorAll('[data-i18n-vars]').forEach((el) => {
-      el.dataset.i18nVars = JSON.stringify({ n: total });
+      el.dataset.i18nVars = JSON.stringify({ ...JSON.parse(el.dataset.i18nVars || '{}'), n: total });
     });
     apply();
 
