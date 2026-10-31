@@ -17,7 +17,7 @@ export const RESTAURANT = {
   country: 'Luxembourg',
   email: 'info@fuku.lu',
   // TODO: Telefonnummer eintragen – auf der alten Website war keine hinterlegt.
-  phone: '',
+  phone: '+352 27 93 25 86',
   timeZone: 'Europe/Luxembourg',
   /* Aus dem OpenStreetMap-Eintrag des Restaurants übernommen.
      Steuert den Marker auf assets/img/karte.jpg (siehe tools/make-map.py)
