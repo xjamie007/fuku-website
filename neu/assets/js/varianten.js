@@ -24,7 +24,6 @@ const FOTOS = [
 const OPTIONEN = new Map([
   ['original', 'Erste Website'],
   ['dampf', 'Dampf'],
-  ['dampf-ruhig', 'Dampf ruhig'],
   ['1', 'Diashow'],
   ['2', 'Fotowand'],
   ['3', 'Mosaik'],
@@ -153,11 +152,9 @@ function zeige(option) {
   hero.classList.toggle('hero--v', option in BAUEN);
   BAUEN[option]?.();
 
-  // „Dampf ruhig“: dasselbe Video, nur langsamer abgespielt
   const video = hero.querySelector('.hero__video');
-  const mitVideo = option.startsWith('dampf');
+  const mitVideo = option === 'dampf';
   hero.classList.toggle('hero--dampf', mitVideo);
-  if (video) video.playbackRate = option === 'dampf-ruhig' ? 0.6 : 1;
   if (video && mitVideo && !ruhig) video.play().catch(() => {});
   else video?.pause();
 

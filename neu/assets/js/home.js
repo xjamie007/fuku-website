@@ -2,9 +2,9 @@
    Startseite – Zahlen und Empfehlungen aus der Speisekarte
    ================================================================== */
 
-import { boot, formatPrice } from './app.js?v=20261031o';
-import { t, onLangChange, getLang, apply } from './i18n.js?v=20261031o';
-import { loadMenu, flatten, countIn, dishName } from './menu-data.js?v=20261031o';
+import { boot, formatPrice } from './app.js?v=20261031p';
+import { t, onLangChange, getLang, apply } from './i18n.js?v=20261031p';
+import { loadMenu, flatten, countIn, dishName } from './menu-data.js?v=20261031p';
 
 boot();
 
