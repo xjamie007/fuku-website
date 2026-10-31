@@ -820,7 +820,8 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
-  margin-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+  /* mit Abstand unter dem Logo, aber noch über der Platte */
+  margin-top: clamp(2.5rem, 13vh, 8rem);
 }
 
 /* Öffnungsstatus und Eckdaten unter der Bühne, im hellen Design */
@@ -834,13 +835,29 @@ p {
   text-align: center;
 }
 
+/* Drei gleich breite Spalten: Öffnungszeiten links, Adresse genau unter
+   dem Status in der Mitte, Gerichte rechts. Auf dem Handy untereinander. */
 .hero__facts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 2rem;
+  justify-self: stretch;
   font-size: var(--step--1);
   color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .hero__facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero__facts > :first-child {
+    text-align: left;
+  }
+
+  .hero__facts > :last-child {
+    text-align: right;
+  }
 }
 
 .hero__facts strong {
@@ -1359,6 +1376,29 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+}
+
+/* Gleicher Unterstrich wie in der Navigation oben: wächst aus der Mitte */
+.footer__bottom a {
+  position: relative;
+}
+
+.footer__bottom a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--brand);
+  translate: -50% 0;
+  transition: width 0.28s var(--ease-out);
+}
+
+.footer__bottom a:hover::after,
+.footer__bottom a:focus-visible::after {
+  width: calc(100% - 0.4rem);
 }
 
 /* ------------------------------------------------------------------
@@ -2062,4 +2102,170 @@ body::after {
 
 .legal h1 {
   margin-bottom: 1.25rem;
+}
+
+/* ------------------------------------------------------------------
+   Anonymes Feedback (Kontaktseite)
+   ------------------------------------------------------------------ */
+.feedback {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 1rem + 3vw, 3rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 900px) {
+  .feedback {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+  }
+}
+
+.feedback__intro p {
+  margin-top: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.feedback__step {
+  display: grid;
+  gap: 1.1rem;
+  animation: fbIn 0.4s var(--ease-out);
+}
+
+@keyframes fbIn {
+  from {
+    opacity: 0;
+    translate: 16px 0;
+  }
+}
+
+.feedback__step h3 {
+  font-size: var(--step-1);
+}
+
+.feedback__progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.feedback__bars {
+  display: flex;
+  gap: 6px;
+}
+
+.feedback__bar {
+  width: 28px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--line-strong);
+  transition: background-color 0.3s var(--ease);
+}
+
+.feedback__bar.is-on {
+  background: var(--brand);
+}
+
+.feedback__scale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.6rem;
+}
+
+.feedback__num {
+  aspect-ratio: 1;
+  max-height: 64px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.18s var(--ease), border-color 0.18s var(--ease), color 0.18s var(--ease),
+    transform 0.18s var(--ease);
+}
+
+.feedback__num:hover,
+.feedback__num:focus-visible {
+  border-color: var(--brand);
+  background: var(--brand-tint);
+  transform: translateY(-2px);
+}
+
+.feedback__num[aria-pressed='true'] {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.feedback__ends {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -0.4rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.feedback__back {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0;
+  border: 0;
+  background: none;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.feedback__back .icon {
+  rotate: 90deg;
+}
+
+.feedback__back:hover {
+  color: var(--ink);
+}
+
+.feedback textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  font: inherit;
+  color: var(--ink);
+  resize: vertical;
+}
+
+.feedback textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px var(--brand-ring);
+}
+
+.feedback__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.feedback__done {
+  justify-items: center;
+  text-align: center;
+}
+
+.feedback__done p {
+  max-width: 40ch;
+  color: var(--ink-soft);
 }
