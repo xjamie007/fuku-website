@@ -3,21 +3,10 @@
    ================================================================== */
 
 /* Diashow, Fotowand, Mosaik, Story: Logo, Buttons und Bewertung stehen
-   genau wie beim Dampf-Video. Im Karussell liegt das Logo über den
-   Fotos, die Buttons stehen ganz unten. */
-.hero[data-variant='4'] .hero__copy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
-.hero[data-variant='4'] .hero__brand img {
-  filter: invert(1) hue-rotate(180deg) drop-shadow(0 6px 24px rgba(0, 0, 0, 0.65));
-}
-
+   genau wie beim Dampf-Video. Das Karussell hat kein Logo – dort stehen
+   die Buttons unter den Fotos (siehe unten). */
 .hero[data-variant='4'] .hero__cta {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .hv {
@@ -163,6 +152,7 @@
 }
 
 .hero[data-variant='4'] .hero__stage {
+  justify-content: flex-end;
   padding-bottom: clamp(5rem, 9vh, 7rem);
 }
 
@@ -529,7 +519,8 @@
 .hero[data-variant='original'] > .hero__stage,
 .hero[data-variant='original'] > .hero__info,
 .hero:not(.hero--dampf) .hero__video,
-.hero--dampf .hv {
+.hero--dampf .hv,
+.hero[data-variant='4'] .hero__brand {
   display: none;
 }
 
