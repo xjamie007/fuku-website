@@ -515,8 +515,8 @@
 .hero[data-variant='original'] > .hero__media,
 .hero[data-variant='original'] > .hero__stage,
 .hero[data-variant='original'] > .hero__info,
-.hero:not([data-variant='dampf']) .hero__video,
-.hero[data-variant='dampf'] .hv,
+.hero:not(.hero--dampf) .hero__video,
+.hero--dampf .hv,
 .hero--v .hero__brand {
   display: none;
 }
@@ -530,4 +530,22 @@
 .hero-original .hero__status,
 .hero-original .hero__cta {
   justify-content: flex-start;
+}
+
+/* Karussell: Fotos sind anklickbar. Die Bühne liegt über dem Video-/
+   Fotobereich – sie lässt Klicks durch, nur Buttons und Bewertung nicht. */
+.hero[data-variant='4'] .hero__stage {
+  pointer-events: none;
+}
+
+.hero[data-variant='4'] .hero__stage a {
+  pointer-events: auto;
+}
+
+.hero[data-variant='4'] .hero__media {
+  z-index: 1;
+}
+
+.hv4__card {
+  cursor: pointer;
 }

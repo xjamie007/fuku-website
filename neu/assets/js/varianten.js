@@ -5,16 +5,16 @@
    Animationen mit Fotos des Restaurants. ?option=… merkt sich die Wahl.
    ================================================================== */
 
+// dish = Gericht-ID in data/menu.json – das Karussell verlinkt darauf
 const FOTOS = [
-  { n: '02', big: true }, // King Roll
-  { n: '03', big: true }, // Xiao Long Bao
-  { n: '04', big: true }, // Nigiri Thon
-  { n: '05', big: true }, // Gambas mit Glasnudeln
-  { n: '07', big: true }, // Chirashi
-  { n: '08', big: true }, // Rind mit Thai-Basilikum
-  { n: '10', big: true }, // Rotes Curry
-  { n: '11', big: true }, // Fraise Roll
-  { n: '12', big: true }, // Nigiri Avocado
+  { n: '02', big: true, dish: 2974 }, // King Roll
+  { n: '04', big: true, dish: 982 }, // Nigiri Thon
+  { n: '05', big: true, dish: 937 }, // Gambas mit Glasnudeln
+  { n: '07', big: true, dish: 1048 }, // Chirashi
+  { n: '08', big: true, dish: 973 }, // Rind mit Thai-Basilikum
+  { n: '10', big: true, dish: 980 }, // Rotes Curry mit Tofu
+  { n: '11', big: true, dish: 1059 }, // Fraise Roll
+  { n: '12', big: true, dish: 989 }, // Nigiri Avocado
   { n: '01' }, // Platte 62 Stück
   { n: '06' }, // Gyoza
   { n: '09' }, // Platte 46 Stück
@@ -24,6 +24,7 @@ const FOTOS = [
 const OPTIONEN = new Map([
   ['original', 'Erste Website'],
   ['dampf', 'Dampf'],
+  ['dampf-ruhig', 'Dampf ruhig'],
   ['1', 'Diashow'],
   ['2', 'Fotowand'],
   ['3', 'Mosaik'],
@@ -31,7 +32,8 @@ const OPTIONEN = new Map([
   ['5', 'Story'],
 ]);
 
-const gross = FOTOS.filter((f) => f.big).map((f) => `assets/img/hero/${f.n}.jpg`);
+const grossFotos = FOTOS.filter((f) => f.big);
+const gross = grossFotos.map((f) => `assets/img/hero/${f.n}.jpg`);
 const klein = FOTOS.map((f) => `assets/img/hero/${f.n}-s.jpg`);
 const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -88,7 +90,10 @@ function mosaik() {
 
 /* 4 · Karussell: Fotos drehen sich in der Tiefe am Betrachter vorbei */
 function karussell() {
-  buehne.innerHTML = `<div class="hv4__track">${gross.map((src) => `<figure class="hv4__card">${bild(src)}</figure>`).join('')}</div>`;
+  // Jede Karte führt zum Gericht auf der Bestellseite
+  buehne.innerHTML = `<div class="hv4__track">${grossFotos
+    .map((f) => `<a class="hv4__card" href="bestellen.html#gericht-${f.dish}" tabindex="-1">${bild(`assets/img/hero/${f.n}.jpg`)}</a>`)
+    .join('')}</div>`;
   const karten = [...buehne.querySelectorAll('.hv4__card')];
   let aktiv = 0;
   const setzen = () => {
@@ -148,8 +153,12 @@ function zeige(option) {
   hero.classList.toggle('hero--v', option in BAUEN);
   BAUEN[option]?.();
 
+  // „Dampf ruhig“: dasselbe Video, nur langsamer abgespielt
   const video = hero.querySelector('.hero__video');
-  if (video && option === 'dampf' && !ruhig) video.play().catch(() => {});
+  const mitVideo = option.startsWith('dampf');
+  hero.classList.toggle('hero--dampf', mitVideo);
+  if (video) video.playbackRate = option === 'dampf-ruhig' ? 0.6 : 1;
+  if (video && mitVideo && !ruhig) video.play().catch(() => {});
   else video?.pause();
 
   // Kopfleiste neu einfärben (dunkel nur über Video/Fotos)

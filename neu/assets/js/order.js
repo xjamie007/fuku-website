@@ -2,10 +2,10 @@
    Bestellseite – Speisekarte, Filter, Warenkorb und Checkout
    ================================================================== */
 
-import { boot, formatPrice, RESTAURANT } from './app.js?v=20261031n';
-import { t, onLangChange, apply, ALLERGENS, getLang } from './i18n.js?v=20261031n';
-import { icon, emoji } from './icons.js?v=20261031n';
-import { loadMenu, flatten, normalize, dishName, dishShort } from './menu-data.js?v=20261031n';
+import { boot, formatPrice, RESTAURANT } from './app.js?v=20261031o';
+import { t, onLangChange, apply, ALLERGENS, getLang } from './i18n.js?v=20261031o';
+import { icon, emoji } from './icons.js?v=20261031o';
+import { loadMenu, flatten, normalize, dishName, dishShort } from './menu-data.js?v=20261031o';
 
 boot();
 
@@ -1004,6 +1004,16 @@ function wireEvents() {
 function jumpToHash() {
   if (!location.hash) return;
   const id = location.hash.slice(1);
+
+  // #gericht-982: zum Gericht scrollen und seine Detailansicht öffnen
+  // (z. B. aus dem Foto-Karussell der Startseite)
+  const gericht = id.match(/^gericht-(\d+)$/);
+  if (gericht) {
+    const dishId = Number(gericht[1]);
+    document.querySelector(`[data-dish="${dishId}"]`)?.scrollIntoView({ block: 'center', behavior: 'instant' });
+    openDetail(dishId);
+    return;
+  }
 
   // Verhindert, dass der Browser danach auf die alte Position zurückspringt.
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
