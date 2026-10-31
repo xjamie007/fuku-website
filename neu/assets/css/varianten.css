@@ -497,8 +497,15 @@
   text-wrap: wrap;
 }
 
+/* Schriften wie auf der ersten Website */
+.hero-original {
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
+}
+
 .hero-original h1 em {
-  font-style: normal; /* Mincho hat keine Kursive */
+  font-style: italic;
 }
 
 /* ==================================================================
