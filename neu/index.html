@@ -25,7 +25,7 @@
     <link rel="preload" as="font" type="font/woff2" href="assets/fonts/shippori-mincho-b1-500-latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="assets/fonts/zen-kaku-gothic-new-400-latin.woff2" crossorigin />
     <link rel="preconnect" href="https://fuku.lu" />
-    <link rel="stylesheet" href="assets/css/style.css?v=20261031d" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20261031e" />
 
     <script type="application/ld+json">
       {
@@ -154,15 +154,6 @@
               <img src="assets/img/logo.png" alt="Fuku" width="250" height="272" />
             </h1>
 
-            <!--
-              Bewertung laut Restaurant Guru (Google 4,8 von 5, 482 Bewertungen),
-              Stand 31.10.2026. Bei Gelegenheit von Hand nachziehen.
-            -->
-            <a class="hero__rating" href="https://de.restaurantguru.com/Restaurant-Fuku-a-Vianden-Vianden" target="_blank" rel="noopener" data-i18n-attr="aria-label:home.rating.aria" data-i18n-vars='{"count":"482"}'>
-              <span class="hero__stars" style="--rating: 4.8" aria-hidden="true">★★★★★</span>
-              <strong data-i18n="home.rating.value">4,8</strong>
-              <span data-i18n="home.rating.count" data-i18n-vars='{"count":"482"}'>482 Google-Bewertungen</span>
-            </a>
 
             <div class="hero__cta">
               <a class="btn btn--brand btn--lg" href="bestellen.html">
@@ -172,6 +163,16 @@
               <a class="btn btn--light btn--lg" href="bestellen.html#sushi" data-i18n="hero.cta2">Karte ansehen</a>
             </div>
           </div>
+
+          <!--
+            Google-Bewertung laut Google Maps (4,8 von 5, 487 Bewertungen),
+            Stand 31.10.2026. Bei Gelegenheit von Hand nachziehen.
+          -->
+          <a class="hero__rating" href="https://www.google.com/maps/place/Resturant+Fuku/@49.9340495,6.2101403,17z/data=!4m8!3m7!1s0x47bffd7b83b47249:0x6ffe96fd72998928!8m2!3d49.9340495!4d6.2101403!9m1!1b1!16s%2Fg%2F11t4l3v1wg" target="_blank" rel="noopener" data-i18n-attr="aria-label:home.rating.aria" data-i18n-vars='{"count":"487"}'>
+            <span class="hero__stars" style="--rating: 4.8" aria-hidden="true">★★★★★</span>
+            <strong data-i18n="home.rating.value">4,8</strong>
+            <span data-i18n="home.rating.count" data-i18n-vars='{"count":"487"}'>487 Google-Bewertungen</span>
+          </a>
         </div>
 
         <div class="wrap hero__info">
@@ -488,6 +489,11 @@
               <span data-i18n="reserve.ctaHome">Tisch reservieren</span>
             </a>
           </div>
+          <a class="cta-band__feedback" href="kontakt.html#feedback">
+            <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+            <span data-i18n="home.cta.feedback">Schon bei uns gewesen? Geben Sie uns anonym Feedback</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+          </a>
         </div>
       </section>
     </main>
@@ -561,6 +567,7 @@
             <span data-i18n="home.story.stat3">Empfohlen von Restaurant Guru</span> 2023
           </a>
           <nav aria-label="Rechtliches">
+            <a href="kontakt.html#feedback" data-i18n="footer.feedback">Feedback</a>
             <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
             <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
             <a href="https://nave.lu" target="_blank" rel="noopener">Created by Nave</a>
@@ -569,6 +576,6 @@
       </div>
     </footer>
 
-    <script type="module" src="assets/js/home.js?v=20261031d"></script>
+    <script type="module" src="assets/js/home.js?v=20261031e"></script>
   </body>
 </html>
