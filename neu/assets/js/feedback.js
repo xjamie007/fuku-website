@@ -6,8 +6,8 @@
    ohne Namen, ohne E-Mail.
    ================================================================== */
 
-import { t, onLangChange, getLang } from './i18n.js?v=20261031p';
-import { icon } from './icons.js?v=20261031p';
+import { t, onLangChange, getLang } from './i18n.js?v=20261031q';
+import { icon } from './icons.js?v=20261031q';
 
 const root = document.querySelector('[data-feedback]');
 const panel = root?.querySelector('[data-feedback-panel]');

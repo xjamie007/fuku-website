@@ -15,9 +15,9 @@ const FOTOS = [
   { n: '10', big: true, dish: 980 }, // Rotes Curry mit Tofu
   { n: '11', big: true, dish: 1059 }, // Fraise Roll
   { n: '12', big: true, dish: 989 }, // Nigiri Avocado
-  { n: '01' }, // Platte 62 Stück
-  { n: '06' }, // Gyoza
-  { n: '09' }, // Platte 46 Stück
+  { n: '01', dish: 1069 }, // Platte 62 Stück
+  { n: '06', dish: 892 }, // Gyoza mit Scampi
+  { n: '09', dish: 1064 }, // Platte 46 Stück
 ];
 
 // Map statt Objekt: Zahlen-Schlüssel würden sonst nach vorne sortiert
@@ -40,7 +40,16 @@ const hero = document.querySelector('.hero[data-variant]');
 const buehne = hero?.querySelector('[data-hv]');
 let timer = null;
 
-const bild = (src, cls = '') => `<img class="${cls}" src="${src}" alt="" decoding="async" />`;
+// Jedes Foto kennt sein Gericht; ein Klick darauf öffnet es auf der Bestellseite
+const GERICHT = new Map(
+  FOTOS.flatMap((f) => [
+    [`assets/img/hero/${f.n}.jpg`, f.dish],
+    [`assets/img/hero/${f.n}-s.jpg`, f.dish],
+  ]),
+);
+
+const bild = (src, cls = '') =>
+  `<img class="${cls}" src="${src}" alt="" decoding="async" data-dish="${GERICHT.get(src)}" />`;
 
 /* 1 · Diashow: langsames Heranzoomen, weiche Überblendung */
 function diashow() {
@@ -175,6 +184,13 @@ if (hero && buehne) {
         .join('')}
     </nav>`,
   );
+
+  buehne.addEventListener('click', (e) => {
+    const foto = e.target.closest('[data-dish]');
+    // Karussell-Karten sind schon Links
+    if (!foto || foto.closest('a')) return;
+    location.href = `bestellen.html#gericht-${foto.dataset.dish}`;
+  });
 
   document.querySelector('.hv-switch').addEventListener('click', (e) => {
     const knopf = e.target.closest('[data-option]');

@@ -532,20 +532,27 @@
   justify-content: flex-start;
 }
 
-/* Karussell: Fotos sind anklickbar. Die Bühne liegt über dem Video-/
-   Fotobereich – sie lässt Klicks durch, nur Buttons und Bewertung nicht. */
-.hero[data-variant='4'] .hero__stage {
+/* Fotos sind anklickbar (führen zum Gericht). Die Bühne liegt über dem
+   Fotobereich – sie lässt Klicks durch, nur Buttons und Bewertung nicht.
+   Bewusst ohne Hover-Effekt: die Animation läuft einfach weiter. */
+.hero--v .hero__stage {
   pointer-events: none;
 }
 
-.hero[data-variant='4'] .hero__stage a {
+.hero--v .hero__stage a {
   pointer-events: auto;
 }
 
-.hero[data-variant='4'] .hero__media {
+.hero--v .hero__media {
   z-index: 1;
 }
 
-.hv4__card {
+.hv [data-dish] {
   cursor: pointer;
+}
+
+/* Ausgeblendete Folien dürfen keine Klicks abfangen */
+.hv1__slide:not(.is-on),
+.hv5__slide:not(.is-on) {
+  pointer-events: none;
 }

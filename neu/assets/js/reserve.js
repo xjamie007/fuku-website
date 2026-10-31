@@ -7,9 +7,9 @@
    hier geht es um Bedienkomfort, nicht um Absicherung.
    ================================================================== */
 
-import { boot, RESTAURANT, RESERVATION, formatTime, localNow } from './app.js?v=20261031p';
-import { t, getLang, getLocale, onLangChange, apply } from './i18n.js?v=20261031p';
-import { icon } from './icons.js?v=20261031p';
+import { boot, RESTAURANT, RESERVATION, formatTime, localNow } from './app.js?v=20261031q';
+import { t, getLang, getLocale, onLangChange, apply } from './i18n.js?v=20261031q';
+import { icon } from './icons.js?v=20261031q';
 
 boot();
 
