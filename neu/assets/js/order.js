@@ -2,10 +2,10 @@
    Bestellseite – Speisekarte, Filter, Warenkorb und Checkout
    ================================================================== */
 
-import { boot, formatPrice, RESTAURANT } from './app.js?v=20261031k';
-import { t, onLangChange, apply, ALLERGENS, getLang } from './i18n.js?v=20261031k';
-import { icon, emoji } from './icons.js?v=20261031k';
-import { loadMenu, flatten, normalize, dishName, dishShort } from './menu-data.js?v=20261031k';
+import { boot, formatPrice, RESTAURANT } from './app.js?v=20261031m';
+import { t, onLangChange, apply, ALLERGENS, getLang } from './i18n.js?v=20261031m';
+import { icon, emoji } from './icons.js?v=20261031m';
+import { loadMenu, flatten, normalize, dishName, dishShort } from './menu-data.js?v=20261031m';
 
 boot();
 

@@ -1,8 +1,8 @@
 /* ==================================================================
-   Kopfbereich-Varianten (nur Vorschau: varianten.html?option=1…5)
+   Kopfbereich-Varianten der Startseite (Vorschau zum Vergleichen)
 
-   Statt des Dampf-Videos zeigt der Kopfbereich Fotos des Restaurants.
-   Fünf Varianten zum Vergleichen; ein Umschalter oben wechselt sie.
+   Umschalter unten: die erste Website, das Dampf-Video und fünf
+   Animationen mit Fotos des Restaurants. ?option=… merkt sich die Wahl.
    ================================================================== */
 
 const FOTOS = [
@@ -20,19 +20,22 @@ const FOTOS = [
   { n: '09' }, // Platte 46 Stück
 ];
 
-const OPTIONEN = {
-  1: 'Diashow',
-  2: 'Fotowand',
-  3: 'Mosaik',
-  4: 'Karussell',
-  5: 'Story',
-};
+// Map statt Objekt: Zahlen-Schlüssel würden sonst nach vorne sortiert
+const OPTIONEN = new Map([
+  ['original', 'Erste Website'],
+  ['dampf', 'Dampf'],
+  ['1', 'Diashow'],
+  ['2', 'Fotowand'],
+  ['3', 'Mosaik'],
+  ['4', 'Karussell'],
+  ['5', 'Story'],
+]);
 
 const gross = FOTOS.filter((f) => f.big).map((f) => `assets/img/hero/${f.n}.jpg`);
 const klein = FOTOS.map((f) => `assets/img/hero/${f.n}-s.jpg`);
 const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const hero = document.querySelector('.hero--v');
+const hero = document.querySelector('.hero[data-variant]');
 const buehne = hero?.querySelector('[data-hv]');
 let timer = null;
 
@@ -139,21 +142,30 @@ const BAUEN = { 1: diashow, 2: fotowand, 3: mosaik, 4: karussell, 5: story };
 
 function zeige(option) {
   clearInterval(timer);
+  buehne.innerHTML = '';
   buehne.removeAttribute('style');
   hero.dataset.variant = option;
-  BAUEN[option]();
+  hero.classList.toggle('hero--v', option in BAUEN);
+  BAUEN[option]?.();
+
+  const video = hero.querySelector('.hero__video');
+  if (video && option === 'dampf' && !ruhig) video.play().catch(() => {});
+  else video?.pause();
+
+  // Kopfleiste neu einfärben (dunkel nur über Video/Fotos)
+  window.dispatchEvent(new Event('scroll'));
   document.querySelectorAll('[data-option]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.option === option));
 }
 
 if (hero && buehne) {
   const start = new URLSearchParams(location.search).get('option');
-  const option = OPTIONEN[start] ? start : '1';
+  const option = OPTIONEN.has(start) ? start : hero.dataset.variant;
 
   document.body.insertAdjacentHTML(
     'beforeend',
     `<nav class="hv-switch" aria-label="Varianten des Kopfbereichs">
-      ${Object.entries(OPTIONEN)
-        .map(([n, name]) => `<button type="button" data-option="${n}"><b>${n}</b> ${name}</button>`)
+      ${[...OPTIONEN]
+        .map(([n, name]) => `<button type="button" data-option="${n}">${n in BAUEN ? `<b>${n}</b> ` : ''}${name}</button>`)
         .join('')}
     </nav>`,
   );

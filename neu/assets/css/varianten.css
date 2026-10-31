@@ -319,3 +319,208 @@
   --btn-bg: #fff;
   --btn-fg: var(--ink);
 }
+
+
+/* ==================================================================
+   Variante „Erste Website“: der Kopfbereich der bisherigen Seite,
+   unverändert übernommen und unter .hero-original gekapselt
+   ================================================================== */
+.hero-original {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.hero-original .hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  padding-block: clamp(2.5rem, 1.5rem + 5vw, 6rem) clamp(3rem, 2rem + 5vw, 6.5rem);
+}
+
+@media (min-width: 900px) {
+  .hero-original .hero__grid {
+    grid-template-columns: 1.02fr 0.98fr;
+  }
+}
+
+.hero-original .hero__copy {
+  position: relative;
+  z-index: 2;
+  max-width: 36rem;
+}
+
+.hero-original .hero__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-original /* Auf schmalen Bildschirmen bricht „Vianden · Luxemburg“ sonst mitten im
+   Ortsnamen um; als eigene Zeile bleibt es lesbar. */
+.hero__status .eyebrow {
+  white-space: nowrap;
+}
+
+.hero-original h1 {
+  margin-bottom: 1.25rem;
+}
+
+.hero-original h1 em {
+  font-style: italic;
+  color: var(--brand);
+}
+
+.hero-original .hero__text {
+  max-width: 42ch;
+  color: var(--ink-soft);
+  font-size: var(--step-1);
+  line-height: 1.55;
+}
+
+.hero-original .hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero-original .hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.hero-original .hero__facts strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--step-0);
+}
+
+.hero-original /* Bildkomposition */
+.hero__art {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-original .hero__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--paper-deep);
+}
+
+.hero-original .hero__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 18s var(--ease) infinite alternate;
+}
+
+@keyframes heroZoom {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.07;
+  }
+}
+
+.hero-original .hero__chip {
+  position: absolute;
+  left: clamp(-1rem, -2vw, -2.25rem);
+  bottom: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.2rem 0.85rem 0.85rem;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 3;
+}
+
+.hero-original .hero__chip img {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--r-md);
+  object-fit: cover;
+}
+
+.hero-original .hero__chip span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero-original .hero__chip strong {
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.hero-original .hero__kanji {
+  position: absolute;
+  top: 50%;
+  right: -8%;
+  translate: 0 -50%;
+  width: min(52vw, 620px);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+
+@media (max-width: 640px) {
+  .hero-original .hero__kanji {
+    right: -25%;
+    width: 90vw;
+  }
+}
+
+.hero-original h1 {
+  font-size: var(--step-4);
+  text-wrap: wrap;
+}
+
+.hero-original h1 em {
+  font-style: normal; /* Mincho hat keine Kursive */
+}
+
+/* ==================================================================
+   Umschalten zwischen den Varianten auf der Startseite
+   ================================================================== */
+.hero:not([data-variant='original']) .hero-original,
+.hero[data-variant='original'] > .hero__media,
+.hero[data-variant='original'] > .hero__stage,
+.hero[data-variant='original'] > .hero__info,
+.hero:not([data-variant='dampf']) .hero__video,
+.hero[data-variant='dampf'] .hv,
+.hero--v .hero__brand {
+  display: none;
+}
+
+.hv {
+  position: absolute;
+  inset: 0;
+}
+
+/* Die neue Startseite zentriert Status und Buttons – im Original links */
+.hero-original .hero__status,
+.hero-original .hero__cta {
+  justify-content: flex-start;
+}
